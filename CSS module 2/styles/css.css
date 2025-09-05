@@ -1,0 +1,50 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+#new{
+    height: 500px;
+    width: 600px;
+    color: blue;
+    /* background-image: url('../image1/photo-1491466424936-e304919aada7.jpg'); */
+    background-image: url('../pexels-pixabay-60597.jpg');
+    background-size: cover;
+    background-size: 466px 367px;
+    background-repeat: no-repeat;
+
+}
+
+.blog{
+    border: 10px solid gray;
+    background-color: rgb(71, 152, 71);
+    margin: 50px;
+    padding: 10px;
+    box-shadow: 10px 10px 20px green;
+
+
+}
+/* #second{
+    visibility: hidden;
+} */
+
+
+#first{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#special{
+    border: 2px solid white;
+    /* display: block; */
+    /* in the inline element like span the margin and pading height doesnot work it only work when we use the display block or display inline block in the inline */
+
+    /* id i want to do the inline and block at a same time i have to use the inline block   */
+ 
+    display: inline-block
+    
+    
+    
+    ;
+
+    height: 200px;
+}
