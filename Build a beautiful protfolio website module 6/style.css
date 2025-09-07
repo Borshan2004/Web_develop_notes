@@ -1,0 +1,80 @@
+/* *{
+    padding: 0px;
+    margin: 0px;
+
+} */
+
+
+.work-sans- {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 200px;
+}
+
+.box2{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+nav h2 {
+    font-family: Open Sans;
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: left;
+}
+
+nav .span_r {
+    color: rgb(254, 114, 14);
+}
+
+nav ul li a {
+    color: rgba(71, 71, 71, 1);
+
+    font-family: Open Sans;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: left;
+
+}
+
+.ls{
+    list-style: none;
+}
+
+nav ul button {
+    width: 150px;
+    height: 64px;
+    background-color: rgb(254, 114, 14);
+    border-radius: 5px;
+    border-style: none;
+    font-family: Open Sans;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: rgb(198, 203, 208);
+
+}
+
+nav ul button a {
+    color: white;
+}
+
+nav ul a {
+    text-decoration: none;
+
+
+}
