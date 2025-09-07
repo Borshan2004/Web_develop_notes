@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+section {
+    font-family: "Work Sans", sans-serif;
+    
+}
+
+#hero {
+    
+
+    background: linear-gradient(0.00deg, rgba(9.197244644165039, 8.92899227142334, 8.92899227142334, 1),rgba(16, 16, 16, 0) 100%),url("imgage.jpg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 919px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+section .hero2 {
+    width: 685px;
+    margin-bottom: -30px;
+    
+
+
+}
+
+section .hero2 .subtitle {
+    opacity: 0.8;
+    color: rgba(255, 255, 255, 1);
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 38px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-bottom: 10px;
+    
+}
+
+section .hero2 .title1 {
+    width: 1000px;
+    height: 160px;
+    color: rgba(255, 255, 255, 1);
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: 0%;
+    text-align: center;
+    margin-bottom: 25px;
+    
+}
+
+section .hero2 .des{
+    opacity: 0.7;
+    width: 1023px;
+height: 56px;
+    color: rgba(255, 255, 255, 1);
+font-family: Work Sans;
+font-size: 18px;
+font-weight: 500;
+line-height: 24px;
+letter-spacing: 0%;
+text-align: center;
+margin-bottom: 20px;
+}
+
+.btn{
+    /* Frame 6 */
+width: 282px;
+height: 65px;
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+gap: undefined;
+padding: 21px 32px 21px 32px;
+
+border-radius: 8px;
+background: rgba(82, 195, 3, 1);
+color: rgba(255, 255, 255, 1);
+
+font-family: Work Sans;
+font-size: 15px;
+font-weight: 600;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+border: none;
+}
+
+section .hero2 .btn_c{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    margin-left: 350px;
+}
+
+
+.card{
+    width: 1920px;
+height: 1222px;
+background: rgba(255, 255, 255, 1);
+margin-top: 30px;
+}
+
+.one_card{
+
+margin:200px;
+width: 1320px;
+height: 742px;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+align-items: center;
+gap: undefined;
+
+
+}
+
+.card_title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+}
+.card_title h2{
+    font-size: 35px;
+    margin-bottom: 40px;
+    line-height: 16px;
+    text-align: center;
+    
+}
+
+.card_element{
+    display: flex;
+
+}
+
+
+.food_card{
+max-width: 323px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 23px;
+
+
+}
+
+
+
+.card_image img{
+    width: 300px;
+    height: 200px;
+}
+
+.food_card span{
+    margin-right: 5px;
+}
+
+.food_card h2{
+    margin-right: 6px;
+    font-size: 30px;
+
+}
+
+.food_card p{
+    font-size: 13px;
+    text-align: center;
+}
+
+
+.food_card .bt_f{
+width: 143px;
+height: 26px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+gap: undefined;
+padding: 10px 30px 10px 30px;
+
+border-radius: 8px;
+background: rgba(82, 195, 3, 0.15);
+}
+
+.one_card .card_button{
+    margin-top: 72px;
+}

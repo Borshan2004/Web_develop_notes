@@ -1,0 +1,40 @@
+.parent{
+    padding: 25px;
+    background-color: beige;
+    display: flex;
+    /* to use the flex on the child we have to control the parent  */
+    gap: 30px;
+
+    /* justify content works on the x axis */
+
+    /* justify-content: center; */
+    /* justify-content: end; */
+    /* justify-content: space-around; */
+    justify-content: space-between;
+    /* justify-content: space-evenly; */
+
+
+
+    /* align-items works on the y axis */
+
+    height: 400px;
+    align-items: center;
+    /* align-items: end; */
+    /* align-items: start; */
+
+
+    /* flex-direction: column; */
+    flex-direction: row;
+    /* flex-direction: row-reverse; */
+
+    flex-wrap: wrap;
+
+}
+
+.child{
+    border: 2px solid green;
+    background-color: aquamarine;
+    font-size: 25px;
+    padding: 20px;
+    /* margin: 10px; */
+}
