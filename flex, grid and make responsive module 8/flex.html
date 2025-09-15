@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Flexbox Example</title>
+    <style>
+        .container {
+            border: 5px solid salmon;
+            height: 250px;
+            display: flex;
+            /* flex-direction: row;
+            justify-content: space-between;
+            align-items: center; */
+            flex-wrap: wrap;
+        }
+        .box {
+            height: 30px;
+            border: 2px dotted seagreen;
+            width: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">box 1</div>
+        <div class="box">box 2</div>
+        <div class="box">box 3</div>
+        <div class="box">box 4</div>
+        <div class="box">box 5</div>
+        <div class="box">box 6</div>
+        <div class="box">box 6</div>
+        <div class="box">box 6</div>
+    </div>
+</body>
+</html>
