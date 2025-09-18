@@ -16,7 +16,7 @@
 
 <body class="work-sans-">
 
-    <header class="head">
+    <header class="head ">
         <nav>
             <h2>Ma<span class="span_r">r</span>y</h2>
             <ul class="box2">
@@ -38,12 +38,12 @@
                 <button class="banner_bt2"><i class="fa-solid fa-phone"></i> Contact</button>
 
             </div>
-            <img src="hardy.png" alt="picture of a young man ">
+            <img class="img_ban" src="hardy.png" alt="picture of a young man ">
         </div>
     </header>
 
     <main>
-        <div class="main1">
+        <div class="main1 ">
             <section class="broder">
                 <h3>About Me</h3>
                 <p class="cn">I, m a designer & developer with a passion for web design. I enjoy developing simple,
@@ -77,14 +77,20 @@
         </div>
 
         <section class="sc2">
-            <h3>What I do</h3>
-            <p class="pd">I have more than 10 years experience building software for clients all over the world. Below
-                is a quick
-                overview of my main technical skill sets and technologies i use. Want to find out more about my
-                experience? Check out my online resume and project portfolio.I have more than 10 years experience
-                building software for clients all over the world. Below is a quick overview of my main technical skill
-                sets and technologies i use. Want to find out more about my experience? Check out my online resume and
-                project portfolio.</p>
+            <div class="sc2_h_P">
+                <h3>What I do</h3>
+                <p class="pd ">I have more than 10 years experience building software for clients all over the world.
+                    Below
+                    is a quick
+                    overview of my main technical skill sets and technologies i use. Want to find out more about my
+                    experience? Check out my online resume and project portfolio.I have more than 10 years experience
+                    building software for clients all over the world. Below is a quick overview of my main technical
+                    skill
+                    sets and technologies i use. Want to find out more about my experience? Check out my online resume
+                    and
+                    project portfolio.</p>
+            </div>
+
             <div class="skill_box">
                 <div class="skill">
                     <img src="/portfolio-resources/images/icons/js.png" alt="javascript picture">
@@ -163,7 +169,7 @@
 
 
 
-                <div class="re_colum">
+                <div class="re_colum ">
                     <h3 class="re_title">
                         My Experience
                     </h3>
@@ -202,13 +208,13 @@
     </main>
 
 
-    <footer class="ftr">
+    <footer class="ftr ">
         <div class="ftr1">
-            <h4 >Let's Connect</h4>
-            
+            <h4>Let's Connect</h4>
+
             <p>Please fill out the form on this section to contact with me or call between 9:00 A.M and 8.00 P.M ET,
                 Monday through Friday.</p>
-            
+
             <div class="ftr1_icon">
                 <a href=""><img src="/portfolio-resources/images/icons/facebook.png" alt=""></a>
                 <a href=""><img src="/portfolio-resources/images/icons/insta.png" alt=""></a>
@@ -216,15 +222,22 @@
             </div>
         </div>
         <div class="ftr2">
-            <h4 >Let’s Message me</h4>
+            <h4>Let’s Message me</h4>
             <div class="ftr2_form">
                 <input type="text" name="" id="" placeholder="Your Name">
                 <input type="email" name="" id="" placeholder="Your Email">
                 <textarea class="txt_a" name="" id="" cols="10" rows="20" placeholder="Message"></textarea>
             </div>
-            <button class="bnt4">Submit</button>
+            <button onclick="welcome()" class="bnt4">Submit</button>
         </div>
     </footer>
+
+
+    <script>
+        function welcome() {
+            alert("this is borshan");
+        }
+    </script>
 
 
 </body>
