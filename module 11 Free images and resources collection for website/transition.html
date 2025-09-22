@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            border: 2px solid red;
+            width: 100px;
+            height: 100px;
+            background-color: blanchedalmond;
+
+
+
+            /* property name | duration | easing function | delay */
+            /* transition: width 4s; */
+            /* transition: width 4s linear 3s; */
+            /* transition: width 6s linear 1s, background-color 3s ease-in 5s; */
+
+            transition:transform 7s linear ;
+
+
+
+            /* Transition Duration → How long the transition takes. Example: If you set transition-duration: 2s;
+            the animation (like color change) will take 2 seconds to complete. 
+            
+            Transition Delay → How long to wait before starting the transition. Example: If you set transition-delay: 1s;
+            the animation will wait 1 second before beginning. */
+
+
+
+/* In CSS transitions/animations, linear is a timing function.
+
+👉 It controls how the speed of the animation changes over time.
+
+linear = moves at the same speed from start to end (no speeding up or slowing down).
+It’s like a car going at a constant speed. 🚗➡️
+
+Other timing functions change the speed:
+
+ease = starts slow → speeds up → slows down at the end.
+
+ease-in = starts slow, then speeds up.
+
+ease-out = starts fast, then slows down. */
+        }
+
+        .box:hover {
+            /* width: 500px; */
+            transform: rotate(45deg) scale(2.5) translateX(150px);
+            background-color: red;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- transfrom: means the change of shape this is a css style property
+         translate : this is a value of transform style rule and this means you move either x or y or both axis
+         transition : how long it will take to change of the shape or color -->
+
+    <div class="box">box-1</div>
+    <div class="box">box-2</div>
+    <div class="box">box-3</div>
+</body>
+
+</html>

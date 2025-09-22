@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 300px;
+            width: 300px;
+            border: 3px solid skyblue;
+            /* only use when we needed it */
+            overflow-y: auto;
+        }
+
+        #box-1 {
+            /* overflow: hidden; */
+            overflow: scroll;
+            /* overflow-x: hidden; */
+            /* overflow-y: hidden; */
+        }
+
+        .header_p{
+            width: 300px;
+            /* for nowrap the width of the horizontal is not working  */
+            white-space: nowrap;
+            overflow: hidden;
+            /* here for the overflow we can't see the full writting but this the text overflow we can watch the exsing using the title in the paragragh tag */
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <p title="my name is borshan and what is your name please tell me " class="header_p">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta voluptas assumenda doloremque neque rerum
+            iusto totam delectus, quos laborum. Autem eius ex odio voluptas, blanditiis veritatis asperiores voluptates
+            est praesentium my name is borshan and what is your name please tell me .
+        </p>
+    </header>
+
+
+    <div id="box-1" class="box">
+        <h2>My text box</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, natus quaerat! Nulla, sequi! Enim, est
+            adipisci non fugit, exercitationem odit, earum cupiditate iusto ipsa eos vel totam porro dicta. Facere, ea.
+            Obcaecati officiis fugit cum vitae itaque veniam dolore eligendi, nemo ex mollitia quibusdam architecto at
+            iusto qui nulla aperiam aut. Cum voluptatum nemo vitae porro fugit veniam ab quasi. Error similique iste,
+            expedita est quisquam adipisci blanditiis velit, autem maiores quis necessitatibus illo ab nisi in accusamus
+            asperiores tenetur itaque officia earum veniam ipsam quia odio! Facere corporis animi cupiditate, asperiores
+            eligendi, magni neque hic omnis totam odio quo dicta delectus fugiat ab porro. Pariatur illum qui officia
+            enim necessitatibus? Cupiditate sunt nemo, sequi voluptatibus dolorem ipsa, delectus itaque enim impedit
+            esse voluptas. Iure obcaecati natus expedita dolorum odio nostrum, dolor ab reiciendis distinctio. Eos modi
+            consequatur obcaecati, doloremque similique laudantium exercitationem quasi excepturi dolorem illo expedita
+            officia molestiae ipsum dignissimos, odio commodi voluptatibus reiciendis, facere sit! Obcaecati accusantium
+            tempore voluptatibus architecto labore rerum iure corporis consectetur sint harum possimus consequatur,
+            vitae, numquam earum tempora quaerat, quidem sunt? Tempora deserunt maiores quae expedita aspernatur
+            excepturi veniam dolore consectetur, officiis provident laudantium corrupti voluptates mollitia quia ab
+            itaque sint unde.</p>
+    </div>
+    <div class="box">
+        <h2>My text box</h2>
+        <p>Iusto culpa voluptates delectus neque qui eius eligendi voluptas quasi optio corporis, explicabo hic laborum.
+            Adipisci esse est, non iure eius incidunt nulla deleniti in aspernatur iusto velit ut nam reprehenderit
+            vero! Accusantium laborum excepturi fugiat, consectetur distinctio eveniet, quaerat enim dicta esse
+            perspiciatis, suscipit cumque maiores sequi similique sint. In culpa rem id. Error, similique molestias
+            .</p>
+    </div>
+
+
+
+</body>
+
+</html>

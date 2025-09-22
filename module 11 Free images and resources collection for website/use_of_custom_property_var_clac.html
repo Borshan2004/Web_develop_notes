@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --primary-color:rgb(118, 118, 156);
+            --secondery-color:red;
+            --font-size:20px;
+        }
+
+        h1{
+            color: var(--primary-color);
+        }
+        h5{
+            background-color: var(--secondery-color);
+        
+        }
+
+        .box{
+            border: 1px solid var(--primary-color);
+            width: calc(100% - 300px);
+        }
+
+        .box h4{
+            border: 2px solid var(--secondery-color);
+        }
+        p{
+            color: var(--primary-color);
+            font-size: var(--font-size);
+        }
+
+        .sidebar{
+            background-color: gray;
+        }
+
+        .main{
+            background-color: bisque;
+        }
+        .container{
+            display: grid;
+            gap: 20px;
+            /* when using the calc space is mandatory */
+            grid-template-columns: 200px calc(100% - 200px - 20px);
+
+        }
+        
+    </style>
+</head>
+
+
+<body>
+
+    <h1>My custom properties</h1>
+    <h5>Use common rules for css property</h5>
+    <div class="box">
+        <h4>I am doing someting</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis necessitatibus odit, reiciendis, dolorum
+            molestias deleniti sequi quia sint distinctio aperiam voluptates nemo ipsam voluptatem labore delectus
+            explicabo omnis? Non, veritatis?</p>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">sidebar</div>
+        <div class="main">main</div>
+    </div>
+
+
+</body>
+
+</html>
