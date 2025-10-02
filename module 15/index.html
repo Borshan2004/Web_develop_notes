@@ -14,7 +14,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
     <script>
         tailwind.config = {
@@ -22,7 +22,7 @@
                 extend: {
                     colors: {
                         clifford: '#da373d',
-                        'bike-primary': '#E76F51',
+                        'small-text-color': '#6C6C6C',
                     },
                     spacing: {
                         '102': '480px',
@@ -37,6 +37,10 @@
     <style>
         .poppins-font {
             font-family: 'Poppins', sans-serif;
+        }
+
+        .bg-bike-primary {
+            background: rgba(231, 111, 81, 1);
         }
     </style>
 
@@ -189,9 +193,269 @@
         </div>
 
 
+        <!-- use flex-1 to distrubute every element equally -->
     </header>
 
-    <!-- use flex-1 to distrubute every element equally -->
+    <main class="lg:container mx-auto">
+
+        <div class="flex flex-col items-center mt-40">
+            <h1 class="text-5xl font-semibold mb-2">Fetured Bikes In This Year</h1>
+            <p class="text-sm text-red-500 border-b-2 border-rose-500 mb-14">Best bike collection</p>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-56">
+                <img src="/biker-zone-resources/images/others/feature-bike.png" alt="">
+                <img src="/biker-zone-resources/images/others/feature-bike.png" alt="">
+                <img src="/biker-zone-resources/images/others/feature-bike.png" alt="">
+            </div>
+        </div>
+
+
+        <div>
+            <h1 class="text-center text-5xl font-semibold mt-32 mb-12">Latest News</h1>
+            <div class="flex justify-around">
+                <div class="card bg-base-100 w-96 border-2 p-5 shadow-sm border-transparent">
+                    <figure>
+                        <img src="/biker-zone-resources/images/others/latest1.png" alt="Shoes" />
+                    </figure>
+                    <div>
+                        <h2 class="text-2xl font-semibold mt-10 mb-3">Ducati XDIAVEL S-73</h2>
+                        <p class="text-base font-normal text-slate-600 mb-10">Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Lacus, fermentum amet faucibus sed
+                            id nisi lectus at.
+                        </p>
+                        <div class="card-actions  ">
+                            <button class="btn bg-bike-primary text-white px-5 lg:px-10 lg:py-6">Read More</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card bg-base-100 w-96 border-2 p-5 shadow-sm border-transparent">
+                    <figure>
+                        <img src="/biker-zone-resources/images/others/latest2.png" alt="Shoes" />
+                    </figure>
+                    <div>
+                        <h2 class="text-2xl font-semibold mt-10 mb-3">Ducati XDIAVEL S-73</h2>
+                        <p class="text-base font-normal text-slate-600 mb-10">Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Lacus, fermentum amet faucibus sed
+                            id nisi lectus at.
+                        </p>
+                        <div class="card-actions  ">
+                            <button class="btn bg-bike-primary text-white px-5 lg:px-10 lg:py-6">Read More</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card bg-base-100 w-96 border-2 p-5 shadow-sm border-transparent">
+                    <figure>
+                        <img src="/biker-zone-resources/images/others/latest3.png" alt="Shoes" />
+                    </figure>
+                    <div>
+                        <h2 class="text-2xl font-semibold mt-10 mb-3">Ducati XDIAVEL S-73</h2>
+                        <p class="text-base font-normal text-slate-600 mb-10">Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Lacus, fermentum amet faucibus sed
+                            id nisi lectus at.
+                        </p>
+                        <div class="card-actions  ">
+                            <button class="btn bg-bike-primary text-white px-5 lg:px-10 lg:py-6">Read More</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="mt-36 mb-32">
+            <h1 class="text-center text-5xl font-bold mb-12">Happy <span class="text-orange-400">Clients says</span>
+            </h1>
+
+            <div class="flex justify-center gap-x-20">
+                <div class=" bg-base-100 w-72 shadow-sm border-2 border-transparent">
+                    <div class=" px-24 pt-10">
+                        <div class="w-24 rounded-full">
+                            <img src="/biker-zone-resources/images/others/user-1.png" />
+                        </div>
+                    </div>
+                    <div class="card-body items-center text-center gap-y-4">
+                        <p class="text-base text-small-text-color font-normal">Slate helps you see how
+                            many more days you need
+                            to work to reach your financial
+                            goal for the month and year.
+                        </p>
+
+                        <div class="rating">
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                aria-label="1 star" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                aria-label="2 star" checked="checked" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                aria-label="3 star" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                aria-label="4 star" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                aria-label="5 star" />
+                        </div>
+
+                        <p class="text-sm text-sky-500 font-semibold">Regina Miles</p>
+                        <p class="text-sm font-semibold">Banker</p>
+
+                    </div>
+                </div>
+
+
+                <div class=" bg-base-100 w-72 shadow-sm border-2 border-transparent">
+                    <div class=" px-24 pt-10">
+                        <div class="w-24 rounded-full">
+                            <img src="/biker-zone-resources/images/others/user-2.png" />
+                        </div>
+                    </div>
+                    <div class="card-body items-center text-center gap-y-4">
+                        <p class="text-base text-small-text-color font-normal">Slate helps you see how
+                            many more days you need
+                            to work to reach your financial
+                            goal for the month and year.
+                        </p>
+
+                        <div class="rating">
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                aria-label="1 star" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                aria-label="2 star" checked="checked" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                aria-label="3 star" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                aria-label="4 star" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                aria-label="5 star" />
+                        </div>
+
+                        <p class="text-sm text-sky-500 font-semibold">Regina Miles</p>
+                        <p class="text-sm font-semibold">Banker</p>
+
+                    </div>
+                </div>
+
+
+
+                <div class=" bg-base-100 w-72 shadow-sm border-2 border-transparent">
+                    <div class=" px-24 pt-10">
+                        <div class="w-24 rounded-full">
+                            <img src="/biker-zone-resources/images/others/user-3.png" />
+                        </div>
+                    </div>
+                    <div class="card-body items-center text-center gap-y-4">
+                        <p class="text-base text-small-text-color font-normal">Slate helps you see how
+                            many more days you need
+                            to work to reach your financial
+                            goal for the month and year.
+                        </p>
+
+                        <div class="rating">
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                aria-label="1 star" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                aria-label="2 star" checked="checked" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                aria-label="3 star" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                aria-label="4 star" />
+                            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"
+                                aria-label="5 star" />
+                        </div>
+
+                        <p class="text-sm text-sky-500 font-semibold">Regina Miles</p>
+                        <p class="text-sm font-semibold">Banker</p>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div>
+            <h1 class="text-center text-5xl font-bold mb-12">Frequently Asked <span
+                    class="text-orange-400">Questions</span> </h1>
+            <div class="flex justify-center gap-x-32">
+
+
+                <div>
+                    <div><img src="/biker-zone-resources/images/others/faq.png" alt=""></div>
+                </div>
+
+                <div>
+                    <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+                        <input type="radio" name="my-accordion-2" checked="checked" />
+                        <div class="collapse-title font-semibold">How do I create an account?</div>
+                        <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and
+                            follow
+                            the registration process.</div>
+                    </div>
+                    <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+                        <input type="radio" name="my-accordion-2" />
+                        <div class="collapse-title font-semibold">I forgot my password. What should I do?</div>
+                        <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow
+                            the
+                            instructions sent to your email.</div>
+                    </div>
+                    <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+                        <input type="radio" name="my-accordion-2" />
+                        <div class="collapse-title font-semibold">How do I update my profile information?</div>
+                        <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to
+                            make
+                            changes.</div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+    </main>
+
+    <nav>
+        <div class="flex justify-around text-white bg-black">
+            <div class="text-base">
+                <div class="flex gap-x-6 ">
+                    <p>Download Now</p>
+                    <p>License</p>
+                </div>
+                <div class="flex gap-x-6">
+                    <p>About</p>
+                    <p>Features</p>
+                    <p>Pricing</p>
+                    <p>Careers</p>
+                    <p>Help</p>
+                    <p>Privacy Policy</p>
+                </div>
+                <div>
+                    <p>© 2020 bike. All rights reserved</p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <p class="text-lg">Get the App</p>
+                </div>
+                <div>
+                    <img src="/biker-zone-resources/images/others/android.png" alt="">
+
+                    <img src="/biker-zone-resources/images/others/ios.png" alt="">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
 
 </body>
 
