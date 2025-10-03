@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/2d9025fe9a.js" crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'small-text-color': '#6C6C6C',
+                    },
+                    spacing: {
+                        '102': '480px',
+                    },
+                },
+            },
+        }
+    </script>
+
+
+    <style>
+        .sora-font {
+            font-family: "Sora", sans-serif;
+
+        }
+    </style>
+</head>
+
+<body class="sora-font ">
+
+    <header>
+
+
+
+
+        <section class="lg:container mx-auto mt-10">
+
+            <div class="flex items-center border-b-2  border-green-500 lg:border-none justify-between px-4">
+                <div class="lg:hidden">
+                    <a href=""><img class="w-14 "
+                            src="/B11-A3-Living-Lab/Assignment_03_Category_0002/c2-assets/logo-header.png" alt=""></a>
+                </div>
+                <div class="dropdown dropdown-left">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+                        <li><a href="">Product</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Contact us</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <nav class="hidden lg:flex justify-between items-center font-normal ">
+
+                <div><img src="/B11-A3-Living-Lab/Assignment_03_Category_0002/c2-assets/logo-header.png" alt=""></div>
+                <div>
+                    <ul class="flex text-xl gap-x-8">
+                        <li><a href="">Product</a></li>
+                        <li><a href="">Services</a></li>
+                        <li><a href="">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="flex items-center gap-x-3">
+
+                    <a href=""><i class="fa-solid fa-magnifying-glass text-2xl"></i></a>
+                    <a href=""><i class="fa-solid fa-cart-shopping text-2xl"></i></a>
+
+
+                    <button class="btn btn-outline   border-green-600 text-xl font-normal">Login</button>
+                    <button
+                        class="btn  bg-green-600 border-green-600 text-xl font-normal text-white px-6">Register</button>
+                </div>
+            </nav>
+
+        </section>
+
+
+
+    </header>
+
+
+
+    <main>
+
+    </main>
+
+
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
