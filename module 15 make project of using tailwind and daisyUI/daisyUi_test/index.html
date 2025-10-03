@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <h1 class="btn">Borshan</h1>
+    <button class="btn btn-lg">Large</button>
+    <button class="btn btn-secondary">Secondary</button>
+    <br>
+    <button class="btn btn-warning bg">Secondary</button>
+
+    <br>
+
+    <!-- Open the modal using ID.showModal() method -->
+    <button class="btn" onclick="my_modal_2.showModal()">open modal</button>
+    <dialog id="my_modal_2" class="modal">
+        <div class="modal-box">
+            <h3 class="text-lg font-bold">Hello!</h3>
+            <p class="py-4">Press ESC key or click outside to close</p>
+        </div>
+        <form method="dialog" class="modal-backdrop">
+            <button>close</button>
+        </form>
+    </dialog>
+
+    <br>
+    <br>
+    <div class="collapse collapse-plus bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-3" checked="checked" />
+        <div class="collapse-title font-semibold">How do I create an account?</div>
+        <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the
+            registration process.</div>
+    </div>
+    <div class="collapse collapse-plus bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title font-semibold">I forgot my password. What should I do?</div>
+        <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions
+            sent to your email.</div>
+    </div>
+    <div class="collapse collapse-plus bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-3" />
+        <div class="collapse-title font-semibold">How do I update my profile information?</div>
+        <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <div class="carousel carousel-vertical rounded-box h-96">
+        <div class="carousel-item h-full">
+            <img src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp" />
+        </div>
+        <div class="carousel-item h-full">
+            <img src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp" />
+        </div>
+        <div class="carousel-item h-full">
+            <img src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp" />
+        </div>
+        <div class="carousel-item h-full">
+            <img src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp" />
+        </div>
+        <div class="carousel-item h-full">
+            <img src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp" />
+        </div>
+        <div class="carousel-item h-full">
+            <img src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp" />
+        </div>
+        <div class="carousel-item h-full">
+            <img src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp" />
+        </div>
+    </div>
+</body>
+
+</html>
