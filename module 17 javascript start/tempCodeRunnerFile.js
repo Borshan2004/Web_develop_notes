@@ -1,0 +1,1 @@
+var num_2 = parseInt('40');
