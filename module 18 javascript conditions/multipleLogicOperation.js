@@ -20,9 +20,25 @@ const height = 76;
 //     console.log("its a very bad choice");
 // }
 
-if((Salary>18000&&height>70)||BcsCader==true){
-    console.log("good for this");
+// if((Salary>18000&&height>70)||BcsCader==true){
+//     console.log("good for this");
+// }
+// else{
+//     console.log("It is a very much bad choice");
+// }
+
+const price=4000;
+if(price>=5000){
+    const discount= price*10/100;
+    const pay = price -discount;
+    console.log(pay);
+}
+else if(price>=4000){
+    const discount= price*5/100;
+    const pay = price -discount;
+    console.log(pay);
 }
 else{
-    console.log("It is a very much bad choice");
+    console.log(price);
 }
+
