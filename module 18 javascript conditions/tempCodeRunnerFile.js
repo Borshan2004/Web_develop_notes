@@ -1,0 +1,1 @@
+(50>20)?console.log("it is very right"):console.log("it is not good");
