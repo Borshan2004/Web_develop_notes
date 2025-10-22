@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            border: 2px solid red;
+            margin: 2px;
+        }
+        section{
+            border: 2px solid green;
+            margin: 2px;
+        }
+        ol{
+            border: 2px solid purple;
+            margin: 2px;
+        }
+        li{
+            border: 2px solid blue;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+    
+    <section id="list-container">
+        <h3>List of things</h3>
+
+        <ol id="item-list">
+            <li id="item-1">Lorem, ipsum.</li>
+            <li id="item-2">Voluptate, nihil.</li>
+            <li id="item-3">Blanditiis, dignissimos!</li>
+            <li id="item-4">Rerum, excepturi?</li>
+            <li id="item-5">Asperiores, natus?</li>
+            <li id="item-6">Laboriosam, magni?</li>
+        </ol>
+    </section>
+     
+    <script>
+        document.getElementById('item-2').addEventListener('click',function(event){
+            console.log("click in the li");
+            //for stop the bubble 
+            event.stopPropagation();//without this the ol also clicked
+
+        })
+
+        document.getElementById('item-list').addEventListener('click',function(){
+            console.log("click in the ol")
+        })
+    </script>
+</body>
+</html>

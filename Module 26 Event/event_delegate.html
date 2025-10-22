@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+        <h3>Event delegate</h3>
+
+        <ol>
+            <li class="item">my asome item-1</li>
+            <li class="item">my asome item-2</li>
+            <li class="item">my asome item-3</li>
+            <li class="item">my asome item-4</li>
+            <li class="item">my asome item-5</li>
+            <li class="item">my asome item-6</li>
+        </ol>
+    </section>
+
+    <script>
+        const items = document.getElementsByClassName('item');
+        for(const item of items){
+            item.addEventListener('click',function(event){
+                event.target.parentNode.removeChild(event.target);
+            })
+        }
+    </script>
+</body>
+</html>

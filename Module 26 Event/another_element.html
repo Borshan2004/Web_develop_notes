@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id="btn_mouse">Mouse clicker</button>
+    <input id="textw" type="text">
+
+    <script>
+        // document.getElementById('btn_mouse').addEventListener('mouseenter',function(){
+        //     console.log("hello");
+        // })
+
+
+        //  document.getElementById('btn_mouse').addEventListener('mousemove',function(){
+        //     console.log("hello");
+        // })
+
+         document.getElementById('btn_mouse').addEventListener('mouseout',function(){
+            console.log("hello");
+        })
+
+        document.getElementById('textw').addEventListener('focus',function(){
+            console.log("print this for the event lisener");
+        })
+
+         document.getElementById('textw').addEventListener('blur',function(){
+            console.log("user finsih his writing now he is not able to write more ");
+        })
+
+        //   document.getElementById('textw').addEventListener('keydown',function(){
+        //     console.log("typing");
+        // })
+
+           document.getElementById('textw').addEventListener('keyup',function(event){
+            console.log("typing",event.target.value);
+        })
+    </script>
+</body>
+</html>
