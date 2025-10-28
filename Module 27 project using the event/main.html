@@ -16,7 +16,7 @@
             <div class="flex items-center ">
                 <img class="w-14" src="/Payoo-MFS-Resources/assets/Group.png" alt="">
                 <div>
-                    <h2 class="font-bold text-xl">$45000</h2>
+                    <h2 class="font-bold text-xl">$ <span id="view_amount">45000</span></h2>
                     <p>Available Balance</p>
                 </div>
 
@@ -91,12 +91,12 @@
                     <input type="password" class="input bg-slate-200 rounded-full" placeholder="Enter 11 digit account number" />
 
                     <label class="label font-bold text-sm">Amount to Add</label>
-                    <input type="password" class="input bg-slate-200 rounded-full" placeholder="Add Amount to withdraw" />
+                    <input id="amount_key" type="password" class="input bg-slate-200 rounded-full" placeholder="Add Amount to withdraw" />
 
                     <label class="label font-bold text-sm">Pin Number</label>
-                    <input type="password" class="input bg-slate-200 rounded-full" placeholder="Enter 4 digit pin number" />
+                    <input id="pass_key" type="password" class="input bg-slate-200 rounded-full" placeholder="Enter 4 digit pin number" />
 
-                    <button id="login_btn" class="btn btn-neutral bg-blue-500 mt-4 rounded-full">Add Money</button>
+                    <button id="add_money" class="btn btn-neutral bg-blue-500 mt-4 rounded-full">Add Money</button>
                 </fieldset>
 
             </form>
@@ -104,6 +104,7 @@
         </div>
     </section>
 
+    <script src="addmoney.js"></script>
 </body>
 
 </html>
