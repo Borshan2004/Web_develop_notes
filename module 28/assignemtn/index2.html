@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/2d9025fe9a.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-indigo-50 h-screen">
+
+    <div class="lg:container mx-auto">
+
+        <nav class="py-6">
+            <div class="navbar bg-base-100 shadow-sm flex justify-between p-4">
+                <div class="flex items-center gap-1">
+                    <img class="w-10" src="/logo.png" alt="">
+                    <h1 class="font-normal text-2xl">Dev<span class="font-extrabold">Board</span></h1>
+                </div>
+
+
+                <div class="flex items-center gap-8">
+                    <div>
+                        <button id="back_to_desk" class="btn btn-active btn-secondary bg-indigo-600 border-indigo-600 text-base-100">Back
+                            to Desk</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <h1 class="text-center p-6 text-3xl font-bold">Blogs</h1>
+            <div class="flex flex-col gap-6">
+                <div class="navbar bg-base-100 shadow-sm flex flex-col justify-start items-start p-4 h-40">
+                    <h1 class="p-3 text-2xl font-bold">Question-1: What are the different ways to select an element in the DOM?</h1>
+                    <div class="border-t-2 border-dashed border-indigo-100 w-full  mx-auto  "></div>
+                    
+                    <p class="p-3 text-xl">We can select elements in the DOM using getElementById, getElementsByClassName,
+                        getElementsByTagName, querySelector, and querySelectorAll methods.</p>
+                </div>
+
+                <div class="navbar bg-base-100 shadow-sm flex flex-col justify-start items-start p-4 h-40">
+                    <h1 class="p-3 text-2xl font-bold">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h1>
+                    <div class="border-t-2 border-dashed border-indigo-100 w-full  mx-auto  "></div>
+                    <p class="p-3 text-xl">The innerHTML property sets or gets the HTML content of an element, innerText sets or gets only
+                        the visible text, and textContent sets or gets all the text including hidden elements.</p>
+                </div>
+
+                <div class="navbar bg-base-100 shadow-sm flex flex-col justify-start items-start p-4 h-40">
+                    <h1 class="p-3 text-2xl font-bold">Question-3: What is event delegation in the DOM?</h1>
+                    <div class="border-t-2 border-dashed border-indigo-100 w-full  mx-auto  "></div>
+                    <p class="p-3 text-xl">Event delegation means using a single event listener on a parent element to handle events on its
+                        child elements using event bubbling.</p>
+                </div>
+
+                <div class="navbar bg-base-100 shadow-sm flex flex-col justify-start items-start p-4 h-40">
+                    <h1 class="p-3 text-2xl font-bold">Question-4: What is event bubbling in the DOM?</h1>
+                    <div class="border-t-2 border-dashed border-indigo-100 w-full  mx-auto  "></div>
+                    <p class="p-3 text-xl">Event bubbling is a process where an event starts from the target element and moves up to its
+                        parent elements in the DOM tree.</p>
+                </div>
+
+                <div class="navbar bg-base-100 shadow-sm flex flex-col justify-start items-start p-4 h-40">
+                    <h1 class="p-3 text-2xl font-bold">Question-5: How do you create, add, and remove elements using JavaScript?</h1>
+                    <div class="border-t-2 border-dashed border-indigo-100 w-full  mx-auto  "></div>
+                    <p class="p-3 text-xl">We can create elements using document.createElement(), add them using appendChild() or append(),
+                        and remove them using removeChild() or remove().</p>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+
+
+    <script src="/new.js"></script>
+
+</body>
+
+</html>
