@@ -1,0 +1,1 @@
+console.log(person.more_details.Father_information.mother?.age);
