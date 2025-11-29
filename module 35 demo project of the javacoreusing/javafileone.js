@@ -12,6 +12,18 @@ const loadVideo=()=>{
     .then((data)=>displayVideo(data.videos))
 }
 
+const loadofsinglebutton=(id)=>{
+
+    
+    const url = `
+    https://openapi.programming-hero.com/api/phero-tube/category/${id}
+    `;
+    fetch(url)
+    .then(res=>res.json())
+    .then(data=>displayVideo(data.category))
+
+}
+
 const displayCatagories=(categories)=>{
 
     const container =document.getElementById("Container_of_dynamic_button");
@@ -20,7 +32,7 @@ const displayCatagories=(categories)=>{
 
         const custom_div= document.createElement("div");
         custom_div.innerHTML=`
-        <button class="btn  ">${cata.category}</button>
+        <button class="btn" onclick="loadofsinglebutton(${cata.category_id})">${cata.category}</button>
         `;
         container.append(custom_div);
 
@@ -30,7 +42,11 @@ const displayCatagories=(categories)=>{
 
 const displayVideo=(video)=>{
 
+  
+
     const container = document.getElementById("video_section");
+
+      container.innerHTML="";
 
     video.forEach((v)=>{
 
@@ -75,4 +91,3 @@ const displayVideo=(video)=>{
 }
 
 loadCatagories();
-loadVideo();
