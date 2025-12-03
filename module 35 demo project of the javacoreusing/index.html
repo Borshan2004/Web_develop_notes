@@ -8,6 +8,11 @@
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .active{
+         background-color: #ff1f3d;
+        }
+    </style>
 </head>
 
 <body class="mx-auto w-11/12">
@@ -27,7 +32,7 @@
                     <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">Sort by view</button>
                 </div>
                 <div class="navbar-end">
-                    <button class="btn btn-active btn-error">Blog</button>
+                    <button class="btn btn-active btn-error bg-red-400">Blog</button>
                 </div>
             </div>
 
@@ -37,14 +42,17 @@
 
     <nav id="Container_of_dynamic_button" class="flex justify-center my-5 gap-3">
 
-        <button class="btn btn-active btn-error" onclick="loadVideo()">ALL</button>
+        <button id="btn_all" class="btn btn-active hover:bg-red-400" onclick="loadVideo()">ALL</button>
 
     </nav>
 
     <section id="video_section" class="grid grid-cols-4 gap-7 ">
+        <!-- col-span-full ->Make this element span across all the columns of the grid.” -->
 
-        
-
+        <div class="col-span-full flex flex-col justify-center items-center mt-32">
+            <img class="w-[200px]" src="/ph-tube-resources/Icon.png" alt="not_here">
+            <p class="text-xl font-bold text-center mt-4">Oops!! Sorry, There is no <br>content here</p>
+        </div>
     </section>
 
     <script src="/javafileone.js"></script>

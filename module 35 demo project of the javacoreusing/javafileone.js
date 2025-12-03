@@ -9,7 +9,25 @@ const loadCatagories=()=>{
 const loadVideo=()=>{
     fetch("https://openapi.programming-hero.com/api/phero-tube/videos")
     .then((response)=>(response).json())
-    .then((data)=>displayVideo(data.videos))
+    .then((data)=>{
+        
+         remove_bg_button();
+        const clickhere = document.getElementById("btn_all");
+        clickhere.classList.add("active");
+        displayVideo(data.videos)})
+}
+
+const remove_bg_button=()=>{
+    //by clicking the button we store the active for the one time and crate the active button array
+     const activebutton=document.getElementsByClassName("active");
+
+     for(btn of activebutton){
+
+        
+        btn.classList.remove("active");
+
+     }
+     
 }
 
 const loadofsinglebutton=(id)=>{
@@ -20,7 +38,14 @@ const loadofsinglebutton=(id)=>{
     `;
     fetch(url)
     .then(res=>res.json())
-    .then(data=>displayVideo(data.category))
+    .then(data=>{
+
+        remove_bg_button();
+        const clickhere = document.getElementById(`btn-${id}`);
+        clickhere.classList.add("active");
+
+        displayVideo(data.category)
+    })
 
 }
 
@@ -32,7 +57,7 @@ const displayCatagories=(categories)=>{
 
         const custom_div= document.createElement("div");
         custom_div.innerHTML=`
-        <button class="btn" onclick="loadofsinglebutton(${cata.category_id})">${cata.category}</button>
+        <button id="btn-${cata.category_id}" class="btn hover:bg-red-400" onclick="loadofsinglebutton(${cata.category_id})">${cata.category}</button>
         `;
         container.append(custom_div);
 
@@ -47,6 +72,22 @@ const displayVideo=(video)=>{
     const container = document.getElementById("video_section");
 
       container.innerHTML="";
+
+      //video.length==0 means the array is empty
+      if(video.length==0){
+
+        container.innerHTML=`
+        
+        
+        <div class="col-span-full flex flex-col justify-center items-center mt-32">
+            <img class="w-[200px]" src="/ph-tube-resources/Icon.png" alt="not_here">
+            <p class="text-xl font-bold text-center mt-4">Oops!! Sorry, There is no <br>content here</p>
+        </div>
+
+        `
+
+        return;
+      }
 
     video.forEach((v)=>{
 
