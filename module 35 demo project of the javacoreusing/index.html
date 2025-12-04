@@ -9,8 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <style>
-        .active{
-         background-color: #ff1f3d;
+        .active {
+            background-color: #ff1f3d;
         }
     </style>
 </head>
@@ -22,17 +22,29 @@
 
     <header>
 
+
         <nav>
+
 
             <div class="navbar bg-base-100 shadow-sm">
                 <div class="navbar-start">
                     <img src="/ph-tube-resources/Logo.png" alt="">
                 </div>
                 <div class="navbar-center">
-                    <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">Sort by view</button>
+                    <label class="input" id="search_work">
+                        <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none"
+                                stroke="currentColor">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.3-4.3"></path>
+                            </g>
+                        </svg>
+                        <input type="search" required placeholder="Search" />
+                    </label>
+
                 </div>
                 <div class="navbar-end">
-                    <button class="btn btn-active btn-error bg-red-400">Blog</button>
+                    <button class="btn btn-active btn-error bg-red-400">Sort by view</button>
                 </div>
             </div>
 
@@ -40,11 +52,21 @@
 
     </header>
 
+    
+
     <nav id="Container_of_dynamic_button" class="flex justify-center my-5 gap-3">
 
         <button id="btn_all" class="btn btn-active hover:bg-red-400" onclick="loadVideo()">ALL</button>
 
     </nav>
+
+    <section class="text-center py-10 hidden" id="real_load">
+        <span class="loading loading-bars loading-xs"></span>
+        <span class="loading loading-bars loading-sm"></span>
+        <span class="loading loading-bars loading-md"></span>
+        <span class="loading loading-bars loading-lg"></span>
+        <span class="loading loading-bars loading-xl"></span>
+    </section>
 
     <section id="video_section" class="grid grid-cols-4 gap-7 ">
         <!-- col-span-full ->Make this element span across all the columns of the grid.” -->
@@ -53,9 +75,28 @@
             <img class="w-[200px]" src="/ph-tube-resources/Icon.png" alt="not_here">
             <p class="text-xl font-bold text-center mt-4">Oops!! Sorry, There is no <br>content here</p>
         </div>
+
+
+
+
+
     </section>
 
+    <dialog id="my_modal_1" class="modal">
+        <div class="modal-box" id="modal_contains">
+
+            <div class="modal-action">
+                <form method="dialog">
+
+                    <button class="btn">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+
+
     <script src="/javafileone.js"></script>
+
 
 </body>
 
