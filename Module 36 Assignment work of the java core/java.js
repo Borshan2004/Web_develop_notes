@@ -34,7 +34,31 @@ const display_cards=(data_word_array)=>{
      const btnwork = document.getElementById("buttons_work");
      btnwork.innerHTML = ""; 
 
+
+     const btnwork3 = document.getElementById("button_work_3");
+     btnwork3.innerHTML = ""; 
+
+     if(data_word_array.length==0){
+
+
+         document.getElementById("button_work_2").classList.add("hidden");
+
+        btnwork3.innerHTML=`
+        
+          <div class="flex flex-col items-center justify-center pb-20 py-6">
+                <div><img src="/B11-A6-English-Janala/assets/alert-error.png" alt=""></div>
+                <p class="text-xs">এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।</p>
+                <p class="text-2xl font-semibold">নেক্সট Lesson এ যান</p>
+          </div>
+
+        `
+
+        return
+     }
+
     for(eatch_data of data_word_array){
+
+        
 
         const div = document.createElement("div");
 
