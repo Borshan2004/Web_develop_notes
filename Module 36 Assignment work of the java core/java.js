@@ -74,13 +74,14 @@ const display_cards = (data_word_array) => {
                 </div>
                 <div class="flex justify-between mx-6 mb-8">
                     
-                    <img onclick="button_click_work_2_number(${num.level_no})" class="btn bg-white px-0.25 w-12 py-0.25" src="/B11-A6-English-Janala/assets/i_icon.png" alt="">
+                    <img onclick="button_click_work_2_number(${eatch_data.id})" class="btn bg-white px-0.25 w-12 py-0.25" src="/B11-A6-English-Janala/assets/i_icon.png" alt="">
                     <img class="btn bg-white px-0.25 w-12 py-0.25" src="/B11-A6-English-Janala/assets/sound_icon.png" alt="">
                 </div>
     </div>
     `
 
         btnwork.append(div);
+         document.getElementById("button_work_2").classList.add("hidden");
 
     }
 
@@ -103,7 +104,41 @@ const button_click_work_2_number = (id) => {
 const modal_display=(data_array)=>{
 
     document.getElementById("my_modal_1").showModal();
+    const container_of_modal = document.getElementById("modal_contains");
+
+    container_of_modal.innerHTML=`
     
+                <div>
+                   <h3 class="text-3xl font-bold">${data_array.word}:(${data_array.pronunciation})</h3>
+                </div>
+                <div>
+
+                    
+                <p class="text-base font-bold">Meaning </p>
+                <p>${data_array.meaning}</p>
+
+                </div>
+                <div>
+                       <p class="text-base font-bold">Example</p>
+                       <p>${data_array.sentence}</p>
+                </div>
+
+                <div>
+                    <p class="font-bold text-sm">সমার্থক শব্দ গুলো</p>
+                    <div>
+                        <button class="btn bg-[#edf7ff]">${data_array.synonyms[0]}</button>
+                        <button class="btn bg-[#edf7ff]">${data_array.synonyms[1]}</button>
+                        <button class="btn bg-[#edf7ff]">${data_array.synonyms[2]}</button>
+                    </div>
+                </div>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn btn-primary"> Complete Learning</button>
+                    </form>
+                </div>
+
+    `
 
 }
 
