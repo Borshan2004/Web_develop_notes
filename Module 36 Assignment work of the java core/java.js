@@ -155,14 +155,33 @@ const modal_display=(data_array)=>{
 
 const click_button_then_go_another_page_freaskques=()=>{
 
-     document.getElementById("fre_ask_ques").scrollIntoView({ behavior: "smooth" });
+    document.getElementById("hiddin_all_body").classList.remove("hidden");
+    document.getElementById("head_sec").classList.add("hidden");
+    document.getElementById("loc_voc").classList.add("hidden");
+    document.getElementById("fre_ask_ques").classList.remove("hidden");
+    // document.getElementById("fre_ask_ques").scrollIntoView({ behavior: "smooth" });
 
 
 }
 
 const click_button_then_go_another_page_learnvocablu=()=>{
 
-     document.getElementById("learn_voc").scrollIntoView({ behavior: "smooth" });
+    document.getElementById("hiddin_all_body").classList.remove("hidden");
+    document.getElementById("head_sec").classList.add("hidden");
+    document.getElementById("fre_ask_ques").classList.add("hidden");
+    document.getElementById("loc_voc").classList.remove("hidden");
+    // document.getElementById("learn_voc").scrollIntoView({ behavior: "smooth" });
+
+
+}
+
+const click_button_then_go_another_page_logout=()=>{
+
+    document.getElementById("hiddin_all_body").classList.remove("hidden");
+    document.getElementById("head_sec").classList.remove("hidden");
+    document.getElementById("fre_ask_ques").classList.add("hidden");
+    document.getElementById("loc_voc").classList.add("hidden");
+    // document.getElementById("learn_voc").scrollIntoView({ behavior: "smooth" });
 
 
 }
@@ -199,8 +218,11 @@ const login_logout=()=>{
 
 
         document.getElementById("hiddin_all_body").classList.remove("hidden");
-        click_button_then_go_another_page_learnvocablu();
+        document.getElementById("head_sec").classList.add("hidden");
+        document.getElementById("fre_ask_ques").classList.add("hidden");
+        
 
+        alert("login is sucess full");
 
     }
 

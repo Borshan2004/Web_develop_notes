@@ -33,7 +33,7 @@
                     <button class="btn btn-outline btn-primary"
                         onclick="click_button_then_go_another_page_learnvocablu()"><img
                             src="/B11-A6-English-Janala/assets/fa-book-open.png" alt=""> Learn</button>
-                    <button class="btn btn-outline btn-primary"> <img
+                    <button class="btn btn-outline btn-primary" onclick="click_button_then_go_another_page_logout()"> <img
                             src="/B11-A6-English-Janala/assets/fa-arrow-right-from-bracket.png" alt="">Logout</button>
 
                 </div>
@@ -43,7 +43,7 @@
 
     <div class="mx-auto w-11/12 ">
 
-        <section class="flex items-center my-12 justify-between">
+        <section class="flex items-center my-12 justify-between " id="head_sec">
             <div class="flex flex-col gap-7">
                 <h1 class="text-5xl font-bold"><span class="text-[#00BCFF]">English</span> is Easy!!</h1>
                 <p class="h-[102px] w-[727px] text-xl font-medium text-[#18181b]">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু
@@ -51,7 +51,7 @@
                     Interactive Lessons আপনাকে নিয়ে যাবে <br> অন্য একটি Level এ</p>
                 <div class="flex flex-col gap-3">
                     <input type="text" placeholder="Enter Your Name" class="input input-md" id="input_1" />
-                    <input type="text" placeholder=".................." class="input input-md" id="input_2"/>
+                    <input type="text" placeholder=".................." class="input input-md" id="input_2" />
                 </div>
                 <div>
                     <button class="btn btn-primary" id="btn_input_1_2">Get Started</button>
@@ -64,40 +64,44 @@
                 <img src="/B11-A6-English-Janala/assets/hero-student.png" alt="">
             </div>
         </section>
-        
+
         <div class="hidden" id="hiddin_all_body">
 
 
-            <section id="learn_voc">
+            <section id="loc_voc">
+                <section id="learn_voc" class="mt-64">
 
-                <h1 class="text-3xl font-bold text-center mb-12"><span class="text-[#00BCFF]">Let's</span> Learn
-                    Vocabularies
-                </h1>
+                    <h1 class="text-3xl font-bold text-center mb-12"><span class="text-[#00BCFF]">Let's</span> Learn
+                        Vocabularies
+                    </h1>
 
-                <div id="buttons_section" class="flex items-center justify-center gap-6 mb-8">
-                </div>
+                    <div id="buttons_section" class="flex items-center justify-center gap-6 mb-8">
+                    </div>
 
 
+                </section>
+
+
+                <section class="bg-[#f8f8f8] loc_voc">
+
+                    <div class=" p-6 rounded-md grid grid-cols-4 gap-6" id="buttons_work">
+
+                    </div>
+
+                    <div class="flex flex-col items-center justify-center pb-20 py-6" id="button_work_2">
+                        <p class="text-xs">আপনি এখনো কোন Lesson Select করেন ন</p>
+                        <p class="text-2xl font-semibold">একটি Lesson Select করুন।</p>
+                    </div>
+
+
+                    <div class="flex flex-col items-center justify-center" id="button_work_3">
+
+                    </div>
+
+                </section>
             </section>
 
 
-            <section class="bg-[#f8f8f8] mb-48">
-
-                <div class=" p-6 rounded-md grid grid-cols-4 gap-6" id="buttons_work">
-
-                </div>
-
-                <div class="flex flex-col items-center justify-center pb-20 py-6" id="button_work_2">
-                    <p class="text-xs">আপনি এখনো কোন Lesson Select করেন ন</p>
-                    <p class="text-2xl font-semibold">একটি Lesson Select করুন।</p>
-                </div>
-
-
-                <div class="flex flex-col items-center justify-center" id="button_work_3">
-
-                </div>
-
-            </section>
 
             <dialog id="my_modal_1" class="modal">
                 <div class="modal-box  flex flex-col gap-6" id="modal_contains">
@@ -106,7 +110,7 @@
             </dialog>
 
 
-            <section class="flex flex-col gap-3" id="fre_ask_ques">
+            <section class="flex flex-col gap-3 mt-60" id="fre_ask_ques">
                 <h1 class="text-3xl font-bold text-center mb-12"><span class="text-[#00BCFF]">Frequently</span> Asked
                     Questions</h1>
                 <div tabindex="0" class="collapse collapse-plus bg-gray-100 border-base-300 border ">
