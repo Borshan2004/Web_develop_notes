@@ -11,7 +11,7 @@ const work_with_buttons = (data_array) => {
     for (num of data_array) {
         const div = document.createElement("div");
         div.innerHTML = `
- <button class="btn btn-outline btn-primary" onclick="buttons_click_work(${num.level_no})"><img src="/B11-A6-English-Janala/assets/fa-book-open.png"  alt="">Lesson-${num.level_no}</button>
+ <button id="${"btn_n"+num.level_no}" class="btn btn-outline btn-primary" onclick="buttons_click_work(${num.level_no})"><img src="/B11-A6-English-Janala/assets/fa-book-open.png"  alt="">Lesson-${num.level_no}</button>
     `
         buttons_section.append(div);
     }
@@ -24,7 +24,15 @@ const buttons_click_work = (id) => {
     const url = `https://openapi.programming-hero.com/api/level/${id}`
     fetch(url)
         .then(Response => Response.json())
-        .then(data => display_cards(data.data))
+        .then(data =>{
+
+            remove_bg_button();
+            const clickhere = document.getElementById("btn_n"+id);
+            clickhere.classList.add("active");
+
+            display_cards(data.data)
+
+        } )
 
 
 }
@@ -81,7 +89,8 @@ const display_cards = (data_word_array) => {
     `
 
         btnwork.append(div);
-         document.getElementById("button_work_2").classList.add("hidden");
+
+        document.getElementById("button_work_2").classList.add("hidden");
 
     }
 
@@ -140,7 +149,70 @@ const modal_display=(data_array)=>{
 
     `
 
+
+}
+
+
+const click_button_then_go_another_page_freaskques=()=>{
+
+     document.getElementById("fre_ask_ques").scrollIntoView({ behavior: "smooth" });
+
+
+}
+
+const click_button_then_go_another_page_learnvocablu=()=>{
+
+     document.getElementById("learn_voc").scrollIntoView({ behavior: "smooth" });
+
+
+}
+
+
+const remove_bg_button = () => {
+    //by clicking the button we store the active for the one time and crate the active button array
+    const activebutton = document.getElementsByClassName("active");
+
+    //when ever in the buttons class there will see a active class then it remove that 
+    for (btn of activebutton) {
+
+
+        btn.classList.remove("active");
+
+    }
+
+}
+
+const login_logout=()=>{
+
+  const input1 = document.getElementById("input_1");
+  const input2 = document.getElementById("input_2");
+  const btn_input = document.getElementById("btn_input_1_2");
+
+
+  btn_input.addEventListener("click", () => {
+    const value1 = input1.value.trim();   // read input
+    const value2 = input2.value.trim();   // read input
+
+  
+
+    if(value1=="English"&&value2==123){
+
+
+        document.getElementById("hiddin_all_body").classList.remove("hidden");
+        click_button_then_go_another_page_learnvocablu();
+
+
+    }
+
+ 
+
+    input1.value1 = "";   
+    input2.value2 = "";   
+     
+  });
+
+
 }
 
 load_of_api_1();
-
+login_logout();
