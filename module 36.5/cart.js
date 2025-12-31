@@ -1,4 +1,4 @@
-work_of_the_click_on_button=()=>{
+const work_of_the_click_on_button=()=>{
 
     const Product_name = document.getElementById("pName");
     const Product_quantity = document.getElementById("pQuantity");
@@ -13,7 +13,7 @@ work_of_the_click_on_button=()=>{
 
 }
 
-display_work=(name,quantity)=>{
+const display_work=(name,quantity)=>{
 
     const container = document.getElementById("unorder_list_id");
 
@@ -26,9 +26,27 @@ display_work=(name,quantity)=>{
 
 }
 
-add_this_on_the_local_storage=(name,quantity)=>{
 
-    const product={name: quantity};
-    localStorage.setItem("cart",JSON.stringify(product));
+const getproductfromlocalstorage=()=>{
+
+    let cart={};
+    const getcartproduct=localStorage.getItem("cart");
+
+    if(getcartproduct){
+        cart=JSON.parse(getcartproduct);
+    }
+    return cart;
+}
+
+const add_this_on_the_local_storage=(name,quantity)=>{
+
+
+    const cart = getproductfromlocalstorage();
+
+    cart[name]=quantity;
+
+    // const product={name: quantity};
+    localStorage.setItem("cart",JSON.stringify(cart));
 
 }
+
