@@ -33,6 +33,8 @@ const getproductfromlocalstorage=()=>{
     const getcartproduct=localStorage.getItem("cart");
 
     if(getcartproduct){
+ 
+        // Work of JSON.parse() -> It converts a JSON string back into a JavaScript object.
         cart=JSON.parse(getcartproduct);
     }
     return cart;
@@ -46,7 +48,22 @@ const add_this_on_the_local_storage=(name,quantity)=>{
     cart[name]=quantity;
 
     // const product={name: quantity};
+
+    // Work of JSON.stringify()  ->It converts a JavaScript object into a string
     localStorage.setItem("cart",JSON.stringify(cart));
 
 }
 
+const display_products_from_local_storage=()=>{
+
+    const products = getproductfromlocalstorage();
+    
+    for(product in products){
+
+
+        display_work(product,products[product]);
+    }
+
+}
+
+display_products_from_local_storage();
