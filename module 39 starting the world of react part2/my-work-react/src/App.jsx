@@ -1,9 +1,24 @@
 
+import { Suspense } from 'react';
 import './App.css'
 
 import Player_Score from './crickter_record';
 
 import Users from './users';
+
+import Users2 from './user2';
+
+
+
+const fetch_work = fetch('https://jsonplaceholder.typicode.com/users').then(res=>res.json());
+
+//this is function 
+const fetch_work_2= async()=>{
+
+  const res =await fetch('https://jsonplaceholder.typicode.com/users');
+  return res.json();
+
+}
 
 function App() {
 
@@ -24,13 +39,28 @@ function App() {
 
   }
   
+   ///* as now we are using function so we need to call that 
+        
+  const fetch_work_2_promise = fetch_work_2();
 
   return (
     <>
 
-       
+        
 
-      <Users ></Users>
+       <Suspense fallback={<p>Wating.....</p>}>
+
+        <Users2 pops2={fetch_work_2_promise}></Users2>
+
+       </Suspense>
+
+
+       <Suspense fallback={<p>Loading......</p>}>
+
+         <Users pops={fetch_work}></Users>
+
+       </Suspense>
+      
       
       <Player_Score></Player_Score>
       
