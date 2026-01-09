@@ -1,0 +1,15 @@
+.box{
+    margin: 10px;
+    
+    border: 2px solid cornsilk;
+}
+
+.box2{
+
+    background-color: grey;
+}
+
+.center{
+    margin-left: 30px;
+    
+}
