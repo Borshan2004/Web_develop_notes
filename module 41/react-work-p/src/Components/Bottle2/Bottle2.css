@@ -1,0 +1,9 @@
+.card{
+    border: 2px solid whitesmoke;
+    padding: 20px;
+}
+
+.size_pic{
+    height: 300px;
+    width: 300px; 
+}
