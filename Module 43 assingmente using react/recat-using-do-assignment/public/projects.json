@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "title": "Fujifilm X-T10 Mirrorless Camera",
+    "description": "A high-performance mirrorless camera with a classic aesthetic, featuring a 16.3MP APS-C sensor and rapid autofocus. Includes 18-55mm lens.",
+    "currentBidPrice": 2850,
+    "timeLeft": "2 Days left",
+    "bidsCount": 14,
+    "image": "Bid1-min.png"
+  },
+  {
+    "id": 2,
+    "title": "Gibson Les Paul Standard Electric Guitar",
+    "description": "Stunning Blue Burst finish with humbucker pickups. Known for its rich sustain and warm tone, perfect for studio sessions.",
+    "currentBidPrice": 3100,
+    "timeLeft": "2 Days left",
+    "bidsCount": 22,
+    "image": "Bid2-min.jpg"
+  },
+  {
+    "id": 3,
+    "title": "MacBook Pro Developer Setup",
+    "description": "A powerful workstation featuring high-resolution display and optimized for full-stack development. Ideal for React and C++ compilation.",
+    "currentBidPrice": 2400,
+    "timeLeft": "2 Days left",
+    "bidsCount": 8,
+    "image": "Bid3-min.png"
+  },
+  {
+    "id": 4,
+    "title": "Omega Seamaster Co-Axial Chronometer",
+    "description": "A luxury diver's watch featuring a blue dial, stainless steel bracelet, and 600m water resistance. A masterpiece of horology.",
+    "currentBidPrice": 5200,
+    "timeLeft": "2 Days left",
+    "bidsCount": 35,
+    "image": "Bid4-min.png"
+  },
+  {
+    "id": 5,
+    "title": "Mid-Century Modern Wooden Chair",
+    "description": "A handcrafted vintage dining chair with intricate wood grain details and a sturdy ladder-back design. Perfect for minimalist interiors.",
+    "currentBidPrice": 450,
+    "timeLeft": "2 Days left",
+    "bidsCount": 5,
+    "image": "Bid5-min.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Signed 'Milk and Honey' by Rupi Kaur",
+    "description": "A beautiful hardcover edition of the New York Times bestseller. Includes original illustrations and author signature.",
+    "currentBidPrice": 120,
+    "timeLeft": "2 Days left",
+    "bidsCount": 19,
+    "image": "Bid6-min.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Classic Still Life Floral Screen Print",
+    "description": "An original large-format screen print of a Dutch-style floral arrangement. Features vibrant colors on a deep black background.",
+    "currentBidPrice": 2850,
+    "timeLeft": "2 Days left",
+    "bidsCount": 11,
+    "image": "Bid7-min.jpg"
+  }
+]
