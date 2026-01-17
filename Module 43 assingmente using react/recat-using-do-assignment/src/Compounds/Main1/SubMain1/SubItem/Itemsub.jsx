@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Itemsub = ({ saveitems }) => {
+const Itemsub = ({ saveitems,RemoveEventHandaler }) => {
     return (
         <div>
             <div className="card bg-base-100 w-80 shadow-sm">
@@ -11,7 +11,7 @@ const Itemsub = ({ saveitems }) => {
                             <img className='w-48 h-20' src={saveitems.image} alt="" />
                         </div>
                         
-                        <button className="btn btn-square btn-sm">
+                        <button onClick={() => RemoveEventHandaler(saveitems.id)} className="btn btn-square btn-sm">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 className="h-6 w-6"

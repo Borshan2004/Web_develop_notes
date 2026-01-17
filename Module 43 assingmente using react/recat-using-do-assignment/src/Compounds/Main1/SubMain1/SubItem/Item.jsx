@@ -1,7 +1,7 @@
 import React from 'react';
 import { CiHeart } from "react-icons/ci";
 
-const Item = ({ items,EventHandaler }) => {
+const Item = ({ items,EventHandaler,colorchange }) => {
     return (
         <div>
             <div className="card bg-base-100 w-72 shadow-sm">
@@ -18,7 +18,7 @@ const Item = ({ items,EventHandaler }) => {
                         <p>Time Left: {items.timeLeft}</p>
 
                     <div className="card-actions cursor-pointer">
-                        <CiHeart onClick={()=>EventHandaler(items)} size={30} />
+                        <CiHeart className={colorchange.includes(items.id) ? 'text-red-600' : ''} onClick={()=>EventHandaler(items)} size={30} />
                     </div>
                 </div>
             </div>

@@ -6,12 +6,33 @@ const Main1 = () => {
 
     const [savedItems, setSavedItems] = useState([]);
 
+    const [likedItems, setLikedItems] = useState([]);
+
+
     const EventHandaler=(items)=>{
 
           setSavedItems([...savedItems,items]);
- 
+          
+          changecolor(items);
+        
+    }
 
-        console.log("Event Handaler",savedItems);
+    const RemoveEventHandaler=(id)=>{
+
+        const remaining= savedItems.filter(itemid=>itemid.id !== id);
+        setSavedItems(remaining);
+    }
+
+
+    const changecolor=(items)=>{
+
+        //here finding for the liked items
+//         If the item is already liked:
+//         remove it from likedItems
+//         Else:
+//         add it to likedItems
+        setLikedItems((pre)=>pre.includes(items.id)?pre.filter(id=>id !== items.id):[...pre,items.id]);
+
     }
 
     return (
@@ -28,8 +49,8 @@ const Main1 = () => {
 
                 <div className='flex gap-10 py-1'>
 
-                    <Sub1 EventHandaler={EventHandaler} className="w-[70%]"></Sub1>
-                    <Sub2 savedItems={savedItems} className="w-[30%]"></Sub2>
+                    <Sub1 EventHandaler={EventHandaler}  colorchange={likedItems} className="w-[70%]"></Sub1>
+                    <Sub2 RemoveEventHandaler={RemoveEventHandaler} savedItems={savedItems}  className="w-[30%]"></Sub2>
 
                 </div>
 

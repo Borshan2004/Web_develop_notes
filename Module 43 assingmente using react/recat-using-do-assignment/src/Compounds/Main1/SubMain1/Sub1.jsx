@@ -4,7 +4,7 @@ import Item from './SubItem/Item';
 
 const fetchData = fetch('projects.json').then(res => res.json());
 
-const Sub1 = ({ EventHandaler }) => {
+const Sub1 = ({ EventHandaler,colorchange}) => {
 
     const fetchDatawork = use(fetchData);
 
@@ -14,7 +14,7 @@ const Sub1 = ({ EventHandaler }) => {
 
             <div className='grid grid-cols-3 gap-6'>
                 {
-                    fetchDatawork.map(items => <Item EventHandaler={EventHandaler} key={items.id} items={items}></Item>)
+                    fetchDatawork.map(items => <Item EventHandaler={EventHandaler} key={items.id} items={items} colorchange={colorchange}></Item>)
                 }
             </div>
 

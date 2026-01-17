@@ -5,7 +5,7 @@ import Itemsub from './SubItem/Itemsub';
 
 
 
-const Sub2 = ({ savedItems }) => {
+const Sub2 = ({ savedItems,RemoveEventHandaler }) => {
 
     console.log("Saved Items in Sub2", savedItems);
 
@@ -24,7 +24,7 @@ const Sub2 = ({ savedItems }) => {
 
                     <div className='flex flex-col gap-5'>
                         {
-                            savedItems.map((saveitems, index) => <Itemsub key={index} saveitems={saveitems}></Itemsub>)
+                            savedItems.map((saveitems, index) => <Itemsub key={index} saveitems={saveitems} RemoveEventHandaler={RemoveEventHandaler} ></Itemsub>)
                         }
 
                     </div>
