@@ -5,7 +5,7 @@ const Navbar = () => {
     return (
         <div>
 
-            <div className="navbar bg-base-100 shadow-sm px-24">
+            <div className="navbar bg-[#ffffff] shadow-sm px-24">
                 <div className="navbar-start">
                     <a className="btn btn-ghost text-3xl gap-0"><span className='text-blue-800'>Auction</span> <span className='text-amber-400 font-extrabold'>Gallery</span></a>
                 </div>

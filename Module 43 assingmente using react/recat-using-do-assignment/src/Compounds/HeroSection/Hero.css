@@ -1,0 +1,15 @@
+html, body {
+  overflow-x: hidden;
+}
+
+.main-bg {
+    background-image: url('./Images/Banner-min.jpg');
+    background-size: cover;
+    background-position: right;
+    /* transform: scaleX(-1); */
+    /* height: 70vh;
+  width: 100%; */
+    width: 2480px;
+    height: 75vh;
+
+}
