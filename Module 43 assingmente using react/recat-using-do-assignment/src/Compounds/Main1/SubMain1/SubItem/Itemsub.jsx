@@ -11,7 +11,7 @@ const Itemsub = ({ saveitems,RemoveEventHandaler }) => {
                             <img className='w-48 h-20' src={saveitems.image} alt="" />
                         </div>
                         
-                        <button onClick={() => RemoveEventHandaler(saveitems.id)} className="btn btn-square btn-sm">
+                        <button onClick={() => RemoveEventHandaler(saveitems.id, saveitems)} className="btn btn-square btn-sm">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 className="h-6 w-6"

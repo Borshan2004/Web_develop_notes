@@ -5,7 +5,7 @@ import Itemsub from './SubItem/Itemsub';
 
 
 
-const Sub2 = ({ savedItems,RemoveEventHandaler }) => {
+const Sub2 = ({ savedItems,RemoveEventHandaler,calculatedTotal }) => {
 
     console.log("Saved Items in Sub2", savedItems);
 
@@ -31,7 +31,7 @@ const Sub2 = ({ savedItems,RemoveEventHandaler }) => {
 
                     <div className='flex px-7 text-xl'>
                         <p>Total bids Amount:</p>
-                        <p>$00000</p>
+                        <p>${calculatedTotal}</p>
                     </div>
                 </div>
 

@@ -10,6 +10,8 @@ const Main1 = () => {
 
     const [isDisabled, setIsDisabled] = useState([]);
 
+    const [calculatedTotal, setCalculatedTotal] = useState(0);  
+
     const EventHandaler=(items)=>{
 
           setSavedItems([...savedItems,items]);
@@ -17,10 +19,14 @@ const Main1 = () => {
           changecolor(items);
 
           setIsDisabled([...isDisabled, items.id]);
+
+          setCalculatedTotal(calculatedTotal => calculatedTotal + items.currentBidPrice);
+
+          
         
     }
 
-    const RemoveEventHandaler=(id)=>{
+    const RemoveEventHandaler=(id,saveitems)=>{
 
         const remaining= savedItems.filter(itemid=>itemid.id !== id);
         setSavedItems(remaining);
@@ -30,6 +36,8 @@ const Main1 = () => {
 
         const removeDisable= isDisabled.filter(itemid=>itemid !== id);
         setIsDisabled(removeDisable);
+
+        setCalculatedTotal(calculatedTotal => calculatedTotal - saveitems.currentBidPrice);
     }
 
 
@@ -60,7 +68,7 @@ const Main1 = () => {
                 <div className='flex gap-10 py-1'>
 
                     <Sub1 EventHandaler={EventHandaler}  colorchange={likedItems} className="w-[70%]" isDisabled={isDisabled}></Sub1>
-                    <Sub2 RemoveEventHandaler={RemoveEventHandaler} savedItems={savedItems}  className="w-[30%]"></Sub2>
+                    <Sub2 RemoveEventHandaler={RemoveEventHandaler} savedItems={savedItems}  className="w-[30%]" calculatedTotal={calculatedTotal}></Sub2>
 
                 </div>
 
