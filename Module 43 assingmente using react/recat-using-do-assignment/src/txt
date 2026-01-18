@@ -1,0 +1,44 @@
+✅ Disable / Enable Summary
+✅ Disable
+
+When you click the heart:
+
+You add the item id to the isDisabled array:
+
+setIsDisabled(prev => [...prev, items.id]);
+
+
+React re-renders the component.
+
+The heart checks:
+
+isDisabled.includes(items.id)
+
+
+If true → it adds:
+
+pointer-events-none opacity-50
+
+
+➡ So the heart becomes unclickable and looks disabled.
+
+✅ Enable
+
+When you remove the item:
+
+You remove the item id from isDisabled:
+
+setIsDisabled(prev => prev.filter(id => id !== itemId));
+
+
+React re-renders.
+
+isDisabled.includes(items.id) becomes false.
+
+Heart becomes clickable again.
+
+🔑 Key Idea
+
+✔ isDisabled is a list of disabled item IDs
+✔ If ID exists → disabled
+✔ If ID removed → enabled

@@ -8,12 +8,15 @@ const Main1 = () => {
 
     const [likedItems, setLikedItems] = useState([]);
 
+    const [isDisabled, setIsDisabled] = useState([]);
 
     const EventHandaler=(items)=>{
 
           setSavedItems([...savedItems,items]);
           
           changecolor(items);
+
+          setIsDisabled([...isDisabled, items.id]);
         
     }
 
@@ -21,6 +24,12 @@ const Main1 = () => {
 
         const remaining= savedItems.filter(itemid=>itemid.id !== id);
         setSavedItems(remaining);
+
+        const removecolor= likedItems.filter(itemid=>itemid !== id);
+        setLikedItems(removecolor);
+
+        const removeDisable= isDisabled.filter(itemid=>itemid !== id);
+        setIsDisabled(removeDisable);
     }
 
 
@@ -31,7 +40,8 @@ const Main1 = () => {
 //         remove it from likedItems
 //         Else:
 //         add it to likedItems
-        setLikedItems((pre)=>pre.includes(items.id)?pre.filter(id=>id !== items.id):[...pre,items.id]);
+        //setLikedItems((likedItems)=>likedItems.includes(items.id)?likedItems.filter(id=>id !== items.id):[...likedItems,items.id]);
+        setLikedItems([...likedItems,items.id]);
 
     }
 
@@ -49,7 +59,7 @@ const Main1 = () => {
 
                 <div className='flex gap-10 py-1'>
 
-                    <Sub1 EventHandaler={EventHandaler}  colorchange={likedItems} className="w-[70%]"></Sub1>
+                    <Sub1 EventHandaler={EventHandaler}  colorchange={likedItems} className="w-[70%]" isDisabled={isDisabled}></Sub1>
                     <Sub2 RemoveEventHandaler={RemoveEventHandaler} savedItems={savedItems}  className="w-[30%]"></Sub2>
 
                 </div>
