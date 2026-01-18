@@ -8,13 +8,14 @@ const Item = ({ items, EventHandaler, colorchange, isDisabled }) => {
 
     return (
         <div>
-            <div className="card bg-base-100 w-72 shadow-sm">
+            <div className="card bg-base-100 w-72 shadow-sm border border-blue-800">
                 <figure className="px-10 pt-10">
                     <img
                         src={items.image}
                         alt="Shoes"
                         className="rounded-xl w-56 h-40" />
                 </figure>
+
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">{items.title}</h2>
 

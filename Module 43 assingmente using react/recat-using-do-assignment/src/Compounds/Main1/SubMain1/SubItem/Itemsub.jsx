@@ -3,11 +3,11 @@ import React from 'react';
 const Itemsub = ({ saveitems,RemoveEventHandaler }) => {
     return (
         <div>
-            <div className="card bg-base-100 w-80 shadow-sm">
+            <div className="card bg-base-100 w-80 shadow-sm border border-blue-800">
                 <div className="card-body">
                     <div className="card-actions justify-end">
 
-                        <div className='pr-10'>
+                        <div className='pr-9'>
                             <img className='w-48 h-20' src={saveitems.image} alt="" />
                         </div>
                         

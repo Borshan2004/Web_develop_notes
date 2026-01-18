@@ -14,7 +14,7 @@ const Sub1 = ({ EventHandaler,colorchange,isDisabled}) => {
 
             <div className='grid grid-cols-3 gap-6'>
                 {
-                    fetchDatawork.map(items => <Item EventHandaler={EventHandaler} key={items.id} items={items} colorchange={colorchange} isDisabled={isDisabled}></Item>)
+                    fetchDatawork.map(items => <Item EventHandaler={EventHandaler} key={items.id} items={items} colorchange={colorchange} isDisabled={isDisabled} ></Item>)
                 }
             </div>
 

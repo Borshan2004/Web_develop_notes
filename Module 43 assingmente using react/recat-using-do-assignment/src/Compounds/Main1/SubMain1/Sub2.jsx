@@ -22,6 +22,11 @@ const Sub2 = ({ savedItems,RemoveEventHandaler,calculatedTotal }) => {
 
                     </div>
 
+                    <div className={`flex flex-col justify-center items-center text-center my-4 py-4 border border-blue-800 ${savedItems.length > 0 ? "hidden" : ""}`}>
+                        <p className='text-xl'>No favorites yet</p>
+                        <p>Click the heart icon on any item to add it to your favorites</p>
+                    </div>
+
                     <div className='flex flex-col gap-5'>
                         {
                             savedItems.map((saveitems, index) => <Itemsub key={index} saveitems={saveitems} RemoveEventHandaler={RemoveEventHandaler} ></Itemsub>)
