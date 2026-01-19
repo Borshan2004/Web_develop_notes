@@ -1,0 +1,132 @@
+[
+    {
+        "student_id": "S101",
+        "details": {
+            "name": "Rahim Ahmed",
+            "age": 19,
+            "department": "CSE",
+            "marks": {
+                "physics": 85,
+                "chemistry": 78,
+                "english": 88
+            }
+        }
+    },
+    {
+        "student_id": "S102",
+        "details": {
+            "name": "Karim Hasan",
+            "age": 20,
+            "department": "EEE",
+            "marks": {
+                "physics": 90,
+                "chemistry": 82,
+                "english": 75
+            }
+        }
+    },
+    {
+        "student_id": "S103",
+        "details": {
+            "name": "Nusrat Jahan",
+            "age": 18,
+            "department": "BBA",
+            "marks": {
+                "physics": 72,
+                "chemistry": 80,
+                "english": 92
+            }
+        }
+    },
+    {
+        "student_id": "S104",
+        "details": {
+            "name": "Arafat Islam",
+            "age": 21,
+            "department": "CSE",
+            "marks": {
+                "physics": 88,
+                "chemistry": 85,
+                "english": 81
+            }
+        }
+    },
+    {
+        "student_id": "S105",
+        "details": {
+            "name": "Tania Akter",
+            "age": 19,
+            "department": "Pharmacy",
+            "marks": {
+                "physics": 79,
+                "chemistry": 91,
+                "english": 86
+            }
+        }
+    },
+    {
+        "student_id": "S106",
+        "details": {
+            "name": "Sakib Hossain",
+            "age": 20,
+            "department": "ME",
+            "marks": {
+                "physics": 83,
+                "chemistry": 76,
+                "english": 80
+            }
+        }
+    },
+    {
+        "student_id": "S107",
+        "details": {
+            "name": "Farzana Rahman",
+            "age": 18,
+            "department": "CSE",
+            "marks": {
+                "physics": 91,
+                "chemistry": 89,
+                "english": 94
+            }
+        }
+    },
+    {
+        "student_id": "S108",
+        "details": {
+            "name": "Imran Khan",
+            "age": 22,
+            "department": "Civil",
+            "marks": {
+                "physics": 74,
+                "chemistry": 70,
+                "english": 68
+            }
+        }
+    },
+    {
+        "student_id": "S109",
+        "details": {
+            "name": "Mim Akter",
+            "age": 19,
+            "department": "Architecture",
+            "marks": {
+                "physics": 87,
+                "chemistry": 84,
+                "english": 90
+            }
+        }
+    },
+    {
+        "student_id": "S110",
+        "details": {
+            "name": "Nayeem Islam",
+            "age": 21,
+            "department": "Textile",
+            "marks": {
+                "physics": 69,
+                "chemistry": 73,
+                "english": 77
+            }
+        }
+    }
+]

@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "name": "Basic Plan",
+    "price": "$29.99/month",
+    "description": "Ideal for individuals who want to stay fit with basic gym access",
+    "features": [
+      "Access to gym equipment",
+      "Locker room access",
+      "Standard support",
+      "1 fitness assessment"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Premium Plan",
+    "price": "$49.99/month",
+    "description": "Perfect for individuals who want additional flexibility and premium features",
+    "features": [
+      "All Basic Plan features",
+      "Unlimited group classes",
+      "Personal trainer sessions",
+      "Diet & nutrition guidance",
+      "Priority support"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Family Plan",
+    "price": "$99.99/month",
+    "description": "Great for families who want to stay healthy together",
+    "features": [
+      "Access for up to 4 family members",
+      "All Premium Plan features",
+      "Kids fitness programs",
+      "Family locker rooms",
+      "Discounts on add-on services"
+    ]
+  }
+]
