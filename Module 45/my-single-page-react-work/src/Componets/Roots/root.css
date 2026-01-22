@@ -1,0 +1,12 @@
+.main_work{
+    display: flex;
+    gap: 20px;
+}
+
+.sub_work{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
