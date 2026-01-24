@@ -16,6 +16,8 @@ import Postdetails from './Componets/Postdetails/Postdetails.jsx';
 
 const data = fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json());
 
+
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -68,6 +70,12 @@ const router = createBrowserRouter([
 
     path :"app2",
     element: <App />,
+
+  },
+  {
+
+    path:"*",
+    element:<h1>not found 404</h1>
 
   },
 

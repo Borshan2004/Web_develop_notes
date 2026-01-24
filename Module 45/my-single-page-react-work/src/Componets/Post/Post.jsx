@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router';
+import { useNavigate } from 'react-router';
 
 const Post = ({postdata}) => {
+
+    const navigate = useNavigate();
 
     const useStyle = {
 
@@ -12,10 +15,18 @@ const Post = ({postdata}) => {
 
     }
 
+    const onclikkhandler = () => {
+        
+        // navigate(`/posts/${postdata.id}`);
+
+        navigate('/mobile')
+    }
+
     return (
         <div style={useStyle}>
             <p>{postdata.title}</p>
             <Link to={`/posts/${postdata.id}`}>Posts</Link>
+            <button onClick={onclikkhandler}>number: {postdata.id}</button>
         </div>
     );
 };
