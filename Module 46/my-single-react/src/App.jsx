@@ -1,10 +1,14 @@
-
-
 import './App.css'
+import Controlledaction from './Compounds/Controlledaction';
+import Formaction from './Compounds/Formaction/Formaction';
+import Uncontroled from './Compounds/Uncontroled/Uncontroled';
+import HookFrom from './HookForm/HookFrom';
+
+
 
 function App() {
 
-  const onclick_work=(e)=>{
+  const onclick_work = (e) => {
 
     e.preventDefault();
 
@@ -14,6 +18,8 @@ function App() {
     console.log(e.target.email.value);
 
   }
+
+
 
   return (
     <>
@@ -27,9 +33,20 @@ function App() {
           <input type="submit" value="submit" />
         </form>
 
+        <br />
+
+        {/* <Formaction></Formaction>
+        <Controlledaction></Controlledaction>
+
+        <Uncontroled></Uncontroled> */}
+      
+        <HookFrom></HookFrom>
+
       </div>
     </>
   )
+
+
 }
 
 export default App
