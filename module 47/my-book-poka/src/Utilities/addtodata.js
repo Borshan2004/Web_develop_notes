@@ -27,4 +27,4 @@ const addtodata =(id)=>{
 
 }
 
-export {addtodata};
+export {addtodata,getexitstingdata};
