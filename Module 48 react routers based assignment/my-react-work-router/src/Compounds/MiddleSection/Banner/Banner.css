@@ -1,0 +1,12 @@
+/* html, body {
+  overflow-x: hidden;
+} */
+
+.main-bg {
+    background-image: url('/public/banner-img-1.png');
+    background-size: cover;
+    background-position: center;
+    height: 75vh; 
+    border-radius: 20px;
+
+}

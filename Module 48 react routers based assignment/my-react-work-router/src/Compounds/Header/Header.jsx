@@ -4,7 +4,7 @@ const Header = () => {
     return (
         <div>
 
-            <div className="navbar bg-base-100 ">
+            <div className="navbar bg-base-100 my-3">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -29,8 +29,8 @@ const Header = () => {
 
                 </div>
 
-                <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 text-[#0f0f0fb3] text-[18px]">
+                <div className="navbar-center hidden lg:flex ">
+                    <ul className="menu menu-horizontal px-1 text-[#0f0f0fb3] text-[18px] flex gap-8">
                         <li><a>Home</a></li>
                         <li><a>My-Bookings</a></li>
                         <li><a>Blogs</a></li>
