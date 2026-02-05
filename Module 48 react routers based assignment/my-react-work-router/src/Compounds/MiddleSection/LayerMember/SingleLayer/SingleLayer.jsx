@@ -1,8 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router';
 
-const SingleLayer = ({ layer }) => {
+const SingleLayer = ({ layer, clicked }) => {
+
+    
+
     return (
-        <div>
+        <div className={`${layer.id > 4 && !clicked ? 'hidden' : ''}`}>
             <div className="card w-162 bg-base-100 card-sm shadow-inner  hover:border-2 hover:border-green-100">
                 <div className="card-body flex flex-row m-6 gap-16">
                     <div>
@@ -11,7 +15,7 @@ const SingleLayer = ({ layer }) => {
                     <div className='flex flex-col gap-3'>
                         <div className='flex'>
                             <button className='btn w-20 h-6 text-xs rounded-2xl border-green-100 bg-green-100 text-[#09982F]'>{layer.appointmentCard.badge}</button>
-                            <button className='btn w-40 h-6 text-xs rounded-2xl bg-blue-100 border-blue-100 text-[#176AE5]'>{layer.experience}</button>
+                            <button className='btn w-40 h-6 text-xs rounded-2xl bg-blue-100 border-blue-100 text-[#176AE5]'>{layer.experience} of experience</button>
                         </div>
                         <div>
                             <h1 className='textarea-xl font-bold'>{layer.name}</h1>
@@ -23,7 +27,9 @@ const SingleLayer = ({ layer }) => {
                         <div>
 
 
-                            <button className='btn w-80 h-7 rounded-2xl border-blue-100 text-[#176AE5] bg-white'>View Details</button>
+
+                            <Link to={`/eachlayer/${layer.id}`}><button  className='btn w-80 h-7 rounded-2xl border-blue-100 text-[#176AE5] bg-white'>View Details</button></Link>
+
                         </div>
 
 
