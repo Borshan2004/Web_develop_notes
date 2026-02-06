@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router";
 import Roots from "../Roots/Roots";
 import MiddleSection from "../Compounds/MiddleSection/MiddleSection";
 import EachLayer from "../Compounds/MiddleSection/LayerMember/EachLayer/EachLayer";
+import Appoinmentlist from "../Compounds/MiddleSection/LayerMember/Appoinmentlist/Appoinmentlist";
 
 export const router = createBrowserRouter([
   {
@@ -24,6 +25,15 @@ export const router = createBrowserRouter([
           return res.json();
         },
         Component: EachLayer
+      },
+      {
+
+        path: "/appointmentlist",
+        loader: async () => {
+          const res = await fetch('/lawyerinfo.json');
+          return res.json();
+        },
+        Component: Appoinmentlist
       },
 
 

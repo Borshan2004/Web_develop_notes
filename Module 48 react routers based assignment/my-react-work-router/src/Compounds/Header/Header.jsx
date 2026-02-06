@@ -34,7 +34,7 @@ const Header = () => {
                     <ul className="menu menu-horizontal px-1 text-[#0f0f0fb3] text-[18px] flex gap-8">
                         <Link to="/"><li><a>Home</a></li></Link>
 
-                        <li><a>My-Bookings</a></li>
+                        <Link to="/appointmentlist"><li><a>My-Bookings</a></li></Link>
                         <li><a>Blogs</a></li>
                         <li><a>Contact Us</a></li>
 

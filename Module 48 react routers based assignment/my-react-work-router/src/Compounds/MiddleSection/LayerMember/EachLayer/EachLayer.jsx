@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
+import { addtodata } from '../../../../addlocal/addlocal';
 
 
 const EachLayer = () => {
@@ -10,6 +11,14 @@ const EachLayer = () => {
     const data = useLoaderData();
 
     const layerdata = data.find(layer => layer.id === parseInt(id));
+
+    // const navigate = useNavigate();
+
+    const handleClick = (id) => {
+       
+        addtodata(id);
+
+    };
 
 
     return (
@@ -62,9 +71,9 @@ const EachLayer = () => {
 
 
 
-             <div className="card w-320.25 bg-base-100 card-sm shadow-inner border-2 border-green-100 mt-10">
+            <div className="card w-320.25 bg-base-100 card-sm shadow-inner border-2 border-green-100 mt-10">
                 <div className="card-body flex flex-col m-6 gap-16">
-                    
+
                     <p className='text-3xl font-bold text-center'>Book an Appointment</p>
                     <div className="w-full border-dotted border-b  border-gray-300"></div>
                     <div className='flex'>
@@ -73,7 +82,7 @@ const EachLayer = () => {
                     </div>
                     <div className="w-full border-dotted border-b  border-gray-300"></div>
                     <button className='btn w-250 h-6 text-xs rounded-2xl border-green-100 bg-green-100 text-[#09982F]'>Due to high patient volume, we are currently accepting appointments for today only. We appreciate your understanding and cooperation.</button>
-                    <a className="btn rounded-full bg-[#0EA106] text-[#FFFFFF] w-300 h-6 text-[20px] px-3.5 py-7 ">Book Appointment Now</a>                  
+                    <a onClick={()=>handleClick(layerdata.id)} className="btn rounded-full bg-[#0EA106] text-[#FFFFFF] w-300 h-6 text-[20px] px-3.5 py-7 ">Book Appointment Now</a>
                 </div>
             </div>
 
