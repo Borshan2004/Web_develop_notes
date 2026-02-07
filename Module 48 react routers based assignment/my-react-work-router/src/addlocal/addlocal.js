@@ -27,4 +27,13 @@ const addtodata =(id)=>{
 
 }
 
-export {addtodata,getexitstingdata};
+const removedata =(id)=>{
+
+    const existingdata = getexitstingdata();
+    const filteredData = existingdata.filter(item => item !== id);
+    const removeeddata = JSON.stringify(filteredData);
+    localStorage.setItem("formdata",removeeddata);
+
+}
+
+export {addtodata,getexitstingdata,removedata};

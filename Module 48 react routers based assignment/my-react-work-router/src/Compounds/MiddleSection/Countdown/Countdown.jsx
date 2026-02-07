@@ -25,13 +25,13 @@ function Number({ n }) {
 const Countdown = () => {
   return (
     <div>
-      <h1 className="text-[40px] font-bold text-center my-5">We Provide Best Law Services</h1>
+      <h1 className="text-[40px] font-bold text-center mt-24">We Provide Best Law Services</h1>
       <p className="text-center mx-64 my-5">Our platform connects you with verified, experienced Lawyers across various specialities — all at your convenience. </p>
 
 
 
 
-      <div className="flex justify-center gap-28 ">
+      <div className="flex justify-center gap-28 mb-28">
 
         <div className="bg-[#f0f0f0] w-65 h-56 rounded-2xl">
           <div className="p-12 flex flex-col justify-end items-center gap-4">

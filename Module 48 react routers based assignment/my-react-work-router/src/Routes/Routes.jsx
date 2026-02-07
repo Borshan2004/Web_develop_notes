@@ -3,6 +3,7 @@ import Roots from "../Roots/Roots";
 import MiddleSection from "../Compounds/MiddleSection/MiddleSection";
 import EachLayer from "../Compounds/MiddleSection/LayerMember/EachLayer/EachLayer";
 import Appoinmentlist from "../Compounds/MiddleSection/LayerMember/Appoinmentlist/Appoinmentlist";
+import BlogPage from "../Compounds/Blogpage/Blogpage";
 
 export const router = createBrowserRouter([
   {
@@ -34,6 +35,12 @@ export const router = createBrowserRouter([
           return res.json();
         },
         Component: Appoinmentlist
+      },
+      {
+
+        path:"/blogpage",
+        Component:BlogPage
+
       },
 
 
