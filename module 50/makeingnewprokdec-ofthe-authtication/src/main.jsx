@@ -7,6 +7,7 @@ import { RouterProvider } from "react-router/dom";
 import Root from './Components/Root/Root.jsx';
 import Home from './Components/Home/Home.jsx';
 import Login from './Components/Login/Login.jsx';
+import Resgistar from './Components/Resgistar/Resgistar.jsx';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path:'/login',
         Component: Login
+      }
+      ,{
+        path:'/register',
+        Component: Resgistar
       }
     ]
   },
