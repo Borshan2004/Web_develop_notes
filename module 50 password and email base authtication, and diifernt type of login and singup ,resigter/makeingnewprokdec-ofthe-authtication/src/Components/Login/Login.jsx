@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth';
+import { createUserWithEmailAndPassword, sendEmailVerification, updateProfile } from 'firebase/auth';
 import React, { useState } from 'react';
 import { auth } from '../../Firebase/Firebase';
 import { FaEye } from "react-icons/fa";
@@ -21,6 +21,9 @@ const Login = () => {
     const handleSubmit = (event) => {
 
         event.preventDefault();
+
+        const name= event.target.name.value;
+        const photo= event.target.photo.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
         const cheked = event.target.cheked.checked;
@@ -49,6 +52,19 @@ const Login = () => {
                         setSuccessM(true);
                         alert("email verification mail is gone")
                      })
+
+                const provider ={
+                    displayName: name,
+                    photoURL : photo
+                }
+
+                updateProfile(auth.currentUser,provider)
+                .then(()=>{
+                    console.log("updated")
+                })
+                .catch((error)=>{
+                    console.log(error)
+                })
             })
             .catch(error => {
                 console.log(error)
@@ -77,6 +93,12 @@ const Login = () => {
                         <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                             <div className="card-body">
                                 <fieldset className="fieldset">
+                                    <label className="label">Name</label>
+                                    <input name='name' type="text" className="input" placeholder="Name" />
+
+                                    <label className="label">Photo url</label>
+                                    <input name='photo' type="text" className="input" placeholder="Photo url" />
+
                                     <label className="label">Email</label>
                                     <input name='email' type="email" className="input" placeholder="Email" />
                                     <label className="label">Password</label>

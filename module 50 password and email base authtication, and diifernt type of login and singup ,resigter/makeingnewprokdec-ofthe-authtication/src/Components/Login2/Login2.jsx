@@ -1,19 +1,38 @@
-import { createUserWithEmailAndPassword, sendEmailVerification } from 'firebase/auth';
+import { sendPasswordResetEmail, signInWithEmailAndPassword } from 'firebase/auth';
 import React, { useState } from 'react';
 import { auth } from '../../Firebase/Firebase';
 import { FaEye } from "react-icons/fa";
 import { FaEyeLowVision } from "react-icons/fa6";
 import { Link } from 'react-router';
+import { useRef } from 'react';
 
-const Login = () => {
 
+const Login2 = () => {
     const [errorM, setErrorm] = useState('');
     const [successM, setSuccessM] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
 
+    const emailref = useRef();
 
 
 
+    const handleforgetpass = () => {
+
+        setErrorm('');
+
+        const email = emailref.current.value;
+        console.log(email);
+        sendPasswordResetEmail(auth,email)
+        .then(()=>{
+            alert("password forget email sent")
+        })
+        .catch(error=>{
+            setErrorm(error.message)
+        })
+
+
+
+    }
 
 
 
@@ -25,30 +44,28 @@ const Login = () => {
         const password = event.target.password.value;
         const cheked = event.target.cheked.checked;
 
+
         if (!cheked) {
             setErrorm('Please check the remember me box');
             return;
         }
 
-
-         const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
-        if (passwordRegex.test(password) === false) {
-            setErrorm('Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number.');
-            return;
-        }
-
-
         setErrorm('');
 
-        createUserWithEmailAndPassword(auth, email, password)
+        signInWithEmailAndPassword(auth, email, password)
             .then(result => {
                 console.log(result)
-                sendEmailVerification(auth.currentUser)
-                     .then(res=>{
-                        console.log(res)
-                        setSuccessM(true);
-                        alert("email verification mail is gone")
-                     })
+                if (!result.user.emailVerified) {
+                    alert("please varify email")
+                }
+                else {
+                    setSuccessM(true);
+                }
+
+
+
+
+
             })
             .catch(error => {
                 console.log(error)
@@ -56,9 +73,15 @@ const Login = () => {
             })
 
 
-       
+        // const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+        // if (passwordRegex.test(password) === false) {
+        //     setErrorm('Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number.');
+        //     return;
+        // }
+
 
     }
+
 
     return (
         <div>
@@ -68,7 +91,7 @@ const Login = () => {
                 <div className="hero bg-base-200 min-h-screen">
                     <div className="hero-content flex-col lg:flex-row-reverse">
                         <div className="text-center lg:text-left">
-                            <h1 className="text-5xl font-bold">SignUp now!</h1>
+                            <h1 className="text-5xl font-bold">Login now!</h1>
                             <p className="py-6">
                                 Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
                                 quasi. In deleniti eaque aut repudiandae et a id nisi.
@@ -78,7 +101,7 @@ const Login = () => {
                             <div className="card-body">
                                 <fieldset className="fieldset">
                                     <label className="label">Email</label>
-                                    <input name='email' type="email" className="input" placeholder="Email" />
+                                    <input name='email' type="email" ref={emailref} className="input" placeholder="Email" />
                                     <label className="label">Password</label>
                                     <div className='relative '>
                                         <input name='password' type={showPassword ? "text" : "password"} className="input" placeholder="Password" />
@@ -86,14 +109,14 @@ const Login = () => {
 
                                     </div>
 
-                                    <div><a className="link link-hover">Forgot password?</a></div>
+                                    <div onClick={handleforgetpass}><a className="link link-hover">Forgot password?</a></div>
                                     <div className='flex  justify-center items-center gap-5'>
-                                       <input type="checkbox" defaultChecked className="checkbox" name='cheked' />
-                                    <p>Remeber me</p>
+                                        <input type="checkbox" defaultChecked className="checkbox" name='cheked' />
+                                        <p>Remeber me</p>
                                     </div>
-                                    
-                                    <button className="btn btn-neutral mt-4">SignUp</button>
-                                    <p>already have a account please <Link to='/login2' className='text-blue-300'>Login here</Link> </p>
+
+                                    <button className="btn btn-neutral mt-4">Login here</button>
+                                    <p>Dont have a account <Link to='/signup' className='text-blue-300'>SignUp here</Link> </p>
                                 </fieldset>
                             </div>
                         </div>
@@ -118,4 +141,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Login2;
