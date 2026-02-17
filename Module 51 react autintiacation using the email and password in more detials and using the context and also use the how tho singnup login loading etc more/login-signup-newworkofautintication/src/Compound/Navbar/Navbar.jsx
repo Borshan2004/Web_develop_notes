@@ -39,18 +39,25 @@ const Navbar = () => {
                     <a className="btn btn-ghost text-xl">daisyUI</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
+                    <ul className="menu menu-horizontal gap-4">
+                        <li><NavLink to='/home'>Home</NavLink></li>
+                        <li><NavLink to='/registar'>Registar</NavLink></li>
+                        <li><NavLink to='/login'>Login</NavLink></li>
+                        <li><NavLink to='/dashboard'>Dashboard</NavLink></li>
 
-                        <NavLink to='/home'><li>Home</li></NavLink>
-                        <NavLink to='/registar'><li>Registar</li></NavLink>
-                        <NavLink to='/login'><li>Login</li></NavLink>
-
+                        {user && (
+                            <>
+                                <li><NavLink to='/orders'>Orders</NavLink></li>
+                                <li><NavLink to='/profile'>Profile</NavLink></li>
+                            </>
+                        )}
                     </ul>
+
                 </div>
                 <div className="navbar-end">
                     {
                         user ?
-                            <>  
+                            <>
                                 <span>{user.email}</span>
                                 <a className="btn" onClick={handlesignout}>SignOut</a>
                             </> : <Link className="btn" to='/login'>LogIn</Link>

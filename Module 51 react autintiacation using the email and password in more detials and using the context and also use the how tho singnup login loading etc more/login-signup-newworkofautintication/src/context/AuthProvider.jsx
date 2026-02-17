@@ -11,21 +11,25 @@ import { auth } from '../../firebase';
 const AuthProvider = ({ children }) => {
 
     const  [user,Setuser] = useState(null);
+    const  [loading,Setloading] = useState(true)
 
 
     const create_email_pass = (email,password)=>{
 
+        Setloading(true)
         return createUserWithEmailAndPassword(auth,email,password)
 
     }
 
     const sign_email_pass =(email,password)=>{
 
+        Setloading(true)
         return signInWithEmailAndPassword(auth,email,password)
 
     }
 
     const signout_email_pass = () =>{
+        Setloading(true)
         return signOut(auth);
     }
 
@@ -43,6 +47,7 @@ const AuthProvider = ({ children }) => {
         const unsubcribe =  onAuthStateChanged(auth,(currentUser)=>{
             console.log("current user inside useEffect",currentUser);
             Setuser(currentUser);
+            Setloading(false);
         })
 
         return () =>{
@@ -54,6 +59,7 @@ const AuthProvider = ({ children }) => {
 
     const userinfo = {
         user,
+        loading,
         create_email_pass,
         sign_email_pass,
         signout_email_pass

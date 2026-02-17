@@ -1,7 +1,7 @@
 // import { createUserWithEmailAndPassword } from 'firebase/auth';
 import React, { use } from 'react';
 import { AuthContext } from '../../context/AuthContext';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 
 // import { auth } from '../../../firebase';
 
@@ -10,12 +10,16 @@ const Registar = () => {
 
     const {create_email_pass} =use(AuthContext);
 
+    const navigate = useNavigate();
+    
+
     const handleonsubmit = (event) =>{
 
         event.preventDefault();
 
         const email = event.target.email.value;
         const password = event.target.password.value;
+
         
         // createUserWithEmailAndPassword(auth,email,password)
         // .then(res=>{
@@ -27,6 +31,7 @@ const Registar = () => {
         create_email_pass(email,password)
         .then(res=>{
             console.log(res)
+            navigate('/')
         })
         .then(error=>{
             console.log(error)
