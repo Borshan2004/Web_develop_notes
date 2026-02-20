@@ -2,6 +2,10 @@ import React from 'react';
 import { Outlet } from 'react-router';
 import Header from '../Compounds/Header/Header';
 import LatestNews from '../Compounds/LatestNews/LatestNews';
+import Navbar from '../Compounds/Navbar/Navbar';
+import LeftAside from '../Compounds/Homework/LeftAside';
+import RightAside from '../Compounds/Homework/RightAside';
+
 
 const Homelayout = () => {
     return (
@@ -11,14 +15,28 @@ const Homelayout = () => {
                 <section>
                     <LatestNews></LatestNews>
                 </section>
-            </header>
-            <main>
-                <section className='leftnav'></section>
-                <section className='main'>
-                    <Outlet></Outlet>
+
+                <section>
+                    <Navbar></Navbar>
                 </section>
-                <section className='rightnav'></section>
+
+            </header>
+
+
+            <main className='w-full max-w-7xl mx-auto grid grid-cols-12 '>
+                <aside className='leftnav col-span-3'>
+                    <LeftAside></LeftAside>
+                </aside>
+
+                <aside className='main col-span-6'>
+                    <Outlet></Outlet>
+                </aside>
+                <aside className='rightnav col-span-3'>
+                    <RightAside></RightAside>
+                </aside>
             </main>
+
+
             <footer></footer>
 
         </div>
