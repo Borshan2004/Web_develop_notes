@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router';
+import Cardview from '../Compounds/Cardview/Cardview';
 
 const Catagories = () => {
 
@@ -34,6 +35,14 @@ const Catagories = () => {
     return (
         <div>
             <p>Catagory number - {saveeachdata.length} </p>
+
+
+            {
+                saveeachdata.map(data => <Cardview key={data.id} news={data}></Cardview>)
+            }
+
+
+
         </div>
     );
 };
