@@ -24,14 +24,14 @@ const Homelayout = () => {
 
 
             <main className='w-full max-w-7xl mx-auto grid grid-cols-12'>
-                <aside className='leftnav col-span-3'>
+                <aside className='leftnav col-span-3 sticky top-0 h-fit'>
                     <LeftAside></LeftAside>
                 </aside>
 
                 <aside className='main col-span-6 mr-48'>
                     <Outlet></Outlet>
                 </aside>
-                <aside className='rightnav col-span-3'>
+                <aside className='rightnav col-span-3 sticky top-0 h-fit'>
                     <RightAside></RightAside>
                 </aside>
             </main>
