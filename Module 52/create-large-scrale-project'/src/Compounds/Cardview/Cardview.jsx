@@ -2,9 +2,11 @@ import React from 'react';
 import { FaEye, FaStar } from "react-icons/fa";
 import { CiBookmark } from "react-icons/ci";
 import { CiShare2 } from "react-icons/ci";
+import { Link } from 'react-router';
 
 const Cardview = ({ news }) => {
     const {
+        id,
         title,
         author,
         thumbnail_url,
@@ -66,9 +68,9 @@ const Cardview = ({ news }) => {
             <div className="card-body pt-3 ">
                 <p className="text-[16px] text-accent">
                     {details.length > 200 ? details.slice(0, 200) + "..." : details}
-                    <span className="text-orange-500 font-semibold cursor-pointer ml-1">
+                    <Link  to={`/news/${id}`} className="text-secondary font-semibold cursor-pointer ml-1">
                         Read More
-                    </span>
+                    </Link>
                 </p>
 
                 {/* Footer */}
