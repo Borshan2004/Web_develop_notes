@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
-import { Link, Navigate, useNavigate } from 'react-router';
+import { Link, Navigate, useLocation, useNavigate } from 'react-router';
 import { AuthContext } from '../Authmanagement/AuthContext';
 
 const Login = () => {
 
     const { EmailpassAuLogin } = useContext(AuthContext)
+
+    const location = useLocation();
 
     const navigate = useNavigate()
 
@@ -20,7 +22,7 @@ const Login = () => {
             .then(res => {
                 console.log(res);
                 alert("login is done")
-                navigate('/')
+                navigate(`${location.state ? location.state : '/'}`)
                 
 
             })
