@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router';
+import { Link, Navigate, useNavigate } from 'react-router';
 import { AuthContext } from '../Authmanagement/AuthContext';
 
 const Login = () => {
 
-    const {EmailpassAuLogin} = useContext(AuthContext)
+    const { EmailpassAuLogin } = useContext(AuthContext)
 
+    const navigate = useNavigate()
 
     const handle_click_login = (event) => {
 
@@ -19,6 +20,9 @@ const Login = () => {
             .then(res => {
                 console.log(res);
                 alert("login is done")
+                navigate('/')
+                
+
             })
             .catch(error => {
                 console.log(error.message);
@@ -31,7 +35,7 @@ const Login = () => {
         <div>
             <form onSubmit={handle_click_login} className="fieldset bg-base-100 border-base-300 rounded-box w-180 h-170 border p-32">
 
-                <h1 className='text-4xl text-center font-bold'>Login wiht your account</h1>
+                <h1 className='text-4xl text-center font-bold'>Login with your account</h1>
                 <hr className="border-t border-base-300 my-8" />
                 <label className="label text-[20px]">Email</label>
                 <input name="email" type="email" className="input w-full bg-base-300" placeholder="Email" />

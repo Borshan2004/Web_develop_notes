@@ -8,14 +8,18 @@ import { auth } from '../Firebase/Firebase';
 const AuthProvider = ({ children }) => {
 
     const [useri,setuseri] = useState(null)
+    const [loader,setLoader] = useState(true);
 
     const EmailPassAuRegistar = (email,pass)=>{
 
+        setLoader(true);
         return createUserWithEmailAndPassword(auth,email,pass);
+        
 
     }
 
     const EmailpassAuLogin = (email,pass)=>{
+        setLoader(true);
         return signInWithEmailAndPassword(auth,email,pass);
     }
 
@@ -28,6 +32,7 @@ const AuthProvider = ({ children }) => {
 
         const unsubscribe = onAuthStateChanged(auth,(currentUser)=>{
             setuseri(currentUser);
+            setLoader(false);
         });
         return ()=>{
             unsubscribe();
@@ -40,7 +45,9 @@ const AuthProvider = ({ children }) => {
         useri,
         EmailPassAuRegistar,
         EmailpassAuLogin,
-        EmailpassSignout
+        EmailpassSignout,
+        loader,
+        setLoader
     }
 
     return (
