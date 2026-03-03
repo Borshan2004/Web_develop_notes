@@ -3,9 +3,9 @@ import { Link } from 'react-router';
 import { AuthContext } from '../Authmanagement/AuthContext';
 const Registar = () => {
 
-    const {EmailPassAuRegistar} = useContext(AuthContext);
+    const { EmailPassAuRegistar, updateprofile, setuseri } = useContext(AuthContext);
 
-    const handle_click_registar = (event) =>{
+    const handle_click_registar = (event) => {
 
         event.preventDefault();
         const name = event.target.name.value;
@@ -13,15 +13,25 @@ const Registar = () => {
         const email = event.target.email.value;
         const password = event.target.password.value;
 
-        console.log(email,password);
+        console.log(email, password);
 
-        EmailPassAuRegistar(email,password)
-        .then(res=>{
-            console.log(res);
-        })
-        .catch(error=>{
-            console.log(error.message);
-        })
+        EmailPassAuRegistar(email, password)
+            .then(res => {
+                console.log(res);
+                const user = res.user;
+
+                updateprofile({ displayName: name, photoURL: photourl })
+                    .then(resp => {
+                        setuseri({ ...user, displayName: name, photoURL: photourl })
+
+                    })
+                    .catch(error => {
+                        console.log(error.message);
+                    })
+            })
+            .catch(error => {
+                console.log(error.message);
+            })
 
     }
 
@@ -47,7 +57,7 @@ const Registar = () => {
 
                 <button className="btn btn-neutral mt-4">Register</button>
                 <p className='text-center mt-3'>
-                     Have An Account ? <Link to='/auth/login' className='text-secondary'> Login</Link>
+                    Have An Account ? <Link to='/auth/login' className='text-secondary'> Login</Link>
                 </p>
             </form>
         </div>
