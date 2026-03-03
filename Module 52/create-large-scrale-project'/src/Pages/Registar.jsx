@@ -13,11 +13,11 @@ const Registar = () => {
         const email = event.target.email.value;
         const password = event.target.password.value;
 
-        console.log(email, password);
+        // console.log(email, password);
 
         EmailPassAuRegistar(email, password)
             .then(res => {
-                console.log(res);
+                // console.log(res);
                 const user = res.user;
 
                 updateprofile({ displayName: name, photoURL: photourl })

@@ -30,7 +30,7 @@ const Catagories = () => {
 
     }, [id, data])
 
-    console.log(saveeachdata);
+    // console.log(saveeachdata);
 
     return (
         <div>
