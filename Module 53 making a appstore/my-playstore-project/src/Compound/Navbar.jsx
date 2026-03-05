@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
 import Button from '../Elements/Button';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
-    const [activeItem, setActiveItem] = useState('Discover');
+
     const [searchFocused, setSearchFocused] = useState(false);
     const [searchValue, setSearchValue] = useState('');
 
-    const navItems = ['Discover', 'Games', 'Productivity', 'Education'];
+    const navItems = [
+        { label: 'Home', path: '/' },
+        { label: 'Store', path: '/store' },
+        { label: 'Library', path: '/library' },
+        { label: 'Profile', path: '/profile' },
+    ];
 
     return (
         <>
@@ -62,25 +68,25 @@ const Navbar = () => {
                 {/* Nav Items */}
                 <div className='flex items-center gap-8 ml-5'>
                     {navItems.map((item) => (
-                        <button
-                            key={item}
-                            className={` nav-item ${activeItem === item ? 'active' : ''}`}
-                            onClick={() => setActiveItem(item)}
-                            style={{
+                        <NavLink
+                            key={item.label}
+                            to={item.path}
+                            className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
+                            style={({ isActive }) => ({
                                 position: 'relative',
                                 background: 'none',
                                 border: 'none',
                                 cursor: 'pointer',
-                                // padding: '4px 0',
                                 fontSize: '20px',
-                                fontWeight: activeItem === item ? 700 : 500,
-                                color: activeItem === item ? '#ffffff' : '#9ca3af',
+                                fontWeight: isActive ? 700 : 500,
+                                color: isActive ? '#ffffff' : '#9ca3af',
                                 fontFamily: "'Nunito', sans-serif",
                                 transition: 'color 0.2s ease',
-                            }}
+                                textDecoration: 'none',
+                            })}
                         >
-                            {item}
-                        </button>
+                            {item.label}
+                        </NavLink>
                     ))}
                 </div>
 

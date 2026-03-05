@@ -9,7 +9,7 @@ const HomeLayout = () => {
             
             <header>
                 <Navbar></Navbar>
-                <p>hello</p>
+                
             </header>
 
             <main>
