@@ -1,0 +1,923 @@
+[
+  {
+    "id": "prod001",
+    "name": "Todoist",
+    "developer": "Doist Inc.",
+    "thumbnail": "https://logo.clearbit.com/todoist.com",
+    "banner": "https://picsum.photos/seed/todoist/1440/620",
+    "downloads": 50000000,
+    "category": "Productivity",
+    "rating": 4.7,
+    "isTrending": true,
+    "isPopular": true,
+    "description": "Todoist is the world's #1 task manager and to-do list app. Organize your work and personal projects, set reminders, and collaborate with your team — all in one place.",
+    "features": [
+      "Smart task scheduling with natural language input",
+      "Project collaboration and team sharing",
+      "Cross-platform sync across all devices",
+      "Karma points and productivity streaks"
+    ],
+    "reviews": [
+      { "user": "productivity_pro", "rating": 5, "comment": "Absolutely transformed how I manage my day. The natural language input is a game changer!" },
+      { "user": "teamlead_sara", "rating": 4, "comment": "Great for team collaboration. Wish it had more free features, but worth the premium." }
+    ]
+  },
+  {
+    "id": "prod002",
+    "name": "Notion",
+    "developer": "Notion Labs Inc.",
+    "thumbnail": "https://logo.clearbit.com/notion.so",
+    "banner": "https://picsum.photos/seed/notion/1440/620",
+    "downloads": 30000000,
+    "category": "Productivity",
+    "rating": 4.8,
+    "isTrending": true,
+    "isPopular": true,
+    "description": "Notion is an all-in-one workspace where you can write, plan, collaborate, and get organized. It combines notes, docs, wikis, and project management into one powerful tool.",
+    "features": [
+      "Flexible drag-and-drop page building",
+      "Databases, tables, and kanban boards",
+      "Real-time team collaboration",
+      "Thousands of community templates"
+    ],
+    "reviews": [
+      { "user": "remote_worker_jay", "rating": 5, "comment": "Replaced 5 apps with just Notion. Can't imagine working without it now." },
+      { "user": "student_mia", "rating": 5, "comment": "Perfect for organizing college notes and assignments. The templates are amazing!" }
+    ]
+  },
+  {
+    "id": "prod003",
+    "name": "Slack",
+    "developer": "Salesforce, Inc.",
+    "thumbnail": "https://logo.clearbit.com/slack.com",
+    "banner": "https://picsum.photos/seed/slack/1440/620",
+    "downloads": 100000000,
+    "category": "Productivity",
+    "rating": 4.5,
+    "isTrending": false,
+    "isPopular": true,
+    "description": "Slack is a messaging platform for teams that brings all your communication together. Channels, direct messages, file sharing, and app integrations make teamwork seamless.",
+    "features": [
+      "Organized channels by topic or team",
+      "Voice and video calls built-in",
+      "2,400+ app integrations",
+      "Powerful message search and archive"
+    ],
+    "reviews": [
+      { "user": "devops_alex", "rating": 4, "comment": "Essential for our engineering team. The GitHub and Jira integrations are flawless." },
+      { "user": "startup_founder", "rating": 5, "comment": "Keeps our remote team connected. Notifications are spot on." }
+    ]
+  },
+  {
+    "id": "prod004",
+    "name": "Trello",
+    "developer": "Atlassian",
+    "thumbnail": "https://logo.clearbit.com/trello.com",
+    "banner": "https://picsum.photos/seed/trello/1440/620",
+    "downloads": 80000000,
+    "category": "Productivity",
+    "rating": 4.6,
+    "isTrending": false,
+    "isPopular": true,
+    "description": "Trello is a visual collaboration tool that creates a shared perspective on your project. Use boards, lists, and cards to organize tasks and workflows in a fun, flexible way.",
+    "features": [
+      "Drag-and-drop kanban boards",
+      "Power-Ups for extended functionality",
+      "Automation with Butler rules",
+      "Mobile-first design"
+    ],
+    "reviews": [
+      { "user": "project_manager_lena", "rating": 5, "comment": "So intuitive! Our team adopted it in one day with zero training." },
+      { "user": "freelancer_bob", "rating": 4, "comment": "Great free tier. Helps me keep client projects on track." }
+    ]
+  },
+  {
+    "id": "prod005",
+    "name": "Evernote",
+    "developer": "Evernote Corporation",
+    "thumbnail": "https://logo.clearbit.com/evernote.com",
+    "banner": "https://picsum.photos/seed/evernote/1440/620",
+    "downloads": 225000000,
+    "category": "Productivity",
+    "rating": 4.3,
+    "isTrending": false,
+    "isPopular": true,
+    "description": "Evernote is the note-taking app that captures your ideas and keeps them organized. From quick notes to detailed research, Evernote syncs across all your devices.",
+    "features": [
+      "Web clipper for saving articles",
+      "Searchable handwriting recognition",
+      "PDF and document annotation",
+      "Shared notebooks for collaboration"
+    ],
+    "reviews": [
+      { "user": "researcher_kate", "rating": 4, "comment": "The web clipper is brilliant for research. Saves hours of copy-pasting." },
+      { "user": "writer_dan", "rating": 4, "comment": "Been using Evernote for 7 years. Reliable and constantly improving." }
+    ]
+  },
+  {
+    "id": "prod006",
+    "name": "Microsoft Teams",
+    "developer": "Microsoft Corporation",
+    "thumbnail": "https://logo.clearbit.com/microsoft.com",
+    "banner": "https://picsum.photos/seed/msteams/1440/620",
+    "downloads": 500000000,
+    "category": "Productivity",
+    "rating": 4.4,
+    "isTrending": true,
+    "isPopular": true,
+    "description": "Microsoft Teams is the hub for team collaboration in Microsoft 365. Chat, meet, call, and collaborate all in one place, integrated with Office apps you already use.",
+    "features": [
+      "Integrated with Microsoft 365 apps",
+      "HD video meetings up to 1,000 attendees",
+      "Together Mode for immersive meetings",
+      "Built-in task management with Planner"
+    ],
+    "reviews": [
+      { "user": "enterprise_user_tim", "rating": 4, "comment": "Seamless with our Office 365 workflow. The calendar integration is excellent." },
+      { "user": "teacher_anna", "rating": 5, "comment": "Perfect for our school. Assignments, meetings, and grading all in one app." }
+    ]
+  },
+  {
+    "id": "prod007",
+    "name": "Google Drive",
+    "developer": "Google LLC",
+    "thumbnail": "https://logo.clearbit.com/drive.google.com",
+    "banner": "https://picsum.photos/seed/googledrive/1440/620",
+    "downloads": 5000000000,
+    "category": "Productivity",
+    "rating": 4.7,
+    "isTrending": false,
+    "isPopular": true,
+    "description": "Google Drive is a cloud storage and collaboration platform that lets you store, share, and collaborate on files and folders from any mobile device, tablet, or computer.",
+    "features": [
+      "15 GB free cloud storage",
+      "Real-time collaboration on Docs, Sheets, Slides",
+      "Offline access to files",
+      "Advanced search with AI-powered suggestions"
+    ],
+    "reviews": [
+      { "user": "college_student_priya", "rating": 5, "comment": "Can't live without it. Sharing group project docs in real-time is so easy." },
+      { "user": "photographer_leo", "rating": 4, "comment": "Great for backing up photos. Wish the free storage was a bit more." }
+    ]
+  },
+  {
+    "id": "prod008",
+    "name": "Asana",
+    "developer": "Asana, Inc.",
+    "thumbnail": "https://logo.clearbit.com/asana.com",
+    "banner": "https://picsum.photos/seed/asana/1440/620",
+    "downloads": 20000000,
+    "category": "Productivity",
+    "rating": 4.5,
+    "isTrending": true,
+    "isPopular": false,
+    "description": "Asana is a project management tool that helps teams orchestrate their work from daily tasks to strategic initiatives. Stay on track with timelines, goals, and workload views.",
+    "features": [
+      "Timeline and Gantt chart views",
+      "Workload management for balanced teams",
+      "Goal tracking and OKR management",
+      "200+ integrations including Zapier"
+    ],
+    "reviews": [
+      { "user": "marketing_head_riya", "rating": 5, "comment": "Transformed our campaign planning. The timeline view is a lifesaver." },
+      { "user": "agency_owner_sam", "rating": 4, "comment": "Great for managing multiple client projects simultaneously." }
+    ]
+  },
+  {
+    "id": "prod009",
+    "name": "Zoom",
+    "developer": "Zoom Video Communications",
+    "thumbnail": "https://logo.clearbit.com/zoom.us",
+    "banner": "https://picsum.photos/seed/zoom/1440/620",
+    "downloads": 500000000,
+    "category": "Productivity",
+    "rating": 4.6,
+    "isTrending": false,
+    "isPopular": true,
+    "description": "Zoom is the leader in modern enterprise video communications. Easy, reliable cloud platform for video meetings, webinars, conference rooms, and phone calls.",
+    "features": [
+      "HD video and audio calls",
+      "Screen sharing and whiteboard",
+      "Breakout rooms for sub-groups",
+      "AI-generated meeting summaries"
+    ],
+    "reviews": [
+      { "user": "remote_team_lead", "rating": 5, "comment": "Rock-solid reliability. We've run thousands of client calls without issues." },
+      { "user": "event_host_julia", "rating": 4, "comment": "Webinar feature is excellent. Easy registration and recording setup." }
+    ]
+  },
+  {
+    "id": "prod010",
+    "name": "Grammarly",
+    "developer": "Grammarly, Inc.",
+    "thumbnail": "https://logo.clearbit.com/grammarly.com",
+    "banner": "https://picsum.photos/seed/grammarly/1440/620",
+    "downloads": 30000000,
+    "category": "Productivity",
+    "rating": 4.7,
+    "isTrending": true,
+    "isPopular": true,
+    "description": "Grammarly is an AI-powered writing assistant that helps you communicate clearly and effectively. From grammar checks to tone suggestions, it elevates your writing everywhere.",
+    "features": [
+      "Real-time grammar and spell check",
+      "Tone and clarity suggestions",
+      "Plagiarism detection",
+      "Works across browsers and apps"
+    ],
+    "reviews": [
+      { "user": "content_writer_ella", "rating": 5, "comment": "My writing has improved dramatically. The tone detector is incredibly accurate." },
+      { "user": "esl_user_marco", "rating": 5, "comment": "As a non-native English speaker, Grammarly is indispensable for my work emails." }
+    ]
+  },
+
+  {
+    "id": "health001",
+    "name": "MyFitnessPal",
+    "developer": "MyFitnessPal, Inc.",
+    "thumbnail": "https://logo.clearbit.com/myfitnesspal.com",
+    "banner": "https://picsum.photos/seed/myfitnesspal/1440/620",
+    "downloads": 200000000,
+    "category": "Healthcare",
+    "rating": 4.7,
+    "isTrending": true,
+    "isPopular": true,
+    "description": "MyFitnessPal is the world's most popular health and fitness app. Track your diet and exercise, log over 14 million foods, and connect with a community of millions on a journey to better health.",
+    "features": [
+      "Database of 14 million+ foods",
+      "Barcode scanner for quick food logging",
+      "Macro and micronutrient tracking",
+      "Integration with 50+ fitness apps and devices"
+    ],
+    "reviews": [
+      { "user": "fitness_freak_omar", "rating": 5, "comment": "Lost 30 lbs using this app. The food database is unmatched." },
+      { "user": "nutritionist_claire", "rating": 4, "comment": "I recommend this to all my clients. Easy to use and comprehensive." }
+    ]
+  },
+  {
+    "id": "health002",
+    "name": "Calm",
+    "developer": "Calm.com, Inc.",
+    "thumbnail": "https://logo.clearbit.com/calm.com",
+    "banner": "https://picsum.photos/seed/calm/1440/620",
+    "downloads": 100000000,
+    "category": "Healthcare",
+    "rating": 4.8,
+    "isTrending": true,
+    "isPopular": true,
+    "description": "Calm is the #1 app for sleep, meditation, and relaxation. Reduce anxiety, improve sleep quality, and build mindfulness habits with guided sessions and soothing sleep stories.",
+    "features": [
+      "Guided meditation for all levels",
+      "Sleep Stories narrated by celebrities",
+      "Breathing exercises and stretching",
+      "Daily Calm sessions and masterclasses"
+    ],
+    "reviews": [
+      { "user": "anxious_no_more", "rating": 5, "comment": "This app literally changed my life. My anxiety is so much more manageable." },
+      { "user": "insomniac_turned_sleeper", "rating": 5, "comment": "Sleep Stories work like magic. I fall asleep within 10 minutes now." }
+    ]
+  },
+  {
+    "id": "health003",
+    "name": "Headspace",
+    "developer": "Headspace Health",
+    "thumbnail": "https://logo.clearbit.com/headspace.com",
+    "banner": "https://picsum.photos/seed/headspace/1440/620",
+    "downloads": 70000000,
+    "category": "Healthcare",
+    "rating": 4.6,
+    "isTrending": false,
+    "isPopular": true,
+    "description": "Headspace is your guide to mindfulness and meditation. With hundreds of themed sessions covering anxiety, focus, sleep, and fitness, Headspace makes meditation simple and accessible.",
+    "features": [
+      "Beginner to advanced meditation courses",
+      "SOS sessions for stressful moments",
+      "Mindful workouts and yoga",
+      "Focus music and sleep sounds"
+    ],
+    "reviews": [
+      { "user": "meditator_first_timer", "rating": 5, "comment": "As a complete beginner, the guided intro pack was perfect. So calming." },
+      { "user": "busy_mom_jess", "rating": 4, "comment": "Even 5 minutes a day with Headspace makes a huge difference in my mood." }
+    ]
+  },
+  {
+    "id": "health004",
+    "name": "Strava",
+    "developer": "Strava Inc.",
+    "thumbnail": "https://logo.clearbit.com/strava.com",
+    "banner": "https://picsum.photos/seed/strava/1440/620",
+    "downloads": 100000000,
+    "category": "Healthcare",
+    "rating": 4.6,
+    "isTrending": true,
+    "isPopular": true,
+    "description": "Strava is the social network for athletes. Track your running, cycling, swimming and other sports activities with GPS, and connect with a global community of 100+ million athletes.",
+    "features": [
+      "GPS tracking for 30+ sports",
+      "Segment challenges and leaderboards",
+      "Route planning and discovery",
+      "Training load and recovery analysis"
+    ],
+    "reviews": [
+      { "user": "marathon_runner_ben", "rating": 5, "comment": "The segment feature keeps me competitive and motivated every single run." },
+      { "user": "cyclist_nina", "rating": 5, "comment": "Best cycling tracker out there. The route discovery feature found me amazing new trails." }
+    ]
+  },
+  {
+    "id": "health005",
+    "name": "Noom",
+    "developer": "Noom, Inc.",
+    "thumbnail": "https://logo.clearbit.com/noom.com",
+    "banner": "https://picsum.photos/seed/noom/1440/620",
+    "downloads": 50000000,
+    "category": "Healthcare",
+    "rating": 4.3,
+    "isTrending": false,
+    "isPopular": true,
+    "description": "Noom uses psychology-based coaching to help you build healthy habits that last. Lose weight sustainably by changing your relationship with food, not just counting calories.",
+    "features": [
+      "Psychology-based behavior change curriculum",
+      "Personal coach and group support",
+      "Color-coded food classification system",
+      "Daily lessons under 10 minutes"
+    ],
+    "reviews": [
+      { "user": "weight_loss_success", "rating": 4, "comment": "Finally a program that addresses the WHY behind eating. Lost 20 lbs sustainably." },
+      { "user": "skeptic_turned_believer", "rating": 4, "comment": "Was skeptical but the psychology approach actually works. Very insightful." }
+    ]
+  },
+  {
+    "id": "health006",
+    "name": "Samsung Health",
+    "developer": "Samsung Electronics Co., Ltd.",
+    "thumbnail": "https://logo.clearbit.com/samsung.com",
+    "banner": "https://picsum.photos/seed/samsunghealth/1440/620",
+    "downloads": 1000000000,
+    "category": "Healthcare",
+    "rating": 4.5,
+    "isTrending": false,
+    "isPopular": true,
+    "description": "Samsung Health helps you manage your health and wellness with activity tracking, sleep monitoring, stress management, and nutrition logging — all powered by your Galaxy devices.",
+    "features": [
+      "Comprehensive health metrics dashboard",
+      "Sleep, stress, and heart rate monitoring",
+      "Step and workout auto-detection",
+      "Together challenges with friends"
+    ],
+    "reviews": [
+      { "user": "galaxy_watch_user", "rating": 5, "comment": "Works seamlessly with my Galaxy Watch. The sleep analysis is incredibly detailed." },
+      { "user": "fitness_tracker_dave", "rating": 4, "comment": "Best health app for Samsung users. The daily activity rings keep me motivated." }
+    ]
+  },
+  {
+    "id": "health007",
+    "name": "BetterHelp",
+    "developer": "BetterHelp, Inc.",
+    "thumbnail": "https://logo.clearbit.com/betterhelp.com",
+    "banner": "https://picsum.photos/seed/betterhelp/1440/620",
+    "downloads": 10000000,
+    "category": "Healthcare",
+    "rating": 4.4,
+    "isTrending": true,
+    "isPopular": false,
+    "description": "BetterHelp is the world's largest online therapy platform. Connect with a licensed therapist via text, phone, or video from the comfort of your home, on your schedule.",
+    "features": [
+      "Licensed and vetted therapists",
+      "Flexible messaging, phone, and video sessions",
+      "Match with a therapist in under 48 hours",
+      "Specialized therapy for couples and teens"
+    ],
+    "reviews": [
+      { "user": "therapy_first_timer", "rating": 5, "comment": "The convenience of texting my therapist anytime is incredible." },
+      { "user": "remote_area_user", "rating": 5, "comment": "Access to quality mental health care in a rural area where therapists are scarce." }
+    ]
+  },
+  {
+    "id": "health008",
+    "name": "Nike Training Club",
+    "developer": "Nike, Inc.",
+    "thumbnail": "https://logo.clearbit.com/nike.com",
+    "banner": "https://picsum.photos/seed/niketraining/1440/620",
+    "downloads": 80000000,
+    "category": "Healthcare",
+    "rating": 4.7,
+    "isTrending": true,
+    "isPopular": true,
+    "description": "Nike Training Club gives you access to expert-designed workouts from Nike Master Trainers and athletes. Whether at home or the gym, get fit with world-class guidance.",
+    "features": [
+      "185+ free workouts across all levels",
+      "Personalized training programs",
+      "Guided video workouts with Nike trainers",
+      "Nutrition plans and wellness tips"
+    ],
+    "reviews": [
+      { "user": "home_workout_hero", "rating": 5, "comment": "The best free workout app by far. The trainers are motivating and professional." },
+      { "user": "gym_addict_tara", "rating": 5, "comment": "Love the training plans. The 4-week body weight program is brutal in the best way!" }
+    ]
+  },
+  {
+    "id": "health009",
+    "name": "Flo Period Tracker",
+    "developer": "Flo Health Inc.",
+    "thumbnail": "https://logo.clearbit.com/flo.health",
+    "banner": "https://picsum.photos/seed/flohealth/1440/620",
+    "downloads": 300000000,
+    "category": "Healthcare",
+    "rating": 4.8,
+    "isTrending": true,
+    "isPopular": true,
+    "description": "Flo is the #1 period tracker and health app for women. Track your cycle, understand your fertility, monitor pregnancy, and access a private health community.",
+    "features": [
+      "AI-powered cycle and ovulation predictions",
+      "Pregnancy and postpartum tracking",
+      "300+ health insights and articles",
+      "Anonymous community health forum"
+    ],
+    "reviews": [
+      { "user": "cycle_tracker_amy", "rating": 5, "comment": "Incredibly accurate predictions. Has never missed my cycle in 2 years of use." },
+      { "user": "ttc_journey_user", "rating": 5, "comment": "The ovulation tracking helped me conceive after 6 months of trying." }
+    ]
+  },
+  {
+    "id": "health010",
+    "name": "Sleep Cycle",
+    "developer": "Sleep Cycle AB",
+    "thumbnail": "https://logo.clearbit.com/sleepcycle.com",
+    "banner": "https://picsum.photos/seed/sleepcycle/1440/620",
+    "downloads": 40000000,
+    "category": "Healthcare",
+    "rating": 4.6,
+    "isTrending": false,
+    "isPopular": true,
+    "description": "Sleep Cycle is an intelligent alarm clock that tracks your sleep patterns and wakes you up during your lightest sleep phase so you feel refreshed and energized every morning.",
+    "features": [
+      "Smart alarm with light sleep detection",
+      "Detailed sleep quality analysis",
+      "Snore detection and recording",
+      "Sleep trend insights and long-term stats"
+    ],
+    "reviews": [
+      { "user": "morning_hater_converted", "rating": 5, "comment": "I actually wake up feeling good now! The smart alarm really works." },
+      { "user": "sleep_scientist_hobbyist", "rating": 4, "comment": "Fascinating data about my sleep cycles. Helped me identify my optimal bedtime." }
+    ]
+  },
+
+  {
+    "id": "edu001",
+    "name": "Programming Hero",
+    "developer": "Programming Hero Ltd.",
+    "thumbnail": "https://i.ibb.co/sWbb4Z5/programming-hero-thumb.jpg",
+    "banner": "https://i.ibb.co/vj5rT68/programming-hero-banner.jpg",
+    "downloads": 3500000,
+    "category": "Education",
+    "rating": 4.8,
+    "isTrending": true,
+    "isPopular": true,
+    "description": "Programming Hero is a fun and interactive way to learn programming. Whether you're a beginner or looking to brush up your skills, this app makes learning to code exciting and practical.",
+    "features": [
+      "Interactive coding lessons",
+      "Real-world projects",
+      "Gamified learning experience"
+    ],
+    "reviews": [
+      { "user": "coder_nadia", "rating": 5, "comment": "Best app for beginners! The lessons are super easy to follow and engaging." }
+    ]
+  },
+  {
+    "id": "edu002",
+    "name": "Duolingo",
+    "developer": "Duolingo Inc.",
+    "thumbnail": "https://logo.clearbit.com/duolingo.com",
+    "banner": "https://picsum.photos/seed/duolingo/1440/620",
+    "downloads": 500000000,
+    "category": "Education",
+    "rating": 4.7,
+    "isTrending": true,
+    "isPopular": true,
+    "description": "Duolingo is the world's most popular language learning app. Learn over 40 languages through quick, fun lessons designed by language experts and powered by science.",
+    "features": [
+      "40+ languages available",
+      "Gamified lessons with streaks and rewards",
+      "Personalized learning paths",
+      "Stories and podcasts for immersive learning"
+    ],
+    "reviews": [
+      { "user": "language_nerd_felix", "rating": 5, "comment": "Reached B1 French in 8 months just using Duolingo daily. Incredibly effective." },
+      { "user": "travel_lover_mei", "rating": 5, "comment": "Learning Japanese for my trip to Tokyo. The app makes it genuinely fun!" }
+    ]
+  },
+  {
+    "id": "edu003",
+    "name": "Khan Academy",
+    "developer": "Khan Academy",
+    "thumbnail": "https://logo.clearbit.com/khanacademy.org",
+    "banner": "https://picsum.photos/seed/khanacademy/1440/620",
+    "downloads": 50000000,
+    "category": "Education",
+    "rating": 4.8,
+    "isTrending": false,
+    "isPopular": true,
+    "description": "Khan Academy offers a free, world-class education for anyone, anywhere. With thousands of lessons in math, science, humanities, and more, learn at your own pace.",
+    "features": [
+      "10,000+ free video lessons",
+      "Personalized learning dashboard",
+      "SAT and AP exam preparation",
+      "Parent and teacher dashboards"
+    ],
+    "reviews": [
+      { "user": "self_taught_engineer", "rating": 5, "comment": "Went from knowing nothing about calculus to acing my college entrance exam. All free!" },
+      { "user": "homeschool_parent", "rating": 5, "comment": "The teacher dashboard makes tracking my kids' progress so easy and comprehensive." }
+    ]
+  },
+  {
+    "id": "edu004",
+    "name": "Coursera",
+    "developer": "Coursera, Inc.",
+    "thumbnail": "https://logo.clearbit.com/coursera.org",
+    "banner": "https://picsum.photos/seed/coursera/1440/620",
+    "downloads": 100000000,
+    "category": "Education",
+    "rating": 4.6,
+    "isTrending": true,
+    "isPopular": true,
+    "description": "Coursera connects you to top university and company courses. Earn certificates and degrees from schools like Stanford, Yale, and Google, all from your smartphone.",
+    "features": [
+      "Certificates from top universities",
+      "Hands-on projects and peer reviews",
+      "Full degree programs online",
+      "Offline viewing for on-the-go learning"
+    ],
+    "reviews": [
+      { "user": "career_changer_priya", "rating": 5, "comment": "The Google Data Analytics certificate helped me land a new job in 3 months!" },
+      { "user": "lifelong_learner_hank", "rating": 4, "comment": "Amazing course quality. Some are pricey but the financial aid option is generous." }
+    ]
+  },
+  {
+    "id": "edu005",
+    "name": "Udemy",
+    "developer": "Udemy, Inc.",
+    "thumbnail": "https://logo.clearbit.com/udemy.com",
+    "banner": "https://picsum.photos/seed/udemy/1440/620",
+    "downloads": 70000000,
+    "category": "Education",
+    "rating": 4.5,
+    "isTrending": false,
+    "isPopular": true,
+    "description": "Udemy is the world's largest online learning platform with 210,000+ courses taught by expert instructors. From coding to photography, find a course for every skill and interest.",
+    "features": [
+      "210,000+ courses across 75 languages",
+      "Lifetime access to purchased courses",
+      "Certificate of completion",
+      "30-day money-back guarantee"
+    ],
+    "reviews": [
+      { "user": "web_dev_student", "rating": 5, "comment": "The React and Node.js courses are incredibly detailed. Best investment I've made." },
+      { "user": "photography_enthusiast", "rating": 4, "comment": "Found a great Adobe Lightroom course. Quality varies by instructor but mostly excellent." }
+    ]
+  },
+  {
+    "id": "edu006",
+    "name": "Brilliant",
+    "developer": "Brilliant.org",
+    "thumbnail": "https://logo.clearbit.com/brilliant.org",
+    "banner": "https://picsum.photos/seed/brilliant/1440/620",
+    "downloads": 10000000,
+    "category": "Education",
+    "rating": 4.8,
+    "isTrending": true,
+    "isPopular": false,
+    "description": "Brilliant teaches math, science, and computer science through interactive problem-solving. Build real understanding through guided discovery rather than passive video watching.",
+    "features": [
+      "Interactive problem-solving approach",
+      "Courses in math, physics, CS, and data science",
+      "Visual and intuitive explanations",
+      "Bite-sized daily challenges"
+    ],
+    "reviews": [
+      { "user": "math_hater_turned_lover", "rating": 5, "comment": "Finally understand calculus after years of struggling. The interactive approach is genius." },
+      { "user": "physics_enthusiast_raj", "rating": 5, "comment": "The quantum mechanics course is mind-blowing. Nothing like anything I've seen before." }
+    ]
+  },
+  {
+    "id": "edu007",
+    "name": "Photomath",
+    "developer": "Photomath, Inc.",
+    "thumbnail": "https://logo.clearbit.com/photomath.com",
+    "banner": "https://picsum.photos/seed/photomath/1440/620",
+    "downloads": 300000000,
+    "category": "Education",
+    "rating": 4.6,
+    "isTrending": false,
+    "isPopular": true,
+    "description": "Photomath is the #1 math learning app. Scan a math problem with your camera and instantly get step-by-step explanations so you learn and understand — not just get the answer.",
+    "features": [
+      "Camera scanning of handwritten and printed problems",
+      "Step-by-step solution explanations",
+      "Multiple solving methods shown",
+      "Covers arithmetic through calculus"
+    ],
+    "reviews": [
+      { "user": "high_school_student_ava", "rating": 5, "comment": "My grades went from C to A in math. The step-by-step explanations actually teach you." },
+      { "user": "parent_helper_mike", "rating": 4, "comment": "Great for helping my kids with homework even when I've forgotten the method." }
+    ]
+  },
+  {
+    "id": "edu008",
+    "name": "Quizlet",
+    "developer": "Quizlet Inc.",
+    "thumbnail": "https://logo.clearbit.com/quizlet.com",
+    "banner": "https://picsum.photos/seed/quizlet/1440/620",
+    "downloads": 300000000,
+    "category": "Education",
+    "rating": 4.6,
+    "isTrending": false,
+    "isPopular": true,
+    "description": "Quizlet is the most popular student learning tool in the world. Create and study flashcard sets, play learning games, and use AI-powered features to ace any exam.",
+    "features": [
+      "500 million+ student-created study sets",
+      "Multiple study modes including Learn and Test",
+      "AI-generated practice questions",
+      "Collaborative class study tools"
+    ],
+    "reviews": [
+      { "user": "med_student_zara", "rating": 5, "comment": "Got through anatomy with flying colors using Quizlet. The spaced repetition is effective." },
+      { "user": "language_student_tom", "rating": 5, "comment": "The best vocabulary memorization tool. Found pre-made sets for all my textbooks." }
+    ]
+  },
+  {
+    "id": "edu009",
+    "name": "Socratic by Google",
+    "developer": "Google LLC",
+    "thumbnail": "https://logo.clearbit.com/google.com",
+    "banner": "https://picsum.photos/seed/socratic/1440/620",
+    "downloads": 20000000,
+    "category": "Education",
+    "rating": 4.4,
+    "isTrending": false,
+    "isPopular": false,
+    "description": "Socratic by Google uses AI to help you understand your school subjects. Take a photo of your question and get visual explanations, resources, and step-by-step breakdowns.",
+    "features": [
+      "AI-powered question recognition",
+      "Visual step-by-step explanations",
+      "Covers math, science, literature, and more",
+      "Curated resources from top education sites"
+    ],
+    "reviews": [
+      { "user": "college_freshman_lily", "rating": 4, "comment": "Snapped a photo of a chemistry equation and got a perfect breakdown. Magic!" },
+      { "user": "curious_student_max", "rating": 4, "comment": "Great for getting unstuck on homework problems. The visual approach really helps." }
+    ]
+  },
+  {
+    "id": "edu010",
+    "name": "Lumosity",
+    "developer": "Lumos Labs, Inc.",
+    "thumbnail": "https://logo.clearbit.com/lumosity.com",
+    "banner": "https://picsum.photos/seed/lumosity/1440/620",
+    "downloads": 100000000,
+    "category": "Education",
+    "rating": 4.4,
+    "isTrending": false,
+    "isPopular": true,
+    "description": "Lumosity is a brain training app designed by neuroscientists. Daily games and challenges target core cognitive skills like memory, attention, problem-solving, and mental flexibility.",
+    "features": [
+      "40+ brain training games",
+      "Personalized training program",
+      "Performance tracking and brain stats",
+      "Challenges for the whole family"
+    ],
+    "reviews": [
+      { "user": "senior_citizen_vera", "rating": 5, "comment": "At 72, I do Lumosity every morning. My doctor says my memory tests have improved significantly." },
+      { "user": "competitive_brain_gamer", "rating": 4, "comment": "Fun and challenging. Love seeing my progress on the percentile charts." }
+    ]
+  },
+
+  {
+    "id": "game001",
+    "name": "Candy Crush Saga",
+    "developer": "King",
+    "thumbnail": "https://logo.clearbit.com/king.com",
+    "banner": "https://picsum.photos/seed/candycrush/1440/620",
+    "downloads": 3000000000,
+    "category": "Game",
+    "rating": 4.4,
+    "isTrending": false,
+    "isPopular": true,
+    "description": "Candy Crush Saga is the iconic match-3 puzzle game loved by millions worldwide. Swap and match colorful candies to progress through thousands of deliciously fun levels.",
+    "features": [
+      "15,000+ unique levels",
+      "New levels added every week",
+      "Special boosters and power-ups",
+      "Connect with friends and send lives"
+    ],
+    "reviews": [
+      { "user": "casual_gamer_sue", "rating": 4, "comment": "Been playing for 8 years! Still addictive. Great way to unwind on my commute." },
+      { "user": "puzzle_master_rick", "rating": 4, "comment": "Some levels are brutally hard but so satisfying when you crack them." }
+    ]
+  },
+  {
+    "id": "game002",
+    "name": "PUBG Mobile",
+    "developer": "Krafton, Inc.",
+    "thumbnail": "https://logo.clearbit.com/pubg.com",
+    "banner": "https://picsum.photos/seed/pubgmobile/1440/620",
+    "downloads": 1000000000,
+    "category": "Game",
+    "rating": 4.2,
+    "isTrending": true,
+    "isPopular": true,
+    "description": "PUBG Mobile is the award-winning mobile battle royale game. Drop onto a massive island, scavenge for weapons, and outlast 99 other players to achieve the ultimate Chicken Dinner.",
+    "features": [
+      "100-player battle royale matches",
+      "Realistic HD graphics and 3D sound",
+      "Multiple maps and seasonal modes",
+      "Team play with voice chat"
+    ],
+    "reviews": [
+      { "user": "battle_royale_king", "rating": 5, "comment": "Unmatched mobile gaming experience. The graphics and controls are console-level quality." },
+      { "user": "squad_player_jamal", "rating": 4, "comment": "Teaming up with friends is incredibly fun. The new maps keep the game fresh." }
+    ]
+  },
+  {
+    "id": "game003",
+    "name": "Among Us",
+    "developer": "InnerSloth LLC",
+    "thumbnail": "https://logo.clearbit.com/innersloth.com",
+    "banner": "https://picsum.photos/seed/amongus/1440/620",
+    "downloads": 500000000,
+    "category": "Game",
+    "rating": 4.3,
+    "isTrending": false,
+    "isPopular": true,
+    "description": "Among Us is a multiplayer social deduction game where crewmates work together to complete tasks while uncovering Impostors sabotaging the mission. Trust no one!",
+    "features": [
+      "4-15 player online multiplayer",
+      "Multiple roles: Crewmate, Impostor, Shapeshifter",
+      "Customizable characters with cosmetics",
+      "Cross-platform play across all devices"
+    ],
+    "reviews": [
+      { "user": "party_game_queen_val", "rating": 5, "comment": "Perfect party game! Family game nights are so much more fun now. Even grandma plays!" },
+      { "user": "streamer_joey", "rating": 4, "comment": "Incredible for content creation. The social deduction creates hilarious moments every time." }
+    ]
+  },
+  {
+    "id": "game004",
+    "name": "Clash of Clans",
+    "developer": "Supercell",
+    "thumbnail": "https://logo.clearbit.com/supercell.com",
+    "banner": "https://picsum.photos/seed/clashofclans/1440/620",
+    "downloads": 500000000,
+    "category": "Game",
+    "rating": 4.5,
+    "isTrending": false,
+    "isPopular": true,
+    "description": "Clash of Clans is a strategy game where you build your village, raise a clan, and compete in epic clan wars. Train troops and attack enemy villages for resources and glory.",
+    "features": [
+      "Build and upgrade your village",
+      "Join Clans and compete in Clan Wars",
+      "Dozens of unique troops and spells",
+      "Regular seasonal events and updates"
+    ],
+    "reviews": [
+      { "user": "veteran_clasher_10yrs", "rating": 5, "comment": "Been playing since 2012 and it only keeps getting better. The clan community is amazing." },
+      { "user": "strategy_gamer_hassan", "rating": 4, "comment": "Deep strategy with the attack planning. The war leagues are incredibly competitive." }
+    ]
+  },
+  {
+    "id": "game005",
+    "name": "Minecraft",
+    "developer": "Mojang Studios",
+    "thumbnail": "https://logo.clearbit.com/minecraft.net",
+    "banner": "https://picsum.photos/seed/minecraft/1440/620",
+    "downloads": 238000000,
+    "category": "Game",
+    "rating": 4.7,
+    "isTrending": true,
+    "isPopular": true,
+    "description": "Minecraft is the best-selling game of all time. Explore infinite worlds, build amazing structures, craft items, and survive against mobs in this iconic sandbox survival game.",
+    "features": [
+      "Infinite procedurally generated worlds",
+      "Creative and Survival game modes",
+      "Cross-platform multiplayer",
+      "Marketplace with community-created content"
+    ],
+    "reviews": [
+      { "user": "builder_extraordinaire", "rating": 5, "comment": "Built a 1:1 scale replica of my school. Creativity has no limits in Minecraft." },
+      { "user": "dad_of_two_gamers", "rating": 5, "comment": "My kids and I play together every weekend. Educational and endlessly fun." }
+    ]
+  },
+  {
+    "id": "game006",
+    "name": "Pokémon GO",
+    "developer": "Niantic, Inc.",
+    "thumbnail": "https://logo.clearbit.com/nianticlabs.com",
+    "banner": "https://picsum.photos/seed/pokemongo/1440/620",
+    "downloads": 1000000000,
+    "category": "Game",
+    "rating": 4.1,
+    "isTrending": false,
+    "isPopular": true,
+    "description": "Pokémon GO brings the world of Pokémon to real life. Explore your neighborhood to discover and catch Pokémon, battle in raids, and trade with friends using augmented reality.",
+    "features": [
+      "AR-powered Pokémon encounters",
+      "Raid battles with real-world players",
+      "Trading and battling with friends",
+      "Seasonal events and Community Days"
+    ],
+    "reviews": [
+      { "user": "outdoor_gamer_gwen", "rating": 5, "comment": "Got me exercising without even realizing it. I walk 10km a day chasing Pokémon!" },
+      { "user": "original_pokemon_fan", "rating": 4, "comment": "A dream come true for any Pokémon fan. Community Days bring players together in real life." }
+    ]
+  },
+  {
+    "id": "game007",
+    "name": "Roblox",
+    "developer": "Roblox Corporation",
+    "thumbnail": "https://logo.clearbit.com/roblox.com",
+    "banner": "https://picsum.photos/seed/roblox/1440/620",
+    "downloads": 600000000,
+    "category": "Game",
+    "rating": 4.2,
+    "isTrending": true,
+    "isPopular": true,
+    "description": "Roblox is an immersive platform where millions of people gather to imagine, create, and share experiences in user-generated 3D worlds. Play any genre imaginable — made by the community.",
+    "features": [
+      "50+ million user-created games",
+      "Avatar customization with millions of items",
+      "Create and publish your own games",
+      "Cross-platform on all devices"
+    ],
+    "reviews": [
+      { "user": "teen_developer_cody", "rating": 5, "comment": "I created my own game at 14 and make money from it. This platform changed my life." },
+      { "user": "parent_of_roblox_fans", "rating": 4, "comment": "My kids have so much fun. The parental controls give me peace of mind." }
+    ]
+  },
+  {
+    "id": "game008",
+    "name": "Genshin Impact",
+    "developer": "HoYoverse",
+    "thumbnail": "https://logo.clearbit.com/hoyoverse.com",
+    "banner": "https://picsum.photos/seed/genshin/1440/620",
+    "downloads": 100000000,
+    "category": "Game",
+    "rating": 4.5,
+    "isTrending": true,
+    "isPopular": true,
+    "description": "Genshin Impact is a free-to-play open-world action RPG with a massive, gorgeous world to explore. Assemble a team of unique characters and unleash elemental abilities in thrilling combat.",
+    "features": [
+      "Massive open world with real-time exploration",
+      "50+ unique playable characters",
+      "Elemental combo combat system",
+      "Regular story updates every 6 weeks"
+    ],
+    "reviews": [
+      { "user": "jrpg_lover_akiko", "rating": 5, "comment": "Console-quality RPG on mobile for free. The world-building and story are phenomenal." },
+      { "user": "casual_to_hardcore", "rating": 4, "comment": "Started casually but got hooked by the deep lore and beautiful art design." }
+    ]
+  },
+  {
+    "id": "game009",
+    "name": "Subway Surfers",
+    "developer": "Sybo Games",
+    "thumbnail": "https://logo.clearbit.com/sybo.com",
+    "banner": "https://picsum.photos/seed/subwaysurfers/1440/620",
+    "downloads": 4000000000,
+    "category": "Game",
+    "rating": 4.4,
+    "isTrending": false,
+    "isPopular": true,
+    "description": "Subway Surfers is an endless runner game where you dash through subway tracks, dodge oncoming trains, and collect coins. One of the most downloaded mobile games of all time.",
+    "features": [
+      "Endless running with increasing difficulty",
+      "World Tour with new locations each update",
+      "Collectible characters and hoverboards",
+      "Weekly hunts and high score challenges"
+    ],
+    "reviews": [
+      { "user": "high_score_chaser_pete", "rating": 4, "comment": "10 years and still unbeatable for a quick gaming fix. Always something new each week." },
+      { "user": "commuter_gamer_jan", "rating": 5, "comment": "Perfect for short sessions on the bus. Easy to learn, impossible to put down." }
+    ]
+  },
+  {
+    "id": "game010",
+    "name": "Clash Royale",
+    "developer": "Supercell",
+    "thumbnail": "https://logo.clearbit.com/clashroyale.com",
+    "banner": "https://picsum.photos/seed/clashroyale/1440/620",
+    "downloads": 500000000,
+    "category": "Game",
+    "rating": 4.3,
+    "isTrending": true,
+    "isPopular": true,
+    "description": "Clash Royale is a real-time strategy game where you collect and upgrade cards, build decks, and battle players around the world to knock down their King's Tower.",
+    "features": [
+      "Real-time 1v1 and 2v2 battles",
+      "100+ collectible cards to unlock",
+      "Clan system with donations and war",
+      "Seasonal tournaments and challenges"
+    ],
+    "reviews": [
+      { "user": "strategy_king_leo", "rating": 5, "comment": "The most skill-based mobile game I've ever played. Incredibly deep deck-building meta." },
+      { "user": "competitive_gamer_zoe", "rating": 4, "comment": "Reached top ladder with a carefully crafted deck. The ranked system is fair and rewarding." }
+    ]
+  }
+]

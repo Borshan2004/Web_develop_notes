@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@plugin "daisyui" {
+  themes: dark --default;
+}
+
+@plugin "daisyui/theme" {
+  name: "dark";
+  default: true;
+
+  /* Backgrounds */
+  --color-base-100: #0a0a0f;      /* main page background */
+  --color-base-200: #12121a;      /* card surface */
+  --color-base-300: #1a1a26;      /* elevated / hover layer */
+
+  /* Brand */
+  --color-primary: #7c5cfc;       /* violet — buttons, links */
+  --color-primary-content: #f0eeff;
+
+  --color-secondary: #f7516b;     /* coral — trending, badges */
+  --color-secondary-content: #ffffff;
+
+  --color-accent: #1aefb8;        /* mint — popular, success */
+  --color-accent-content: #0a0a0f;
+
+  /* Semantic */
+  --color-neutral: #1a1a26;
+  --color-neutral-content: #6e6e8a;
+
+  --color-info: #60a5fa;
+  --color-success: #1aefb8;
+  --color-warning: #fbbf24;
+  --color-error: #f7516b;
+
+  /* Text */
+  --color-base-content: #f0eeff;  /* main text */
+
+  /* Misc */
+  --rounded-box: 1.25rem;
+  --rounded-btn: 999px;
+  --border-color: rgba(255, 255, 255, 0.07);
+}
