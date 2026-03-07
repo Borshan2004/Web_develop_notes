@@ -1,22 +1,21 @@
-
 import React, { useEffect, useState, useRef } from 'react';
 import { useLoaderData } from 'react-router';
 import { ChevronLeft, ChevronRight } from 'lucide-react'; // Icons for buttons
-import TrendingCard from './TrendingCard';
 import './Trendingdatastore.css'
+import Newcatagorycard2 from './Newcatagorycard2';
 
-const Trendingdatastore = () => {
-    const [dataT, setDataT] = useState([]);
-    const data = useLoaderData();
+const Newcatagory2 = () => {
+    const [dataT1, setDataT1] = useState([]);
+    const data1 = useLoaderData();
 
 
     // 1. Create a ref for the scrollable container
     const scrollContainerRef = useRef(null);
 
     useEffect(() => {
-        const trendingdata = data.filter(eachdata => eachdata.isTrending === true);
+        const trendingdata = data1.filter(eachdata => eachdata.category === "Healthcare");
         // Fixed: Directly set the filtered array
-        setDataT(trendingdata);
+        setDataT1(trendingdata);
 
         // Create an interval to scroll right every 5000ms
         const autoScroll = setInterval(() => {
@@ -25,7 +24,7 @@ const Trendingdatastore = () => {
 
         // Cleanup: Clear the interval if the user leaves the page
         return () => clearInterval(autoScroll);
-    }, [data]);
+    }, [data1]);
 
     // 2. Function to handle scrolling
     const scroll = (direction) => {
@@ -53,7 +52,7 @@ const Trendingdatastore = () => {
         <div className="relative group">
             {/* 3. Navigation Buttons */}
             <div className="flex justify-between items-center mb-4">
-                <h2 className="text-xl font-bold">Trending Apps</h2>
+                
                 <div className="flex gap-2">
                     <button
                         onClick={() => scroll('left')}
@@ -75,9 +74,9 @@ const Trendingdatastore = () => {
                 ref={scrollContainerRef}
                 className="flex gap-6 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory scroll-smooth"
             >
-                {dataT.map(datashow => (
+                {dataT1.map(datashow => (
                     <div key={datashow.id} className="flex-shrink-0 snap-start">
-                        <TrendingCard data={datashow} />
+                        <Newcatagorycard2 data={datashow} />
                     </div>
                 ))}
             </div>
@@ -85,4 +84,6 @@ const Trendingdatastore = () => {
     );
 };
 
-export default Trendingdatastore;
+export default Newcatagory2;
+
+

@@ -1,11 +1,10 @@
-
 import React, { useEffect, useState, useRef } from 'react';
 import { useLoaderData } from 'react-router';
 import { ChevronLeft, ChevronRight } from 'lucide-react'; // Icons for buttons
-import TrendingCard from './TrendingCard';
 import './Trendingdatastore.css'
+import Newcatagorycard from './Newcatagorycard';
 
-const Trendingdatastore = () => {
+const Newcatagory = () => {
     const [dataT, setDataT] = useState([]);
     const data = useLoaderData();
 
@@ -14,7 +13,7 @@ const Trendingdatastore = () => {
     const scrollContainerRef = useRef(null);
 
     useEffect(() => {
-        const trendingdata = data.filter(eachdata => eachdata.isTrending === true);
+        const trendingdata = data.filter(eachdata => eachdata.category === "Productivity");
         // Fixed: Directly set the filtered array
         setDataT(trendingdata);
 
@@ -53,7 +52,7 @@ const Trendingdatastore = () => {
         <div className="relative group">
             {/* 3. Navigation Buttons */}
             <div className="flex justify-between items-center mb-4">
-                <h2 className="text-xl font-bold">Trending Apps</h2>
+                
                 <div className="flex gap-2">
                     <button
                         onClick={() => scroll('left')}
@@ -77,7 +76,7 @@ const Trendingdatastore = () => {
             >
                 {dataT.map(datashow => (
                     <div key={datashow.id} className="flex-shrink-0 snap-start">
-                        <TrendingCard data={datashow} />
+                        <Newcatagorycard data={datashow} />
                     </div>
                 ))}
             </div>
@@ -85,4 +84,4 @@ const Trendingdatastore = () => {
     );
 };
 
-export default Trendingdatastore;
+export default Newcatagory;

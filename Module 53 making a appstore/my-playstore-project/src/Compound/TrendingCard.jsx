@@ -2,13 +2,14 @@ import React from 'react';
 import { Download, Star } from 'lucide-react'; // Optional: Use lucide-react or SVG
 import { Link } from 'react-router-dom';
 
-const TrendingCard = () => {
+const TrendingCard = ({data}) => {
+    
     return (
-        <div className="card w-md h-64 bg-base-100 shadow-xl image-full group cursor-pointer">
+        <div className="card w-md h-64 bg-base-100 shadow-xl image-full group cursor-pointer hover:border border-primary">
             {/* Background Image */}
             <figure>
                 <img
-                    src="https://img.freepik.com/free-photo/creature-with-glowing-eyes-staring-darkness-generated-by-ai_188544-24515.jpg"
+                    src={data.banner}
                     alt="Demon eyes"
                     className="object-cover h-full w-full"
                 />
@@ -17,7 +18,7 @@ const TrendingCard = () => {
             <div className="card-body justify-end p-4">
                 {/* Card Title */}
                 <h2 className="card-title text-white text-xl font-bold mb-0">
-                    Demon eyes
+                    {data.name}
                 </h2>
 
                 <div className="flex items-center justify-between mt-1">
@@ -37,7 +38,7 @@ const TrendingCard = () => {
                     <div className="card-actions">
                         <Link
                             to="/install/demon-eyes"
-                            className="btn btn-sm h-8 px-5 rounded-md border-none bg-[#9EF01A] hover:bg-[#70E000] text-black capitalize font-semibold"
+                            className="btn btn-sm h-8 px-5 rounded-md border-none bg-primary hover:bg-[#55227eb5] text-white capitalize font-semibold"
                         >
                             Install
                         </Link>

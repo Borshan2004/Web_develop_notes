@@ -1,11 +1,10 @@
-
 import React, { useEffect, useState, useRef } from 'react';
 import { useLoaderData } from 'react-router';
 import { ChevronLeft, ChevronRight } from 'lucide-react'; // Icons for buttons
-import TrendingCard from './TrendingCard';
 import './Trendingdatastore.css'
+import Newcatagorycard3 from './Newcatagorycard3';
 
-const Trendingdatastore = () => {
+const Newcatagory3 = () => {
     const [dataT, setDataT] = useState([]);
     const data = useLoaderData();
 
@@ -14,7 +13,7 @@ const Trendingdatastore = () => {
     const scrollContainerRef = useRef(null);
 
     useEffect(() => {
-        const trendingdata = data.filter(eachdata => eachdata.isTrending === true);
+        const trendingdata = data.filter(eachdata => eachdata.category === "Education");
         // Fixed: Directly set the filtered array
         setDataT(trendingdata);
 
@@ -77,7 +76,7 @@ const Trendingdatastore = () => {
             >
                 {dataT.map(datashow => (
                     <div key={datashow.id} className="flex-shrink-0 snap-start">
-                        <TrendingCard data={datashow} />
+                        <Newcatagorycard3 data={datashow} />
                     </div>
                 ))}
             </div>
@@ -85,4 +84,4 @@ const Trendingdatastore = () => {
     );
 };
 
-export default Trendingdatastore;
+export default Newcatagory3;
