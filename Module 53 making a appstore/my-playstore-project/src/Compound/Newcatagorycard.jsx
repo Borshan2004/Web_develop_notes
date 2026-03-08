@@ -24,7 +24,7 @@ const Newcatagorycard = ({data}) => {
                     </div>
 
                     {/* Divider */}
-                    <div className="h-4 w-[1px] bg-primary"></div>
+                    <div className="h-4 w-1px bg-primary"></div>
 
                     {/* Downloads */}
                     <div className="flex items-center text-primary  gap-1">

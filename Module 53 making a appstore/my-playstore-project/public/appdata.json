@@ -538,7 +538,7 @@
     "category": "Education",
     "rating": 4.6,
     "isTrending": true,
-    "isPopular": true,
+    "isPopular": false,
     "description": "Coursera connects you to top university and company courses. Earn certificates and degrees from schools like Stanford, Yale, and Google, all from your smartphone.",
     "features": [
       "Certificates from top universities",
@@ -561,7 +561,7 @@
     "category": "Education",
     "rating": 4.5,
     "isTrending": false,
-    "isPopular": true,
+    "isPopular": false,
     "description": "Udemy is the world's largest online learning platform with 210,000+ courses taught by expert instructors. From coding to photography, find a course for every skill and interest.",
     "features": [
       "210,000+ courses across 75 languages",
@@ -607,7 +607,7 @@
     "category": "Education",
     "rating": 4.6,
     "isTrending": false,
-    "isPopular": true,
+    "isPopular": false,
     "description": "Photomath is the #1 math learning app. Scan a math problem with your camera and instantly get step-by-step explanations so you learn and understand — not just get the answer.",
     "features": [
       "Camera scanning of handwritten and printed problems",
@@ -723,7 +723,7 @@
     "category": "Game",
     "rating": 4.2,
     "isTrending": true,
-    "isPopular": true,
+    "isPopular": false,
     "description": "PUBG Mobile is the award-winning mobile battle royale game. Drop onto a massive island, scavenge for weapons, and outlast 99 other players to achieve the ultimate Chicken Dinner.",
     "features": [
       "100-player battle royale matches",
@@ -746,7 +746,7 @@
     "category": "Game",
     "rating": 4.3,
     "isTrending": false,
-    "isPopular": true,
+    "isPopular": false,
     "description": "Among Us is a multiplayer social deduction game where crewmates work together to complete tasks while uncovering Impostors sabotaging the mission. Trust no one!",
     "features": [
       "4-15 player online multiplayer",
@@ -769,7 +769,7 @@
     "category": "Game",
     "rating": 4.5,
     "isTrending": false,
-    "isPopular": true,
+    "isPopular": false,
     "description": "Clash of Clans is a strategy game where you build your village, raise a clan, and compete in epic clan wars. Train troops and attack enemy villages for resources and glory.",
     "features": [
       "Build and upgrade your village",
@@ -792,7 +792,7 @@
     "category": "Game",
     "rating": 4.7,
     "isTrending": true,
-    "isPopular": true,
+    "isPopular": false,
     "description": "Minecraft is the best-selling game of all time. Explore infinite worlds, build amazing structures, craft items, and survive against mobs in this iconic sandbox survival game.",
     "features": [
       "Infinite procedurally generated worlds",
@@ -838,7 +838,7 @@
     "category": "Game",
     "rating": 4.2,
     "isTrending": true,
-    "isPopular": true,
+    "isPopular": false,
     "description": "Roblox is an immersive platform where millions of people gather to imagine, create, and share experiences in user-generated 3D worlds. Play any genre imaginable — made by the community.",
     "features": [
       "50+ million user-created games",

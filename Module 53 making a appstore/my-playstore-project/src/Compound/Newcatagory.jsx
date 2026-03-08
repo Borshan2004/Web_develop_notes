@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { useLoaderData } from 'react-router';
+import { NavLink, useLoaderData } from 'react-router';
 import { ChevronLeft, ChevronRight } from 'lucide-react'; // Icons for buttons
 import './Trendingdatastore.css'
 import Newcatagorycard from './Newcatagorycard';
@@ -12,21 +12,7 @@ const Newcatagory = () => {
     // 1. Create a ref for the scrollable container
     const scrollContainerRef = useRef(null);
 
-    useEffect(() => {
-        const trendingdata = data.filter(eachdata => eachdata.category === "Productivity");
-        // Fixed: Directly set the filtered array
-        setDataT(trendingdata);
-
-        // Create an interval to scroll right every 5000ms
-        const autoScroll = setInterval(() => {
-            scroll('right');
-        }, 5000);
-
-        // Cleanup: Clear the interval if the user leaves the page
-        return () => clearInterval(autoScroll);
-    }, [data]);
-
-    // 2. Function to handle scrolling
+      // 2. Function to handle scrolling
     const scroll = (direction) => {
         if (scrollContainerRef.current) {
             const { current } = scrollContainerRef;
@@ -47,6 +33,22 @@ const Newcatagory = () => {
             }
         }
     };
+
+    useEffect(() => {
+        const trendingdata = data.filter(eachdata => eachdata.category === "Productivity");
+        // Fixed: Directly set the filtered array
+        setDataT(...dataT,trendingdata);
+
+        // Create an interval to scroll right every 5000ms
+        const autoScroll = setInterval(() => {
+            scroll('right');
+        }, 5000);
+
+        // Cleanup: Clear the interval if the user leaves the page
+        return () => clearInterval(autoScroll);
+    }, [data]);
+
+  
 
     return (
         <div className="relative group">
@@ -76,9 +78,9 @@ const Newcatagory = () => {
                 className="flex gap-6 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory scroll-smooth"
             >
                 {dataT.map(datashow => (
-                    <div key={datashow.id} className="flex-shrink-0 snap-start">
+                    <NavLink to={`/catagory/${datashow.id}`} key={datashow.id} className="shrink-0 snap-start">
                         <Newcatagorycard data={datashow} />
-                    </div>
+                    </NavLink>
                 ))}
             </div>
         </div>

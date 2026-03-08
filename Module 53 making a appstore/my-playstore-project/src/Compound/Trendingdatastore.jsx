@@ -13,19 +13,6 @@ const Trendingdatastore = () => {
     // 1. Create a ref for the scrollable container
     const scrollContainerRef = useRef(null);
 
-    useEffect(() => {
-        const trendingdata = data.filter(eachdata => eachdata.isTrending === true);
-        // Fixed: Directly set the filtered array
-        setDataT(trendingdata);
-
-        // Create an interval to scroll right every 5000ms
-        const autoScroll = setInterval(() => {
-            scroll('right');
-        }, 5000);
-
-        // Cleanup: Clear the interval if the user leaves the page
-        return () => clearInterval(autoScroll);
-    }, [data]);
 
     // 2. Function to handle scrolling
     const scroll = (direction) => {
@@ -48,6 +35,23 @@ const Trendingdatastore = () => {
             }
         }
     };
+
+
+    useEffect(() => {
+        const trendingdata = data.filter(eachdata => eachdata.isTrending === true);
+        // Fixed: Directly set the filtered array
+        setDataT(...dataT,trendingdata);
+
+        // Create an interval to scroll right every 5000ms
+        const autoScroll = setInterval(() => {
+            scroll('right');
+        }, 5000);
+
+        // Cleanup: Clear the interval if the user leaves the page
+        return () => clearInterval(autoScroll);
+    }, [data]);
+
+
 
     return (
         <div className="relative group">
@@ -76,7 +80,7 @@ const Trendingdatastore = () => {
                 className="flex gap-6 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory scroll-smooth"
             >
                 {dataT.map(datashow => (
-                    <div key={datashow.id} className="flex-shrink-0 snap-start">
+                    <div key={datashow.id} className="shrink-0 snap-start">
                         <TrendingCard data={datashow} />
                     </div>
                 ))}

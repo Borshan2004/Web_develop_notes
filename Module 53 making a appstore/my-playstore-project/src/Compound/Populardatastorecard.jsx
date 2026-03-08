@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Newcatagorycard3 = ({data}) => {
+const Populardatastorecard = ({data}) => {
     return (
-        <div className="card w-40 h-64 bg-base-300 hover:bg-base-200 shadow-xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300 hover:border border-primary">
+        <div className="card w-100 h-36  flex flex-row  bg-base-300 hover:bg-base-200 shadow-xl overflow-hidden cursor-pointer hover:scale-105 transition-transform duration-300 hover:border border-primary">
             {/* Image Section */}
             <figure className="px-3 pt-3">
-                <img 
+                <img
                     src={data.banner} // Replace with your image source
                     alt="Lost Realm"
                     className="w-40 rounded-xl aspect-square object-cover"
@@ -45,4 +45,4 @@ const Newcatagorycard3 = ({data}) => {
     );
 };
 
-export default Newcatagorycard3;
+export default Populardatastorecard;
