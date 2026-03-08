@@ -53,17 +53,17 @@ const Trendingdatastore = () => {
         <div className="relative group">
             {/* 3. Navigation Buttons */}
             <div className="flex justify-between items-center mb-4">
-                <h2 className="text-xl font-bold">Trending Apps</h2>
+                <h2 className="text-3xl font-bold">Trending Apps</h2>
                 <div className="flex gap-2">
                     <button
                         onClick={() => scroll('left')}
-                        className="btn btn-circle btn-sm bg-neutral-800 border-neutral-700 hover:bg-purple-600 text-white"
+                        className="btn btn-circle btn-sm bg-neutral-800 border-neutral-700 hover:bg-primary text-white"
                     >
                         <ChevronLeft size={20} />
                     </button>
                     <button
                         onClick={() => scroll('right')}
-                        className="btn btn-circle btn-sm bg-neutral-800 border-neutral-700 hover:bg-purple-600 text-white"
+                        className="btn btn-circle btn-sm bg-neutral-800 border-neutral-700 hover:bg-primary text-white"
                     >
                         <ChevronRight size={20} />
                     </button>

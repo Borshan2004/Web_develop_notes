@@ -3,6 +3,8 @@ import Banner from '../Compound/Banner';
 
 import Trendingdatastore from '../Compound/Trendingdatastore';
 import Newcatagory from '../Compound/Newcatagory';
+import Newcatagory2 from '../Compound/Newcatagory2';
+import Newcatagory3 from '../Compound/Newcatagory3';
 
 const Home = () => {
     return (
@@ -16,18 +18,18 @@ const Home = () => {
             </section>
 
             <section className='mx-auto max-w-375'>
-                <h2 className="text-xl font-bold">Productivity</h2>
+                <h2 className="text-3xl font-bold mt-14">Productivity</h2>
                 <Newcatagory></Newcatagory>
             </section>
 
             <section className='mx-auto max-w-375'>
-                <h2 className="text-xl font-bold">Healthcare</h2>
-                <Newcatagory></Newcatagory>
+                <h2 className="text-3xl font-bold mt-14">Healthcare</h2>
+                <Newcatagory2></Newcatagory2>
             </section>
 
             <section className='mx-auto max-w-375'>
-                <h2 className="text-xl font-bold">Education</h2>
-                <Newcatagory></Newcatagory>
+                <h2 className="text-3xl font-bold mt-14">Education</h2>
+                <Newcatagory3></Newcatagory3>
             </section>
 
         </div>

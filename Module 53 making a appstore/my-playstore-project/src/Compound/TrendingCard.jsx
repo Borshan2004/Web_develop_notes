@@ -25,11 +25,11 @@ const TrendingCard = ({data}) => {
                     {/* Stats Section */}
                     <div className="flex items-center gap-3 text-sm text-gray-300">
                         <div className="flex items-center gap-1">
-                            <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                            <Star className="w-4 h-4 text-primary fill-current" />
                             <span>4,9</span>
                         </div>
-                        <div className="flex items-center gap-1 border-l border-gray-600 pl-3">
-                            <Download className="w-4 h-4" />
+                        <div className="flex items-center gap-1 border-l border-primary pl-3">
+                            <Download className="w-4 h-4 text-primary" />
                             <span>20K</span>
                         </div>
                     </div>
