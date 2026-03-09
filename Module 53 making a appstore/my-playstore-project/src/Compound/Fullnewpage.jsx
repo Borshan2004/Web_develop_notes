@@ -9,22 +9,28 @@ const Fullnewpage = () => {
     // 1. Core Data States
     const [gameData, setGameData] = useState(null);
     const [activeTab, setActiveTab] = useState('info'); // 'info' or 'reviews'
-    
+
     // 2. Review States
-    const [reviewsList, setReviewsList] = useState([
-        { id: 1, user: "AlphaGamer", comment: "Amazing graphics!", date: "2 mins ago" }
-    ]);
+    const [reviewsList, setReviewsList] = useState(() => {
+        const savedReviews = localStorage.getItem(`reviews_${id}`);
+        return savedReviews ? JSON.parse(savedReviews) : [
+            { id: 1, user: "AlphaGamer", comment: "Amazing graphics!", date: "2 mins ago" }
+        ];
+    });
     const [newReview, setNewReview] = useState("");
 
     useEffect(() => {
-    // Find the specific game from the loaded data
-    const storedata = data?.find((datas) => datas.id === id);
-    
-    if (storedata) {
-        // Just pass the object directly. Do NOT use ...gameData
-        setGameData(storedata); 
-    }
-}, [id, data]);
+        // Find the specific game from the loaded data
+        const storedata = data?.find((datas) => datas.id === id);
+
+        if (storedata) {
+            // Just pass the object directly. Do NOT use ...gameData
+            setGameData(storedata);
+        }
+        localStorage.setItem(`reviews_${id}`, JSON.stringify(reviewsList));
+
+
+    }, [id, data,reviewsList]);
 
     // 3. Handlers
     const handleReviewSubmit = (e) => {
@@ -43,6 +49,8 @@ const Fullnewpage = () => {
     };
 
     if (!gameData) return <div className="min-h-screen bg-black flex items-center justify-center text-white">Loading...</div>;
+
+
 
     return (
         <div className="min-h-screen bg-[#0a0a0a] text-white pb-32">
@@ -68,14 +76,14 @@ const Fullnewpage = () => {
                 <div className="text-center mb-10">
                     <h1 className="text-4xl font-black tracking-tight mb-2">{gameData.name}</h1>
                     <p className="text-xs uppercase tracking-widest text-gray-500 font-bold">
-                        Published by <span className="text-primary">{gameData.publisher || 'Unknown'}</span> | Released in 2021
+                        Published by <span className="text-primary">{gameData.developer || 'Unknown'}</span> | Released in 2021
                     </p>
                 </div>
 
                 {/* --- Stats Bar --- */}
                 <div className="flex justify-around items-center py-6 bg-base-200/50 rounded-3xl mb-10 border border-white/5">
                     <div className="text-center flex-1">
-                        <span className="text-xl text-yellow-500">★</span>
+                        <span className="text-xl text-primary">★</span>
                         <p className="text-sm font-bold mt-1">Rating</p>
                         <p className="text-[10px] text-gray-400">4.9</p>
                     </div>
@@ -89,13 +97,13 @@ const Fullnewpage = () => {
 
                 {/* --- Tabs Switching --- */}
                 <div className="flex border-b border-white/10 mb-8 justify-between px-4">
-                    <button 
+                    <button
                         onClick={() => setActiveTab('info')}
                         className={`pb-3 text-sm font-bold transition-all ${activeTab === 'info' ? 'border-b-2 border-primary text-primary' : 'text-gray-500'}`}
                     >
                         Information
                     </button>
-                    <button 
+                    <button
                         onClick={() => setActiveTab('reviews')}
                         className={`pb-3 text-sm font-bold transition-all ${activeTab === 'reviews' ? 'border-b-2 border-primary text-primary' : 'text-gray-500'}`}
                     >
@@ -109,7 +117,7 @@ const Fullnewpage = () => {
                     <div className="space-y-4 animate-fadeIn">
                         <label className="text-lg font-bold text-gray-200">Description</label>
                         <div className="bg-base-200 border border-white/5 rounded-2xl p-4 text-gray-400 leading-relaxed italic">
-                           "This is where your dynamic description from the data would go. Explore the vast landscapes and engage in epic battles."
+                            {gameData.description}
                         </div>
                     </div>
                 ) : (
@@ -123,7 +131,7 @@ const Fullnewpage = () => {
                                 value={newReview}
                                 onChange={(e) => setNewReview(e.target.value)}
                             />
-                            <button 
+                            <button
                                 onClick={handleReviewSubmit}
                                 className="btn btn-primary btn-sm mt-3 w-full rounded-xl"
                             >
@@ -148,7 +156,7 @@ const Fullnewpage = () => {
             </div>
 
             {/* --- Sticky Footer --- */}
-            <div className=" bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black via-black to-transparent z-20">
+            <div className="fixed bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black via-black to-transparent z-20">
                 <button className="btn btn-primary w-full h-16 rounded-2xl text-lg font-black shadow-lg">
                     Install Now!
                 </button>

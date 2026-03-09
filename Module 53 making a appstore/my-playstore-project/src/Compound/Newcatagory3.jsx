@@ -1,8 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { useLoaderData } from 'react-router';
+import { NavLink, useLoaderData } from 'react-router';
 import { ChevronLeft, ChevronRight } from 'lucide-react'; // Icons for buttons
 import './Trendingdatastore.css'
 import Newcatagorycard3 from './Newcatagorycard3';
+import Newcatagorycard from './Newcatagorycard';
 
 const Newcatagory3 = () => {
     const [dataT, setDataT] = useState([]);
@@ -80,9 +81,9 @@ const Newcatagory3 = () => {
                 className="flex gap-6 overflow-x-auto pb-8 scrollbar-hide snap-x snap-mandatory scroll-smooth"
             >
                 {dataT.map(datashow => (
-                    <div key={datashow.id} className="shrink-0 snap-start">
-                        <Newcatagorycard3 data={datashow} />
-                    </div>
+                    <NavLink to={`/catagory/${datashow.id}`} key={datashow.id} className="shrink-0 snap-start">
+                        <Newcatagorycard data={datashow} />
+                    </NavLink>
                 ))}
             </div>
         </div>
