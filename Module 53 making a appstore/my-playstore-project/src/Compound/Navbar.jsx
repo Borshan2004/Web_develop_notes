@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Button from '../Elements/Button';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+
 
 const Navbar = () => {
 
@@ -136,7 +137,8 @@ const Navbar = () => {
 
                 <div className='mr-4'>
                     {/* <button className='btn'>Login</button> */}
-                    <Button>Login</Button>
+                    <Link to={"/auth/login"}><Button>Login</Button></Link>
+                    
                 </div>
 
             </nav>

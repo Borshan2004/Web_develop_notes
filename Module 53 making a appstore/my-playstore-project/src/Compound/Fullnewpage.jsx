@@ -156,7 +156,7 @@ const Fullnewpage = () => {
             </div>
 
             {/* --- Sticky Footer --- */}
-            <div className="fixed bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black via-black to-transparent z-20">
+            <div className=" bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black via-black to-transparent z-20">
                 <button className="btn btn-primary w-full h-16 rounded-2xl text-lg font-black shadow-lg">
                     Install Now!
                 </button>
