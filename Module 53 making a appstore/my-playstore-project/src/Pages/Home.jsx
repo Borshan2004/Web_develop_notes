@@ -7,6 +7,9 @@ import Newcatagory2 from '../Compound/Newcatagory2';
 import Newcatagory3 from '../Compound/Newcatagory3';
 import Populardatastore from '../Compound/Populardatastore';
 import Fullnewpage from '../Compound/Fullnewpage';
+import LoginPage from './LoginPage';
+import { Section } from 'lucide-react';
+import RegisterPage from './RegisterPage';
 
 const Home = () => {
     return (
@@ -39,6 +42,13 @@ const Home = () => {
                 <Populardatastore></Populardatastore>
             </section>
 
+            {/* <section>
+                <LoginPage></LoginPage>
+            </section>
+
+            <section>
+                <RegisterPage></RegisterPage>
+            </section> */}
             
 
         </div>
