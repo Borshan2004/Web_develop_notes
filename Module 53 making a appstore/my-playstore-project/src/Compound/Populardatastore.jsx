@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
-import { useLoaderData } from 'react-router';
+import { NavLink, useLoaderData } from 'react-router';
 import Populardatastorecard from './Populardatastorecard';
 
 const Populardatastore = () => {
@@ -24,7 +24,10 @@ const Populardatastore = () => {
             {/* Grid Layout: 1 column on mobile, 2 columns on desktop */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-x-[500px] gap-y-6">
                 {datas.map((popular) => (
-                    <Populardatastorecard key={popular.id} data={popular}> </Populardatastorecard>
+                    
+                    <NavLink to={`/catagory/${popular.id}`} key={popular.id} className="shrink-0 snap-start">
+                        <Populardatastorecard key={popular.id} data={popular}> </Populardatastorecard>
+                    </NavLink>
                 ))}
             </div>
         </div>
