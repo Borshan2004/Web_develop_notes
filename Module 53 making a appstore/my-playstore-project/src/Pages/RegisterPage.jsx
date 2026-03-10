@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router';
+import { AuthContext } from '../Authentication/AuthContext';
 
 const RegisterPage = () => {
     const [formData, setFormData] = useState({
@@ -10,19 +11,33 @@ const RegisterPage = () => {
     });
     const navigate = useNavigate();
 
+    const { EmailPassAuRegistar } = useContext(AuthContext)
+
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
     const handleRegister = (e) => {
         e.preventDefault();
-        if (formData.password !== formData.confirmPassword) {
-            alert("Passwords do not match!");
-            return;
-        }
-        console.log("Creating account for:", formData);
+        // if (formData.password !== formData.confirmPassword) {
+        //     alert("Passwords do not match!");
+        //     return;
+        // }
+        // console.log("Creating account for:", formData);
+
+        const email = e.target.email.value;
+        const fullName = e.target.fullName.value;
+        const password = e.target.password.value;
+        const confirmPassword = e.target.email.value;
+        console.log(email, password, fullName, confirmPassword)
+
+        EmailPassAuRegistar(email, password)
+            .then(res => { console.log(res) })
+            .catch(error => {
+                console.log(error);
+            })
         // Add registration logic here
-        navigate('/login');
+        // navigate('/login');
     };
 
     return (
@@ -124,7 +139,7 @@ const RegisterPage = () => {
                     </form>
 
                     <p className="text-center text-sm text-gray-500 mt-8">
-                        Already have an account? <button onClick={() => navigate('/login')} className="text-primary font-bold hover:underline">Sign In</button>
+                        Already have an account? <button onClick={() => navigate('/auth/login')} className="text-primary font-bold hover:underline">Sign In</button>
                     </p>
                 </div>
             </div>

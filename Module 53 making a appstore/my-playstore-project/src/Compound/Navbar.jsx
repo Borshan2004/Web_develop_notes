@@ -62,8 +62,17 @@ const Navbar = () => {
                     AppVault
                 </span> */}
 
-                <div>
+                {/* <div>
                     <img className='h-32 w-64  rounded-4xl bg-base-100' src='/src/assets/banner_purple.png' alt="logo" />
+                </div> */}
+
+                <div className="flex justify-center items-center gap-3 m-7">
+                    <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center shadow-[0_0_20px_rgba(124,58,237,0.5)]">
+                        <span className="text-white font-black text-xl italic">bp</span>
+                    </div>
+                    <h1 className="text-2xl font-black tracking-tighter text-white">
+                        bp<span className="text-primary">funstore</span>
+                    </h1>
                 </div>
 
                 {/* Nav Items */}
@@ -138,7 +147,7 @@ const Navbar = () => {
                 <div className='mr-4'>
                     {/* <button className='btn'>Login</button> */}
                     <Link to={"/auth/login"}><Button>Login</Button></Link>
-                    
+
                 </div>
 
             </nav>

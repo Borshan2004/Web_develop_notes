@@ -1,15 +1,25 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router';
+import React, { useContext, useState } from 'react';
+import { Link, useNavigate } from 'react-router';
+import { AuthContext } from '../Authentication/AuthContext';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
+  const {EmailpassAuLogin} = useContext(AuthContext);
+
   const handleLogin = (e) => {
     e.preventDefault();
     // Add your login logic here
     console.log("Logging in with:", email, password);
+
+    EmailpassAuLogin(email,password)
+    .then(res=>console.log(res))
+    .catch(error=>{
+      console.log(error)
+    })
+
     navigate('/'); 
   };
 
@@ -45,6 +55,7 @@ const LoginPage = () => {
               <input 
                 type="email" 
                 placeholder="name@example.com" 
+                name="email"
                 className="input input-bordered w-full bg-[#0a0a0a] border-white/10 focus:border-primary text-white" 
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -88,7 +99,7 @@ const LoginPage = () => {
           </div>
 
           <p className="text-center text-sm text-gray-500 mt-8">
-            New to bpfunstore? <a href="#" className="text-primary font-bold hover:underline">Create Account</a>
+            New to bpfunstore? <a href="#" className="text-primary font-bold hover:underline"><Link to='/auth/signin'>Create Account</Link></a>
           </p>
         </div>
       </div>
