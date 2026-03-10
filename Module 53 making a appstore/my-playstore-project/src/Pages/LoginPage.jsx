@@ -9,7 +9,7 @@ const LoginPage = () => {
 
   const location = useLocation();
 
-  const {EmailpassAuLogin} = useContext(AuthContext);
+  const {EmailpassAuLogin,Signwithgoogle} = useContext(AuthContext);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -24,6 +24,19 @@ const LoginPage = () => {
 
     navigate(`${location.state? location.state :'/'}`); 
   };
+
+  const handlegooglesingin =(e)=>{
+    e.preventDefault();
+
+    Signwithgoogle().
+    then(res=>{
+      console.log(res)
+
+    })
+    .catch(error=>{
+      console.log(error);
+    })
+  }
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] flex flex-col items-center justify-center px-6 relative overflow-hidden">
@@ -92,7 +105,7 @@ const LoginPage = () => {
 
           {/* Social Logins */}
           <div className="grid grid-cols-2 gap-4">
-            <button className="btn btn-outline border-white/10 hover:bg-white/5 text-white normal-case rounded-2xl">
+            <button onClick={handlegooglesingin} className="btn btn-outline border-white/10 hover:bg-white/5 text-white normal-case rounded-2xl">
               Google
             </button>
             <button className="btn btn-outline border-white/10 hover:bg-white/5 text-white normal-case rounded-2xl">
