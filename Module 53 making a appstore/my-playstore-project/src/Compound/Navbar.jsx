@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { Link, NavLink } from 'react-router';
+import { AuthContext } from '../Authentication/AuthContext';
 import Button from '../Elements/Button';
-import { Link, NavLink } from 'react-router-dom';
+
+
 
 
 const Navbar = () => {
@@ -8,12 +11,25 @@ const Navbar = () => {
     const [searchFocused, setSearchFocused] = useState(false);
     const [searchValue, setSearchValue] = useState('');
 
+    const { useri, EmailpassSignout } = useContext(AuthContext)
     const navItems = [
         { label: 'Home', path: '/' },
         { label: 'Store', path: '/store' },
         { label: 'Library', path: '/library' },
         { label: 'Profile', path: '/profile' },
     ];
+
+    const signoutwork = (event) => {
+        event.preventDefault();
+
+        EmailpassSignout()
+            .then(res => {
+                alert("signout is done",res)
+            })
+            .catch(error => {
+                console.log(error.message);
+            })
+    }
 
     return (
         <>
@@ -146,7 +162,11 @@ const Navbar = () => {
 
                 <div className='mr-4'>
                     {/* <button className='btn'>Login</button> */}
-                    <Link to={"/auth/login"}><Button>Login</Button></Link>
+                    
+                    {
+                        useri ? <Button onClick={signoutwork}>Logout</Button> : <Link to={"/auth/login"}><Button>Login</Button></Link>
+                    }
+
 
                 </div>
 
