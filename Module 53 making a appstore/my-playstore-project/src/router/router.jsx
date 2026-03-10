@@ -11,6 +11,7 @@ import Libary from '../Pages/Libary';
 import LoginRegistarform from '../Layout/LoginRegistarform';
 import LoginPage from '../Pages/LoginPage';
 import RegisterPage from '../Pages/RegisterPage';
+import PrivateRoute from '../Authentication/PrivateRoute';
 
 
 const router = createBrowserRouter([
@@ -26,7 +27,12 @@ const router = createBrowserRouter([
             },
             {
                 path: "/catagory/:id",
-                element: <Fullnewpage></Fullnewpage>,
+                element: (
+                    <PrivateRoute>
+                        <Fullnewpage></Fullnewpage>
+                    </PrivateRoute>
+                )
+                ,
                 loader: () => fetch("/appdata.json")
             }
         ]
