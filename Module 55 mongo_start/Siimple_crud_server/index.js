@@ -8,7 +8,7 @@ const express = require('express');
 const cors = require('cors');
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const app = express();
-const port =  5000;
+const port = 5000;
 
 
 
@@ -39,23 +39,53 @@ async function run() {
         const usersCollection = client.db('userdb').collection('users');
 
 
-        app.get('/users',async(req,res)=>{
+        app.get('/users', async (req, res) => {
             const cursor = usersCollection.find();
             const result = await cursor.toArray();
             res.send(result)
         })
 
-        app.post('/users',async(req,res)=>{
-            
+        app.get('/users/:id', async (req, res) => {
+
+
+            const id = req.params;
+            const query = { _id: new ObjectId(id) }
+            const result = await usersCollection.findOne(query)
+            res.send(result)
+
+
+        })
+
+        app.put('/users/:id',async(req,res)=>{
+            const id = req.params.id;
+            const filter = {_id: new ObjectId(id)}
+            const user = req.body
+
+            const updateDoc ={
+                $set: {
+                    name : user.name,
+                    email: user.email
+                }
+            }
+
+            const options = { upsert: true };
+
+            const result = await usersCollection.updateOne(filter,updateDoc,options)
+
+            res.send(result)
+        })
+
+        app.post('/users', async (req, res) => {
+
             // console.log("data is running ")
             const newUser = req.body;
             const result = await usersCollection.insertOne(newUser);
             res.send(result)
         })
 
-        app.delete('/users/:id',async(req,res)=>{
+        app.delete('/users/:id', async (req, res) => {
             const id = req.params.id
-            const query = {_id: new ObjectId(id)}
+            const query = { _id: new ObjectId(id) }
             const result = await usersCollection.deleteOne(query)
             res.send(result)
         })
@@ -64,12 +94,12 @@ async function run() {
         await client.db("admin").command({ ping: 1 });
         console.log("Pinged your deployment. You successfully connected to MongoDB!");
 
-        
-    }
-    finally{
 
     }
-    
+    finally {
+
+    }
+
 
 }
 

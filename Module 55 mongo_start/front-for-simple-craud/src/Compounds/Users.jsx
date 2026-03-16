@@ -1,4 +1,5 @@
 import React, { use, useState } from 'react';
+import { Link } from 'react-router';
 
 const Users = ({ userpromise }) => {
 
@@ -70,6 +71,8 @@ const Users = ({ userpromise }) => {
                 {
                     savedata.map(d => (
                         <p key={d._id}>{d.name} : :{d.email}
+                            <Link to={`/update/${d._id}`}>edit</Link>
+                            <Link to={`/users/${d._id}`}>users details</Link>
                             <button onClick={() => handledelete(d._id)}>delete</button>
                         </p>
 
