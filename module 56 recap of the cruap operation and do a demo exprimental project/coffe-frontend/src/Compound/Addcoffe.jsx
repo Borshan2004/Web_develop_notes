@@ -11,6 +11,7 @@ const Addcoffe = () => {
         const formData = new FormData(form);
 
         const coffedata = Object.fromEntries(formData.entries())
+        
         console.log(coffedata)
 
         fetch("http://localhost:3000/coffes", {

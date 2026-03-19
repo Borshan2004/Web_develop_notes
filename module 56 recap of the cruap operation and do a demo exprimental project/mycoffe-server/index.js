@@ -17,6 +17,7 @@ app.use(express.json());
 
 const uri = `mongodb+srv://${process.env.COFFEE_DB_U}:${process.env.COFFEE_DB_P}@bpdatastore.vot3ykk.mongodb.net/?appName=BPdataStore`;
 
+
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
     serverApi: {
@@ -33,6 +34,7 @@ async function run() {
         // Send a ping to confirm a successful connection
 
         const coffescollection = client.db('coffeeDB').collection('coffes')
+        const usercollection = client.db('coffeeDB').collection('user')
 
 
         app.get('/coffes',async(req,res)=>{
@@ -74,6 +76,26 @@ async function run() {
 
             const result = await coffescollection.updateOne(filter,updatedoc,options)
             res.send(result)
+
+        })
+
+        app.post('/user',async(req,res)=>{
+            const data = req.body;
+            result = await usercollection.insertOne(data);
+            res.send(result)
+        })
+
+        app.patch('/user',async(req,res)=>{
+
+            const {email,lastSignInTime} = req.body;
+            const filter = {email:email} //for compare
+            const updatedoc = {
+                $set:{
+                    lastSignInTime : lastSignInTime //data updating
+                }
+            }
+            const result = await usercollection.updateOne(filter,updatedoc)
+            res.send(result);
 
         })
         
