@@ -12,6 +12,10 @@ import AddPlantForm from './Page/AddPlantForm.jsx';
 import AllPlantsTable from './Layout/AllPlantsTable.jsx';
 import Allplantlayout from './Layout/Allplantlayout.jsx';
 import PlantDetails from './Compound/PlantDetails.jsx';
+import LoginPage from './Page/LoginPage.jsx';
+import RegisterPage from './Page/RegisterPage.jsx';
+import MyPlantPageLayout from './Layout/MyPlantPageLayout.jsx';
+import MyPage from './Compound/MyPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -55,6 +59,29 @@ const router = createBrowserRouter([
 
       }
     ]
+  },
+  {
+
+    path:'/myplant',
+    
+    Component:MyPlantPageLayout,
+    children:[
+      {
+        index:true,
+        loader:()=>fetch('http://localhost:3000/plantinfo').then(res=>res.json()),
+        Component:MyPage
+      }
+    ]
+
+
+  },
+  {
+    path:'/login',
+    Component:LoginPage
+  },
+  {
+    path:'/registar',
+    Component:RegisterPage
   }
 ]);
 

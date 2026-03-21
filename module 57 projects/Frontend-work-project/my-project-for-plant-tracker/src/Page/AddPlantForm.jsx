@@ -144,14 +144,14 @@ const AddPlantForm = () => {
                             ></textarea>
                         </div>
 
-                        {/* Read-only User Info */}
+                       
                         <div className="form-control">
                             <label className="label"><span className="label-text">Added By</span></label>
                             <input type="text" className="input input-bordered bg-base-200 " />
                         </div>
                         <div className="form-control">
                             <label className="label"><span className="label-text">Email</span></label>
-                            <input type="text" className="input input-bordered bg-base-200 " />
+                            <input type="text" name='email' className="input input-bordered bg-base-200 " />
                         </div>
 
                         {/* Submit Button */}

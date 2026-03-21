@@ -45,8 +45,11 @@ const Navbar = () => {
 
       {/* Auth Buttons */}
       <div className="navbar-end gap-2">
-        <a className="btn btn-outline btn-sm lg:btn-md">Login</a>
-        <a className="btn btn-primary btn-sm lg:btn-md text-white">Register</a>
+        <Link to="/login"><a className="btn btn-outline btn-sm lg:btn-md">Login</a> </Link>
+        <Link to="/registar">
+          <a className="btn btn-primary btn-sm lg:btn-md text-white">Register</a>
+        </Link>
+
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const PlantCard = ({ plant }) => {
     const { plantName, image, category, careLevel, description } = plant;
@@ -37,9 +38,15 @@ const PlantCard = ({ plant }) => {
                 </div>
 
                 <div className="card-actions justify-end">
-                    <button className="btn bg-[#006d44] hover:bg-[#005a38] text-white border-none btn-block rounded-xl">
-                        View Details
-                    </button>
+                    <Link to={`/allplant/details/${plant._id}`}>
+
+                        <button className="btn bg-[#006d44] hover:bg-[#005a38] text-white border-none btn-block rounded-xl">
+                            View Details
+                        </button>
+
+                    </Link>
+
+
                 </div>
             </div>
         </div>

@@ -109,10 +109,10 @@ const PlantDetails = () => {
                         {/* Action Buttons */}
                         <div className="flex flex-col sm:flex-row gap-4">
                             <button className="btn flex-1 bg-[#006d44] hover:bg-[#005a38] text-white border-none h-14 rounded-2xl text-md font-bold shadow-lg shadow-emerald-100 transition-all hover:scale-[1.02]">
-                                I Watered This
+                                Delete
                             </button>
                             <button className="btn btn-outline border-emerald-200 text-emerald-800 hover:bg-emerald-50 hover:border-emerald-400 h-14 rounded-2xl px-8 font-bold">
-                                Edit Details
+                                Update
                             </button>
                         </div>
 
