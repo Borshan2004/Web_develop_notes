@@ -7,6 +7,11 @@ import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import Homelayout from './Layout/Homelayout.jsx';
 import Home from './Page/Home.jsx';
+import Addplant from './Layout/Addplant.jsx';
+import AddPlantForm from './Page/AddPlantForm.jsx';
+import AllPlantsTable from './Layout/AllPlantsTable.jsx';
+import Allplantlayout from './Layout/Allplantlayout.jsx';
+import PlantDetails from './Compound/PlantDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -15,11 +20,42 @@ const router = createBrowserRouter([
     children:[
       {
         index:true,
-        Component:Home
+        Component:Home,
+        loader:()=>fetch('http://localhost:3000/plantinfo').then(res=>res.json())
       }
     ]
     
   },
+  {
+    path:"/addplant",
+    Component:Addplant,
+    children:[
+      {
+        index:true,
+        Component:AddPlantForm
+      }
+    ]
+  },
+  {
+    path:"/allplant",
+    Component: Allplantlayout,
+    
+    children:[
+      {
+        index:true,
+        Component:AllPlantsTable,
+        loader:()=>fetch('http://localhost:3000/plantinfo').then(res=>res.json())
+      },
+      {
+
+        path:'details/:id',
+        loader:({params})=>fetch(`http://localhost:3000/plantinfo/${params.id}`).then(res=>res.json()),
+        Component:PlantDetails,
+        
+
+      }
+    ]
+  }
 ]);
 
 

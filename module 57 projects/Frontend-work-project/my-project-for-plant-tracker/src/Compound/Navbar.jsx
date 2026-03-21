@@ -1,17 +1,24 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Navbar = () => {
   const navOptions = (
     <>
-      <li><a>Home</a></li>
-      <li><a>All Plants</a></li>
-      <li><a>Add Plant</a></li>
+      <Link to="/">
+        <li><a>Home</a></li>
+      </Link>
+
+
+      <Link to="/allplant">  <li><a>All Plants</a></li></Link>
+
+      <Link to="/addplant"><li><a>Add Plant</a></li></Link>
+
       <li><a>My Plants</a></li>
     </>
   );
 
   return (
-    <div data-theme="plant-light"  className="navbar bg-base-200 shadow-lg px-4 lg:px-8">
+    <div data-theme="plant-light" className="navbar bg-base-200 shadow-lg px-4 lg:px-8 ">
       {/* Mobile Menu & Logo */}
       <div className="navbar-start">
         <div className="dropdown">
