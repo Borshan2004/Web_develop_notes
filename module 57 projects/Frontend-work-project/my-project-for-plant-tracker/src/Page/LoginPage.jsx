@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { Mail, Lock, LogIn } from 'lucide-react';
 import toast, { Toaster } from 'react-hot-toast';
 import { AuthContext } from '../AuthOperationM/AuthContext';
+import { useLocation, useNavigate } from 'react-router';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -9,22 +10,26 @@ const LoginPage = () => {
 
   const { EmailPasswordLogin,Loginwithgoogle } = useContext(AuthContext)
 
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const handleLogin = (e) => {
     e.preventDefault();
     console.log(email, password)
 
     EmailPasswordLogin(email, password)
       .then(res => {
-        console.log(res)
+        console.log("login done",res)
         toast.success('Welcome back! Logging you in...', {
         icon: '🚀',
       });
-        
+        navigate(`${location.state ? location.state : '/'}`)
       })
       .catch(error => {
         console.log(error)
       })
 
+      
 
     // Mock logic: Only "admin@example.com" with "password123" works
     // if (email === 'borshanpurification42@gmail.com' && password === 'Bp2004Bp') {
@@ -47,12 +52,14 @@ const LoginPage = () => {
     Loginwithgoogle()
     .then(res=>{
       console.log(res)
+      navigate(`${location.state ? location.state : '/'}`)
     })
     .catch(error=>{
       console.log(error)
     })
 
     toast('Redirecting to GitHub...'), { icon: '🐙' }
+    
 
   }
 

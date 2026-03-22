@@ -16,6 +16,18 @@ const PlantDetails2 = ({plant}) => {
         nextWatering, description
     } = plant;
 
+    const deleteoperation = (id) =>{
+
+        fetch(`http://localhost:3000/plantinfo/${id}`,{
+            method:'DELETE',
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data);
+        })
+
+    }
+
     return (
         <div className="min-h-screen bg-[#f3f9f1] py-8 md:py-12 px-4">
             <div className="max-w-5xl mx-auto">
@@ -108,7 +120,7 @@ const PlantDetails2 = ({plant}) => {
 
                         {/* Action Buttons */}
                         <div className="flex flex-col sm:flex-row gap-4">
-                            <button className="btn flex-1 bg-[#006d44] hover:bg-[#005a38] text-white border-none h-14 rounded-2xl text-md font-bold shadow-lg shadow-emerald-100 transition-all hover:scale-[1.02]">
+                            <button onClick={()=>deleteoperation(plant._id)} className="btn flex-1 bg-[#006d44] hover:bg-[#005a38] text-white border-none h-14 rounded-2xl text-md font-bold shadow-lg shadow-emerald-100 transition-all hover:scale-[1.02]">
                                 Delete
                             </button>
                             <button className="btn btn-outline border-emerald-200 text-emerald-800 hover:bg-emerald-50 hover:border-emerald-400 h-14 rounded-2xl px-8 font-bold">

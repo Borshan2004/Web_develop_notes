@@ -17,6 +17,7 @@ import RegisterPage from './Page/RegisterPage.jsx';
 import MyPlantPageLayout from './Layout/MyPlantPageLayout.jsx';
 import MyPage from './Compound/MyPage.jsx';
 import AuthProvider from './AuthOperationM/AuthProvider.jsx';
+import PrivateRoute from './AuthOperationM/PrivateRoute.jsx';
 
 const router = createBrowserRouter([
   {
@@ -55,7 +56,11 @@ const router = createBrowserRouter([
 
         path: 'details/:id',
         loader: ({ params }) => fetch(`http://localhost:3000/plantinfo/${params.id}`).then(res => res.json()),
-        Component: PlantDetails,
+        element: (
+          <PrivateRoute>
+            <PlantDetails></PlantDetails>
+          </PrivateRoute>
+        )
 
 
       }
