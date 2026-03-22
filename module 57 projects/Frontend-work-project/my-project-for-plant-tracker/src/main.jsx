@@ -16,78 +16,82 @@ import LoginPage from './Page/LoginPage.jsx';
 import RegisterPage from './Page/RegisterPage.jsx';
 import MyPlantPageLayout from './Layout/MyPlantPageLayout.jsx';
 import MyPage from './Compound/MyPage.jsx';
+import AuthProvider from './AuthOperationM/AuthProvider.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    Component:Homelayout,
-    children:[
+    Component: Homelayout,
+    children: [
       {
-        index:true,
-        Component:Home,
-        loader:()=>fetch('http://localhost:3000/plantinfo').then(res=>res.json())
+        index: true,
+        Component: Home,
+        loader: () => fetch('http://localhost:3000/plantinfo').then(res => res.json())
       }
     ]
-    
+
   },
   {
-    path:"/addplant",
-    Component:Addplant,
-    children:[
+    path: "/addplant",
+    Component: Addplant,
+    children: [
       {
-        index:true,
-        Component:AddPlantForm
+        index: true,
+        Component: AddPlantForm
       }
     ]
   },
   {
-    path:"/allplant",
+    path: "/allplant",
     Component: Allplantlayout,
-    
-    children:[
+
+    children: [
       {
-        index:true,
-        Component:AllPlantsTable,
-        loader:()=>fetch('http://localhost:3000/plantinfo').then(res=>res.json())
+        index: true,
+        Component: AllPlantsTable,
+        loader: () => fetch('http://localhost:3000/plantinfo').then(res => res.json())
       },
       {
 
-        path:'details/:id',
-        loader:({params})=>fetch(`http://localhost:3000/plantinfo/${params.id}`).then(res=>res.json()),
-        Component:PlantDetails,
-        
+        path: 'details/:id',
+        loader: ({ params }) => fetch(`http://localhost:3000/plantinfo/${params.id}`).then(res => res.json()),
+        Component: PlantDetails,
+
 
       }
     ]
   },
   {
 
-    path:'/myplant',
-    
-    Component:MyPlantPageLayout,
-    children:[
+    path: '/myplant',
+
+    Component: MyPlantPageLayout,
+    children: [
       {
-        index:true,
-        loader:()=>fetch('http://localhost:3000/plantinfo').then(res=>res.json()),
-        Component:MyPage
+        index: true,
+        loader: () => fetch('http://localhost:3000/plantinfo').then(res => res.json()),
+        Component: MyPage
       }
     ]
 
 
   },
   {
-    path:'/login',
-    Component:LoginPage
+    path: '/login',
+    Component: LoginPage
   },
   {
-    path:'/registar',
-    Component:RegisterPage
+    path: '/registar',
+    Component: RegisterPage
   }
 ]);
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
+
   </StrictMode>,
 )

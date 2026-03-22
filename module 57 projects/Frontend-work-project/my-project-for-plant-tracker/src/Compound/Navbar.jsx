@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router';
+import { AuthContext } from '../AuthOperationM/AuthContext';
 
 const Navbar = () => {
+
+  const {userA,Emailpasslogout} = useContext(AuthContext)
+  console.log(userA)
+
   const navOptions = (
     <>
       <Link to="/">
@@ -13,10 +18,26 @@ const Navbar = () => {
 
       <Link to="/addplant"><li><a>Add Plant</a></li></Link>
 
-      <li><a>My Plants</a></li>
+      <Link to="/myplant"><li><a>My Plants</a></li></Link>
+      
+
+      
     </>
+    
   );
 
+  const handellogut = ()=>{
+
+    Emailpasslogout()
+    .then(res=>{
+      console.log(res)
+    })
+    .catch(error=>{
+      console.log(error)
+    })
+
+  }
+  
   return (
     <div data-theme="plant-light" className="navbar bg-base-200 shadow-lg px-4 lg:px-8 ">
       {/* Mobile Menu & Logo */}
@@ -45,7 +66,10 @@ const Navbar = () => {
 
       {/* Auth Buttons */}
       <div className="navbar-end gap-2">
-        <Link to="/login"><a className="btn btn-outline btn-sm lg:btn-md">Login</a> </Link>
+        {
+          userA ? <a onClick={handellogut} className="btn btn-outline btn-sm lg:btn-md">Logout</a>   : <Link to="/login"><a className="btn btn-outline btn-sm lg:btn-md">Login</a> </Link>
+        }
+        
         <Link to="/registar">
           <a className="btn btn-primary btn-sm lg:btn-md text-white">Register</a>
         </Link>

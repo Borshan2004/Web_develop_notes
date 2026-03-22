@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { User, Mail, Image, Lock, UserPlus } from 'lucide-react';
 import toast, { Toaster } from 'react-hot-toast';
 import { useNavigate, Link } from 'react-router';
+import { AuthContext } from '../AuthOperationM/AuthContext';
 
 const RegisterPage = () => {
   const navigate = useNavigate();
@@ -16,6 +17,8 @@ const RegisterPage = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const { EmailPasswordRegistar } = useContext(AuthContext)
+
   const validatePassword = (pass) => {
     const hasUpper = /[A-Z]/.test(pass);
     const hasLower = /[a-z]/.test(pass);
@@ -29,7 +32,19 @@ const RegisterPage = () => {
 
   const handleRegister = (e) => {
     e.preventDefault();
-    
+    const email = formData.email;
+    const password = formData.password;
+
+    console.log(email, password)
+
+    EmailPasswordRegistar(email, password)
+      .then(res => {
+        console.log(res)
+      })
+      .catch(error => {
+        console.log(error)
+      })
+
     // 1. Validate Password
     const passwordError = validatePassword(formData.password);
     if (passwordError) {
@@ -50,7 +65,7 @@ const RegisterPage = () => {
   return (
     <div className="min-h-screen bg-base-200 flex items-center justify-center p-4">
       <Toaster position="top-center" />
-      
+
       <div className="card w-full max-w-lg bg-base-100 shadow-2xl">
         <div className="card-body">
           <div className="flex flex-col items-center mb-4">
