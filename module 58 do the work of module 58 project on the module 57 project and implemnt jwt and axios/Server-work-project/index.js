@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
+const jwt = require('jsonwebtoken');
 
 //this need for env setup
 require('dotenv').config();
@@ -8,11 +9,50 @@ require('dotenv').config();
 const cors = require('cors');
 const port = 3000;
 
-app.use(cors())
+// app.use(cors())
+
+const cookieParser = require('cookie-parser');
+
+
+// cookie set up
+app.use(cors({
+    origin: ['http://localhost:5173'],
+    credentials: true
+}))
+
+
 app.use(express.json())
 
+app.use(cookieParser());//middleware-> use the middleware for those for which i need the security 
 //PlantCare
 //pi4xDllEeW4u4gHG
+
+const logger = (req,res,next) =>{
+    console.log('inside the logger middleware');
+    next();
+}
+
+const verifyToken= (req,res,next) =>{
+    const token = req?.cookies?.token
+    console.log('cookies in the middleware',req.cookies)
+    
+    if(!token){
+        return res.status(401).send({message: 'unauthorized access'})
+    }
+
+    //verify token
+    jwt.verify(token,process.env.SCRET_CODE,(err,decoded)=>{
+        if(err){
+            return res.status(401).send({message:'unauthorized access'})
+        }
+        req.decoded = decoded
+        next()
+        // console.log(decoded)
+    })
+
+
+
+}
 
 
 const uri = `mongodb+srv://${process.env.PLANT_N}:${process.env.PLANT_P}@bpdatastore.vot3ykk.mongodb.net/?appName=BPdataStore`;
@@ -31,42 +71,74 @@ async function run() {
 
         const plantdatacollection = client.db("plantDB").collection("plantinfo");
 
-        app.post('/plantinfo',async(req,res)=>{
+
+        //hwt token related api
+
+        app.post('/jwt', async (req, res) => {
+
+            const useremail = req.body;
+
+            //gerate a token
+            const token = jwt.sign(useremail, process.env.SCRET_CODE, { expiresIn: '1d' });
+
+            //set token in the cookies
+
+            res.cookie('token', token, {
+                httpOnly: true,
+                secure: false,
+
+            })
+
+
+            res.send({ sucess: true })
+
+        })
+
+
+
+        app.post('/plantinfo',logger,verifyToken, async (req, res) => {
+            // console.log('cookies recieved ',req.cookies)
             const data = req.body;
+            const email = data.email;
+
+            if(email!==req.decoded.email){
+                return res.status(403).send({message:'forbidden access'})
+            }
+
             const result = await plantdatacollection.insertOne(data)
             res.send(result)
         })
 
-        app.get('/plantinfo',async(req,res)=>{
+        app.get('/plantinfo', async (req, res) => {
             const result = await plantdatacollection.find().toArray();
             res.send(result)
         })
 
-        app.get('/plantinfo/:id',async(req,res)=>{
+        app.get('/plantinfo/:id', async (req, res) => {
             const id = req.params.id;
-            const query = {_id: new ObjectId(id)}
+            const query = { _id: new ObjectId(id) }
             const result = await plantdatacollection.findOne(query);
             res.send(result)
         })
 
-        app.put('/plantinfo/:id',async(req,res)=>{
-            const id  = req.params.id;
-            const filter  = {_id: new ObjectId(id)}
-            const options = {upsert: true}
+        app.put('/plantinfo/:id', async (req, res) => {
+            const id = req.params.id;
+            const filter = { _id: new ObjectId(id) }
+            const options = { upsert: true }
             const updatedata = req.body;
             const updatedoc = {
-                $set:updatedata
+                $set: updatedata
             }
-            const result =await plantdatacollection.updateOne(filter,updatedoc,options)
+            const result = await plantdatacollection.updateOne(filter, updatedoc, options)
             res.send(result)
 
 
         })
 
-        app.delete('/plantinfo/:id',async(req,res)=>{
+        app.delete('/plantinfo/:id', async (req, res) => {
 
             const id = req.params.id;
-            const qurey = {_id : new ObjectId(id)}
+            const qurey = { _id: new ObjectId(id) }
             const result = await plantdatacollection.deleteOne(qurey);
             res.send(result);
 

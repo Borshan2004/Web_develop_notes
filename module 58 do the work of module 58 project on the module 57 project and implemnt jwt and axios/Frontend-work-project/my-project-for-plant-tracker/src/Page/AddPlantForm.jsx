@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React from 'react';
 
 const AddPlantForm = () => {
@@ -16,15 +17,25 @@ const AddPlantForm = () => {
         console.log("Plant Data Submitted:", plantData);
         // Add your axios/fetch POST request here to save to MongoDB
          
-        fetch('http://localhost:3000/plantinfo',{
-            method:'POST',
-            headers:{
-                'content-type':"application/json"
-            },
-            body:JSON.stringify(plantData)
+        // fetch('http://localhost:3000/plantinfo',{
+        //     method:'POST',
+        //     headers:{
+        //         'content-type':"application/json"
+        //     },
+        //     body:JSON.stringify(plantData)
+        // })
+        // .then(res=>res.json())
+        // .then(data=>console.log(data))
+
+        axios.post('http://localhost:3000/plantinfo',plantData,{
+            withCredentials:true
         })
-        .then(res=>res.json())
-        .then(data=>console.log(data))
+        .then(res=>{
+            console.log(res.data)
+        })
+        .catch(error=>{
+            console.log(error)
+        })
     
     };
 
